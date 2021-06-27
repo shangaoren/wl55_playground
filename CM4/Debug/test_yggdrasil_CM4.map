@@ -1,0 +1,1037 @@
+Archive member included to satisfy reference by file (symbol)
+
+c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-exit.o)
+                              c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o (exit)
+c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-impure.o)
+                              c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-exit.o) (_global_impure_ptr)
+c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-init.o)
+                              c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o (__libc_init_array)
+c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-memset.o)
+                              c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o (memset)
+c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-strlen.o)
+                              src/volund/utils/StringsTools.o (strlen)
+c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libnosys.a(_exit.o)
+                              c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-exit.o) (_exit)
+
+Discarded input sections
+
+ .text          0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crti.o
+ .data          0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crti.o
+ .bss           0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crti.o
+ .data          0x0000000000000000        0x4 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtbegin.o
+ .text          0x0000000000000000       0x74 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o
+ .data          0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o
+ .bss           0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o
+ .ARM.extab     0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o
+ .ARM.exidx     0x0000000000000000        0x8 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o
+ .ARM.attributes
+                0x0000000000000000       0x1c c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o
+ .group         0x0000000000000000       0x10 src/core/Core.o
+ .group         0x0000000000000000        0x8 src/core/Core.o
+ .group         0x0000000000000000        0xc src/core/Core.o
+ .group         0x0000000000000000        0x8 src/core/Core.o
+ .group         0x0000000000000000        0x8 src/core/Core.o
+ .group         0x0000000000000000        0x8 src/core/Core.o
+ .group         0x0000000000000000        0xc src/core/Core.o
+ .group         0x0000000000000000        0xc src/core/Core.o
+ .group         0x0000000000000000        0x8 src/core/Core.o
+ .group         0x0000000000000000        0x8 src/core/Core.o
+ .group         0x0000000000000000        0x8 src/core/Core.o
+ .group         0x0000000000000000        0x8 src/core/Core.o
+ .group         0x0000000000000000        0x8 src/core/Core.o
+ .group         0x0000000000000000        0x8 src/core/Core.o
+ .group         0x0000000000000000        0x8 src/core/Core.o
+ .group         0x0000000000000000        0x8 src/core/Core.o
+ .group         0x0000000000000000        0x8 src/core/Core.o
+ .group         0x0000000000000000        0x8 src/core/Core.o
+ .group         0x0000000000000000        0x8 src/core/Core.o
+ .group         0x0000000000000000        0xc src/core/Core.o
+ .group         0x0000000000000000        0x8 src/core/Core.o
+ .group         0x0000000000000000        0x8 src/core/Core.o
+ .group         0x0000000000000000        0xc src/core/Core.o
+ .group         0x0000000000000000        0xc src/core/Core.o
+ .group         0x0000000000000000        0x8 src/core/Core.o
+ .group         0x0000000000000000        0x8 src/core/Core.o
+ .text          0x0000000000000000        0x0 src/core/Core.o
+ .data          0x0000000000000000        0x0 src/core/Core.o
+ .bss           0x0000000000000000        0x0 src/core/Core.o
+ .text._ZN4core4Core13enterStopModeEv
+                0x0000000000000000       0x1c src/core/Core.o
+ .text._ZN4core4Core16exitFromStopModeEv
+                0x0000000000000000       0x20 src/core/Core.o
+ .text._ZN4core4Core25getCurrentInterruptNumberEv
+                0x0000000000000000        0x6 src/core/Core.o
+ .bss._ZN4core4Core21s_deepSleepNotifyListE
+                0x0000000000000000        0x8 src/core/Core.o
+ .group         0x0000000000000000        0xc src/core/drivers/Clocks.o
+ .group         0x0000000000000000        0xc src/core/drivers/Clocks.o
+ .group         0x0000000000000000        0xc src/core/drivers/Clocks.o
+ .group         0x0000000000000000        0xc src/core/drivers/Clocks.o
+ .text          0x0000000000000000        0x0 src/core/drivers/Clocks.o
+ .data          0x0000000000000000        0x0 src/core/drivers/Clocks.o
+ .bss           0x0000000000000000        0x0 src/core/drivers/Clocks.o
+ .text._ZN4core7drivers6Clocks4initEv
+                0x0000000000000000       0xdc src/core/drivers/Clocks.o
+ .rodata._ZN4core7drivers6Clocks17s_systemCoreClockE
+                0x0000000000000000        0x4 src/core/drivers/Clocks.o
+ .rodata._ZN4core7drivers6Clocks18s_peripheralClock1E
+                0x0000000000000000        0x4 src/core/drivers/Clocks.o
+ .rodata._ZN4core7drivers6Clocks18s_peripheralClock2E
+                0x0000000000000000        0x4 src/core/drivers/Clocks.o
+ .rodata._ZN4core7drivers6Clocks5s_hsiE
+                0x0000000000000000        0x4 src/core/drivers/Clocks.o
+ .group         0x0000000000000000        0x8 src/core/drivers/Systick.o
+ .group         0x0000000000000000        0x8 src/core/drivers/Systick.o
+ .group         0x0000000000000000        0x8 src/core/drivers/Systick.o
+ .group         0x0000000000000000        0x8 src/core/drivers/Systick.o
+ .group         0x0000000000000000        0xc src/core/drivers/Systick.o
+ .text          0x0000000000000000        0x0 src/core/drivers/Systick.o
+ .data          0x0000000000000000        0x0 src/core/drivers/Systick.o
+ .bss           0x0000000000000000        0x0 src/core/drivers/Systick.o
+ .text._ZN4core7drivers7Systick15initSystemTimerEmm
+                0x0000000000000000       0x28 src/core/drivers/Systick.o
+ .text._ZN4core7drivers7Systick16startSystemTimerEv
+                0x0000000000000000       0x10 src/core/drivers/Systick.o
+ .text._ZN4core7drivers7Systick15stopSystemTimerEv
+                0x0000000000000000       0x10 src/core/drivers/Systick.o
+ .text._ZN4core7drivers7Systick6getIrqEv
+                0x0000000000000000        0x6 src/core/drivers/Systick.o
+ .rodata._ZTVN4core7drivers7SystickE
+                0x0000000000000000       0x18 src/core/drivers/Systick.o
+ .data._ZN4core7drivers7Systick6s_selfE
+                0x0000000000000000        0x4 src/core/drivers/Systick.o
+ .comment       0x0000000000000000       0x7c src/core/drivers/Systick.o
+ .ARM.attributes
+                0x0000000000000000       0x33 src/core/drivers/Systick.o
+ .text          0x0000000000000000       0x14 src/core/vendor/startup_stm32wl55jcix.o
+ .data          0x0000000000000000        0x0 src/core/vendor/startup_stm32wl55jcix.o
+ .bss           0x0000000000000000        0x0 src/core/vendor/startup_stm32wl55jcix.o
+ .group         0x0000000000000000        0xc src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .group         0x0000000000000000        0xc src/main.o
+ .group         0x0000000000000000        0xc src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .group         0x0000000000000000        0x8 src/main.o
+ .text          0x0000000000000000        0x0 src/main.o
+ .data          0x0000000000000000        0x0 src/main.o
+ .bss           0x0000000000000000        0x0 src/main.o
+ .bss._ZN4core4Core10coreClocksE
+                0x0000000000000000        0x4 src/main.o
+ .bss._ZN4core4Core8idleTaskE
+                0x0000000000000000      0x254 src/main.o
+ .rodata._ZTVN6kernel13TaskWithStackILm128EEE
+                0x0000000000000000       0x10 src/main.o
+ .bss._ZGVN4core4Core10coreClocksE
+                0x0000000000000000        0x4 src/main.o
+ .bss._ZGVN4core4Core8idleTaskE
+                0x0000000000000000        0x4 src/main.o
+ .text          0x0000000000000000        0x0 src/volund/utils/StringsTools.o
+ .data          0x0000000000000000        0x0 src/volund/utils/StringsTools.o
+ .bss           0x0000000000000000        0x0 src/volund/utils/StringsTools.o
+ .text._ZN6volund12StringsTools7compareEPKcS2_
+                0x0000000000000000       0x30 src/volund/utils/StringsTools.o
+ .text._ZN6volund12StringsTools7compareEPKcS2_t
+                0x0000000000000000       0x2a src/volund/utils/StringsTools.o
+ .text._ZN6volund12StringsTools7compareEPKctS2_t
+                0x0000000000000000       0x20 src/volund/utils/StringsTools.o
+ .text._ZN6volund12StringsTools7strCopyEPKcPc
+                0x0000000000000000       0x16 src/volund/utils/StringsTools.o
+ .text._ZN6volund12StringsTools7strCopyEPKcPct
+                0x0000000000000000       0x1c src/volund/utils/StringsTools.o
+ .text._ZN6volund12StringsTools8containsEPcPKc
+                0x0000000000000000       0x60 src/volund/utils/StringsTools.o
+ .text._ZN6volund12StringsTools8containsEPKcS2_
+                0x0000000000000000       0x60 src/volund/utils/StringsTools.o
+ .text._ZN6volund12StringsTools11digitToCharEh
+                0x0000000000000000        0xc src/volund/utils/StringsTools.o
+ .text._ZN6volund12StringsTools8toStringEhPcth
+                0x0000000000000000       0x76 src/volund/utils/StringsTools.o
+ .text._ZN6volund12StringsTools8toStringEtPcth
+                0x0000000000000000       0x72 src/volund/utils/StringsTools.o
+ .text._ZN6volund12StringsTools8toStringEmPcth
+                0x0000000000000000       0x78 src/volund/utils/StringsTools.o
+ .text._ZN6volund12StringsTools4toU8EPKcj
+                0x0000000000000000       0x2e src/volund/utils/StringsTools.o
+ .text._ZN6volund12StringsTools5toU16EPKcj
+                0x0000000000000000       0x30 src/volund/utils/StringsTools.o
+ .text._ZN6volund12StringsTools5toI16EPKcj
+                0x0000000000000000       0x4c src/volund/utils/StringsTools.o
+ .text._ZN6volund12StringsTools5toU32EPKcj
+                0x0000000000000000       0x48 src/volund/utils/StringsTools.o
+ .text._ZN6volund12StringsTools9skipZerosEPKcj
+                0x0000000000000000       0x14 src/volund/utils/StringsTools.o
+ .comment       0x0000000000000000       0x7c src/volund/utils/StringsTools.o
+ .ARM.attributes
+                0x0000000000000000       0x33 src/volund/utils/StringsTools.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Event.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Event.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Event.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Event.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Event.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Event.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Event.o
+ .group         0x0000000000000000        0xc src/yggdrasil/kernel/Event.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Event.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Event.o
+ .text          0x0000000000000000        0x0 src/yggdrasil/kernel/Event.o
+ .data          0x0000000000000000        0x0 src/yggdrasil/kernel/Event.o
+ .bss           0x0000000000000000        0x0 src/yggdrasil/kernel/Event.o
+ .bss._ZN4core4Core10coreClocksE
+                0x0000000000000000        0x4 src/yggdrasil/kernel/Event.o
+ .bss._ZN4core4Core8idleTaskE
+                0x0000000000000000      0x254 src/yggdrasil/kernel/Event.o
+ .text._ZN6kernel5Event4waitEm
+                0x0000000000000000        0x8 src/yggdrasil/kernel/Event.o
+ .text._ZN6kernel5Event6signalEv
+                0x0000000000000000        0xa src/yggdrasil/kernel/Event.o
+ .text._ZN6kernel5Event14someoneWaitingEv
+                0x0000000000000000        0xa src/yggdrasil/kernel/Event.o
+ .text._ZN6kernel5Event5resetEv
+                0x0000000000000000        0x6 src/yggdrasil/kernel/Event.o
+ .text._ZN6kernel5Event11isAlreadyUpEv
+                0x0000000000000000        0x4 src/yggdrasil/kernel/Event.o
+ .text._ZN6kernel5Event9onTimeoutEPNS_4TaskE
+                0x0000000000000000       0x40 src/yggdrasil/kernel/Event.o
+ .text._ZN4core4Core14supervisorCallILN6kernel11ServiceCall9SvcNumberE12EsPNS2_5EventEmEET0_T1_T2_
+                0x0000000000000000        0xe src/yggdrasil/kernel/Event.o
+ .text._ZN4core4Core14supervisorCallILN6kernel11ServiceCall9SvcNumberE11EbPNS2_5EventEEET0_T1_
+                0x0000000000000000        0xe src/yggdrasil/kernel/Event.o
+ .rodata._ZTVN6kernel13TaskWithStackILm128EEE
+                0x0000000000000000       0x10 src/yggdrasil/kernel/Event.o
+ .bss._ZGVN4core4Core10coreClocksE
+                0x0000000000000000        0x4 src/yggdrasil/kernel/Event.o
+ .bss._ZGVN4core4Core8idleTaskE
+                0x0000000000000000        0x4 src/yggdrasil/kernel/Event.o
+ .rodata._ZN6kernel5Event20serviceCallEventWaitE
+                0x0000000000000000        0x4 src/yggdrasil/kernel/Event.o
+ .rodata._ZN6kernel5Event22serviceCallEventSignalE
+                0x0000000000000000        0x4 src/yggdrasil/kernel/Event.o
+ .rodata._ZTVN6kernel5EventE
+                0x0000000000000000       0x10 src/yggdrasil/kernel/Event.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Mutex.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Mutex.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Mutex.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Mutex.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Mutex.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Mutex.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Mutex.o
+ .group         0x0000000000000000        0xc src/yggdrasil/kernel/Mutex.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Mutex.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Mutex.o
+ .text          0x0000000000000000        0x0 src/yggdrasil/kernel/Mutex.o
+ .data          0x0000000000000000        0x0 src/yggdrasil/kernel/Mutex.o
+ .bss           0x0000000000000000        0x0 src/yggdrasil/kernel/Mutex.o
+ .text._ZN6kernel4Task12sleepCompareEPS0_S1_
+                0x0000000000000000       0x38 src/yggdrasil/kernel/Mutex.o
+ .text._ZN6kernel4Task15priorityCompareEPS0_S1_
+                0x0000000000000000       0x18 src/yggdrasil/kernel/Mutex.o
+ .bss._ZN4core4Core10coreClocksE
+                0x0000000000000000        0x4 src/yggdrasil/kernel/Mutex.o
+ .bss._ZN4core4Core8idleTaskE
+                0x0000000000000000      0x254 src/yggdrasil/kernel/Mutex.o
+ .text._ZN6kernel5Mutex4lockEm
+                0x0000000000000000        0x8 src/yggdrasil/kernel/Mutex.o
+ .text._ZN6kernel5Mutex7releaseEv
+                0x0000000000000000        0x8 src/yggdrasil/kernel/Mutex.o
+ .text._ZN6kernel5Mutex8isLockedEv
+                0x0000000000000000        0xa src/yggdrasil/kernel/Mutex.o
+ .text._ZN6kernel5Mutex8stopWaitEPNS_4TaskE
+                0x0000000000000000       0x50 src/yggdrasil/kernel/Mutex.o
+ .text._ZN6kernel5Mutex9onTimeoutEPNS_4TaskE
+                0x0000000000000000       0x84 src/yggdrasil/kernel/Mutex.o
+ .text._ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E
+                0x0000000000000000       0xae src/yggdrasil/kernel/Mutex.o
+ .text._ZN4core4Core14supervisorCallILN6kernel11ServiceCall9SvcNumberE15EsPNS2_5MutexEmEET0_T1_T2_
+                0x0000000000000000        0xe src/yggdrasil/kernel/Mutex.o
+ .text._ZN4core4Core14supervisorCallILN6kernel11ServiceCall9SvcNumberE16EbPNS2_5MutexEEET0_T1_
+                0x0000000000000000        0xe src/yggdrasil/kernel/Mutex.o
+ .rodata._ZTVN6kernel13TaskWithStackILm128EEE
+                0x0000000000000000       0x10 src/yggdrasil/kernel/Mutex.o
+ .bss._ZGVN4core4Core10coreClocksE
+                0x0000000000000000        0x4 src/yggdrasil/kernel/Mutex.o
+ .bss._ZGVN4core4Core8idleTaskE
+                0x0000000000000000        0x4 src/yggdrasil/kernel/Mutex.o
+ .rodata._ZN6kernel5Mutex23supervisorCallLockMutexE
+                0x0000000000000000        0x4 src/yggdrasil/kernel/Mutex.o
+ .rodata._ZN6kernel5Mutex26supervisorCallReleaseMutexE
+                0x0000000000000000        0x4 src/yggdrasil/kernel/Mutex.o
+ .rodata._ZTVN6kernel5MutexE
+                0x0000000000000000       0x10 src/yggdrasil/kernel/Mutex.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Scheduler.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Scheduler.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Scheduler.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Scheduler.o
+ .group         0x0000000000000000       0x10 src/yggdrasil/kernel/Scheduler.o
+ .group         0x0000000000000000        0xc src/yggdrasil/kernel/Scheduler.o
+ .group         0x0000000000000000        0xc src/yggdrasil/kernel/Scheduler.o
+ .group         0x0000000000000000        0xc src/yggdrasil/kernel/Scheduler.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Scheduler.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Scheduler.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Scheduler.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Scheduler.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Scheduler.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Scheduler.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Scheduler.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Scheduler.o
+ .group         0x0000000000000000        0xc src/yggdrasil/kernel/Scheduler.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Scheduler.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Scheduler.o
+ .text          0x0000000000000000        0x0 src/yggdrasil/kernel/Scheduler.o
+ .data          0x0000000000000000        0x0 src/yggdrasil/kernel/Scheduler.o
+ .bss           0x0000000000000000        0x0 src/yggdrasil/kernel/Scheduler.o
+ .text._ZN6kernel4Task12sleepCompareEPS0_S1_
+                0x0000000000000000       0x38 src/yggdrasil/kernel/Scheduler.o
+ .text._ZN6kernel4Task15priorityCompareEPS0_S1_
+                0x0000000000000000       0x18 src/yggdrasil/kernel/Scheduler.o
+ .text._ZN4core10interfaces3IrqcvsEv
+                0x0000000000000000        0x6 src/yggdrasil/kernel/Scheduler.o
+ .text.__NVIC_EnableIRQ
+                0x0000000000000000       0x1c src/yggdrasil/kernel/Scheduler.o
+ .text.__NVIC_SetPriority
+                0x0000000000000000       0x28 src/yggdrasil/kernel/Scheduler.o
+ .text._ZN14implementation7vectors20DynamicVectorManager15registerHandlerEN4core10interfaces3IrqEPFvvEPKc
+                0x0000000000000000       0x30 src/yggdrasil/kernel/Scheduler.o
+ .text._ZN14implementation7vectors20DynamicVectorManager11irqPriorityEN4core10interfaces3IrqEhh
+                0x0000000000000000       0x7c src/yggdrasil/kernel/Scheduler.o
+ .text._ZN14implementation7vectors20DynamicVectorManager11irqPriorityEN4core10interfaces3IrqEh
+                0x0000000000000000       0x3c src/yggdrasil/kernel/Scheduler.o
+ .text._ZN14implementation7vectors20DynamicVectorManager9enableIrqEN4core10interfaces3IrqE
+                0x0000000000000000       0x24 src/yggdrasil/kernel/Scheduler.o
+ .bss._ZN4core4Core10coreClocksE
+                0x0000000000000000        0x4 src/yggdrasil/kernel/Scheduler.o
+ .bss._ZN4core4Core8idleTaskE
+                0x0000000000000000      0x254 src/yggdrasil/kernel/Scheduler.o
+ .text._ZN6kernel9Scheduler12inThreadModeEv
+                0x0000000000000000        0xe src/yggdrasil/kernel/Scheduler.o
+ .text._ZN6kernel9Scheduler8getTicksEv
+                0x0000000000000000        0xc src/yggdrasil/kernel/Scheduler.o
+ .text._ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E
+                0x0000000000000000       0xae src/yggdrasil/kernel/Scheduler.o
+ .rodata._ZTVN6kernel13TaskWithStackILm128EEE
+                0x0000000000000000       0x10 src/yggdrasil/kernel/Scheduler.o
+ .bss._ZGVN4core4Core10coreClocksE
+                0x0000000000000000        0x4 src/yggdrasil/kernel/Scheduler.o
+ .bss._ZGVN4core4Core8idleTaskE
+                0x0000000000000000        0x4 src/yggdrasil/kernel/Scheduler.o
+ .text._ZN6kernel5Hooks15onTaskStartExecEPNS_4TaskE.isra.2
+                0x0000000000000000        0x2 src/yggdrasil/kernel/Scheduler.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Task.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Task.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Task.o
+ .group         0x0000000000000000        0xc src/yggdrasil/kernel/Task.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Task.o
+ .group         0x0000000000000000        0x8 src/yggdrasil/kernel/Task.o
+ .text          0x0000000000000000        0x0 src/yggdrasil/kernel/Task.o
+ .data          0x0000000000000000        0x0 src/yggdrasil/kernel/Task.o
+ .bss           0x0000000000000000        0x0 src/yggdrasil/kernel/Task.o
+ .bss._ZN4core4Core10coreClocksE
+                0x0000000000000000        0x4 src/yggdrasil/kernel/Task.o
+ .bss._ZN4core4Core8idleTaskE
+                0x0000000000000000      0x254 src/yggdrasil/kernel/Task.o
+ .text._ZN6kernel4Task16isStackCorruptedEv
+                0x0000000000000000       0x42 src/yggdrasil/kernel/Task.o
+ .rodata._ZTVN6kernel13TaskWithStackILm128EEE
+                0x0000000000000000       0x10 src/yggdrasil/kernel/Task.o
+ .bss._ZGVN4core4Core10coreClocksE
+                0x0000000000000000        0x4 src/yggdrasil/kernel/Task.o
+ .bss._ZGVN4core4Core8idleTaskE
+                0x0000000000000000        0x4 src/yggdrasil/kernel/Task.o
+ .rodata._ZN6kernel4Task13startTaskStubE
+                0x0000000000000000        0x4 src/yggdrasil/kernel/Task.o
+ .text          0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-exit.o)
+ .data          0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-exit.o)
+ .bss           0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-exit.o)
+ .text.exit     0x0000000000000000       0x28 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-exit.o)
+ .debug_frame   0x0000000000000000       0x28 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-exit.o)
+ .ARM.attributes
+                0x0000000000000000       0x2e c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-exit.o)
+ .text          0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-impure.o)
+ .data          0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-impure.o)
+ .bss           0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-impure.o)
+ .data._impure_ptr
+                0x0000000000000000        0x4 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-impure.o)
+ .data.impure_data
+                0x0000000000000000       0x60 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-impure.o)
+ .rodata._global_impure_ptr
+                0x0000000000000000        0x4 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-impure.o)
+ .ARM.attributes
+                0x0000000000000000       0x2e c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-impure.o)
+ .text          0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-init.o)
+ .data          0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-init.o)
+ .bss           0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-init.o)
+ .text          0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-memset.o)
+ .data          0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-memset.o)
+ .bss           0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-memset.o)
+ .text.memset   0x0000000000000000       0x10 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-memset.o)
+ .debug_frame   0x0000000000000000       0x20 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-memset.o)
+ .ARM.attributes
+                0x0000000000000000       0x2e c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-memset.o)
+ .text          0x0000000000000000       0x10 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-strlen.o)
+ .data          0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-strlen.o)
+ .bss           0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-strlen.o)
+ .ARM.attributes
+                0x0000000000000000       0x17 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-strlen.o)
+ .text          0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libnosys.a(_exit.o)
+ .data          0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libnosys.a(_exit.o)
+ .bss           0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libnosys.a(_exit.o)
+ .text._exit    0x0000000000000000        0x2 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libnosys.a(_exit.o)
+ .debug_frame   0x0000000000000000       0x20 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libnosys.a(_exit.o)
+ .ARM.attributes
+                0x0000000000000000       0x2e c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libnosys.a(_exit.o)
+ .text          0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtend.o
+ .data          0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtend.o
+ .bss           0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtend.o
+ .eh_frame      0x0000000000000000        0x4 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtend.o
+ .ARM.attributes
+                0x0000000000000000       0x2e c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtend.o
+ .text          0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtn.o
+ .data          0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtn.o
+ .bss           0x0000000000000000        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtn.o
+
+Memory Configuration
+
+Name             Origin             Length             Attributes
+RAM              0x0000000020000000 0x0000000000008000 xrw
+ROM              0x0000000008000000 0x0000000000020000 xr
+*default*        0x0000000000000000 0xffffffffffffffff
+
+Linker script and memory map
+
+LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crti.o
+LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtbegin.o
+LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m/crt0.o
+LOAD src/core/Core.o
+LOAD src/core/drivers/Clocks.o
+LOAD src/core/drivers/Systick.o
+LOAD src/core/vendor/startup_stm32wl55jcix.o
+LOAD src/main.o
+LOAD src/volund/utils/StringsTools.o
+LOAD src/yggdrasil/kernel/Event.o
+LOAD src/yggdrasil/kernel/Mutex.o
+LOAD src/yggdrasil/kernel/Scheduler.o
+LOAD src/yggdrasil/kernel/Task.o
+START GROUP
+LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libstdc++_nano.a
+LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libsupc++_nano.a
+END GROUP
+LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libstdc++_nano.a
+LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libm.a
+LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a
+START GROUP
+LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m\libgcc.a
+LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a
+END GROUP
+START GROUP
+LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m\libgcc.a
+LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a
+LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libnosys.a
+END GROUP
+START GROUP
+LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m\libgcc.a
+LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a
+LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libnosys.a
+END GROUP
+LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtend.o
+LOAD c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtn.o
+                0x0000000020008000                _estack = (ORIGIN (RAM) + LENGTH (RAM))
+                0x0000000000000200                _Min_Heap_Size = 0x200
+                0x0000000000000400                _Min_Stack_Size = 0x400
+
+.isr_vector     0x0000000008000000      0x138
+                0x0000000008000000                . = ALIGN (0x4)
+ *(.isr_vector)
+ .isr_vector    0x0000000008000000      0x138 src/core/vendor/startup_stm32wl55jcix.o
+                0x0000000008000000                g_pfnVectors
+                0x0000000008000138                . = ALIGN (0x4)
+
+.text           0x0000000008000138     0x1a70
+                0x0000000008000138                . = ALIGN (0x4)
+ *(.text)
+ .text          0x0000000008000138       0x40 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtbegin.o
+ *(.text*)
+ .text.__NVIC_EnableIRQ
+                0x0000000008000178       0x1c src/core/Core.o
+ .text.__NVIC_SetPriority
+                0x0000000008000194       0x28 src/core/Core.o
+ .text._ZN4core10interfaces3IrqcvsEv
+                0x00000000080001bc        0x6 src/core/Core.o
+                0x00000000080001bc                core::interfaces::Irq::operator short()
+ .text._ZN14implementation7vectors20DynamicVectorManager15registerHandlerEN4core10interfaces3IrqEPFvvEPKc
+                0x00000000080001c2       0x30 src/core/Core.o
+                0x00000000080001c2                implementation::vectors::DynamicVectorManager::registerHandler(core::interfaces::Irq, void (*)(), char const*)
+ .text._ZN14implementation7vectors20DynamicVectorManager17unregisterHandlerEN4core10interfaces3IrqE
+                0x00000000080001f2        0xe src/core/Core.o
+                0x00000000080001f2                implementation::vectors::DynamicVectorManager::unregisterHandler(core::interfaces::Irq)
+ .text._ZN14implementation7vectors20DynamicVectorManager16tableBaseAddressEv
+                0x0000000008000200        0x6 src/core/Core.o
+                0x0000000008000200                implementation::vectors::DynamicVectorManager::tableBaseAddress()
+ .text._ZN14implementation7vectors20DynamicVectorManager6getIsrEm
+                0x0000000008000206        0x8 src/core/Core.o
+                0x0000000008000206                implementation::vectors::DynamicVectorManager::getIsr(unsigned long)
+ .text._ZN14implementation7vectors20DynamicVectorManager11irqPriorityEN4core10interfaces3IrqEhh
+                0x000000000800020e       0x7c src/core/Core.o
+                0x000000000800020e                implementation::vectors::DynamicVectorManager::irqPriority(core::interfaces::Irq, unsigned char, unsigned char)
+ .text._ZN14implementation7vectors20DynamicVectorManager11irqPriorityEN4core10interfaces3IrqEh
+                0x000000000800028a       0x3c src/core/Core.o
+                0x000000000800028a                implementation::vectors::DynamicVectorManager::irqPriority(core::interfaces::Irq, unsigned char)
+ *fill*         0x00000000080002c6        0x2 
+ .text._ZN14implementation7vectors20DynamicVectorManager15subPriorityBitsEh
+                0x00000000080002c8       0x30 src/core/Core.o
+                0x00000000080002c8                implementation::vectors::DynamicVectorManager::subPriorityBits(unsigned char)
+ .text._ZN14implementation7vectors20DynamicVectorManager15subPriorityBitsEv
+                0x00000000080002f8        0xc src/core/Core.o
+                0x00000000080002f8                implementation::vectors::DynamicVectorManager::subPriorityBits()
+ .text._ZN14implementation7vectors20DynamicVectorManager9enableIrqEN4core10interfaces3IrqE
+                0x0000000008000304       0x24 src/core/Core.o
+                0x0000000008000304                implementation::vectors::DynamicVectorManager::enableIrq(core::interfaces::Irq)
+ .text._ZN14implementation7vectors20DynamicVectorManager10disableIrqEN4core10interfaces3IrqE
+                0x0000000008000328       0x2c src/core/Core.o
+                0x0000000008000328                implementation::vectors::DynamicVectorManager::disableIrq(core::interfaces::Irq)
+ .text._ZN14implementation7vectors20DynamicVectorManager8clearIrqEN4core10interfaces3IrqE
+                0x0000000008000354       0x24 src/core/Core.o
+                0x0000000008000354                implementation::vectors::DynamicVectorManager::clearIrq(core::interfaces::Irq)
+ .text._ZN14implementation7vectors20DynamicVectorManager24lockInterruptsHigherThanEh
+                0x0000000008000378       0x16 src/core/Core.o
+                0x0000000008000378                implementation::vectors::DynamicVectorManager::lockInterruptsHigherThan(unsigned char)
+ .text._ZN14implementation7vectors20DynamicVectorManager26unlockInterruptsHigherThanEh
+                0x000000000800038e       0x1a src/core/Core.o
+                0x000000000800038e                implementation::vectors::DynamicVectorManager::unlockInterruptsHigherThan(unsigned char)
+ .text._ZN14implementation7vectors20DynamicVectorManager17lockAllInterruptsEv
+                0x00000000080003a8       0x18 src/core/Core.o
+                0x00000000080003a8                implementation::vectors::DynamicVectorManager::lockAllInterrupts()
+ .text._ZN14implementation7vectors20DynamicVectorManager19enableAllInterruptsEv
+                0x00000000080003c0       0x1c src/core/Core.o
+                0x00000000080003c0                implementation::vectors::DynamicVectorManager::enableAllInterrupts()
+ .text._ZN14implementation7vectors20DynamicVectorManager11isInstalledEv
+                0x00000000080003dc       0x14 src/core/Core.o
+                0x00000000080003dc                implementation::vectors::DynamicVectorManager::isInstalled()
+ .text._ZN14implementation7vectors20DynamicVectorManager20installVectorManagerEv
+                0x00000000080003f0       0x10 src/core/Core.o
+                0x00000000080003f0                implementation::vectors::DynamicVectorManager::installVectorManager()
+ .text._ZN14implementation7vectors20DynamicVectorManager17defaultIsrHandlerEv
+                0x0000000008000400       0x10 src/core/Core.o
+                0x0000000008000400                implementation::vectors::DynamicVectorManager::defaultIsrHandler()
+ .text._ZN4core7drivers6Clocks4initEv
+                0x0000000008000410       0xdc src/core/Core.o
+                0x0000000008000410                core::drivers::Clocks::init()
+ .text._ZN4core4Core8initCoreEv
+                0x00000000080004ec       0x60 src/core/Core.o
+                0x00000000080004ec                core::Core::initCore()
+ .text._ZN4core4Core11restoreTaskEPVm
+                0x000000000800054c       0x18 src/core/Core.o
+                0x000000000800054c                core::Core::restoreTask(unsigned long volatile*)
+ .text._ZN4core4Core8idleFuncEm
+                0x0000000008000564        0x4 src/core/Core.o
+                0x0000000008000564                core::Core::idleFunc(unsigned long)
+ .text._ZN4core4Core20contextSwitchTriggerEv
+                0x0000000008000568       0x10 src/core/Core.o
+                0x0000000008000568                core::Core::contextSwitchTrigger()
+ .text._ZN4core4Core20contextSwitchHandlerEv
+                0x0000000008000578       0x32 src/core/Core.o
+                0x0000000008000578                core::Core::contextSwitchHandler()
+ .text._ZN4core4Core18systemTimerHandlerEv
+                0x00000000080005aa        0x4 src/core/Core.o
+                0x00000000080005aa                core::Core::systemTimerHandler()
+ .text._ZN4core4Core21supervisorCallHandlerEv
+                0x00000000080005ae       0x20 src/core/Core.o
+                0x00000000080005ae                core::Core::supervisorCallHandler()
+ .text._ZN4core4Core9hardFaultEv
+                0x00000000080005ce       0x1c src/core/Core.o
+                0x00000000080005ce                core::Core::hardFault()
+ .text._ZN4core4Core3nmiEv
+                0x00000000080005ea        0x4 src/core/Core.o
+                0x00000000080005ea                core::Core::nmi()
+ .text._ZN4core4Core10usageFaultEv
+                0x00000000080005ee        0x4 src/core/Core.o
+                0x00000000080005ee                core::Core::usageFault()
+ .text._ZN4core4Core8busFaultEv
+                0x00000000080005f2        0x4 src/core/Core.o
+                0x00000000080005f2                core::Core::busFault()
+ *fill*         0x00000000080005f6        0x2 
+ .text._ZN4core4Core17HardFaultAnalyzerEPm
+                0x00000000080005f8       0xc8 src/core/Core.o
+                0x00000000080005f8                core::Core::HardFaultAnalyzer(unsigned long*)
+ .text.startup._GLOBAL__sub_I__ZN4core4Core13vectorManagerE
+                0x00000000080006c0      0x138 src/core/Core.o
+ .text._ZN4core7drivers6Clocks22getSystemCoreFrequencyEv
+                0x00000000080007f8        0xc src/core/drivers/Clocks.o
+                0x00000000080007f8                core::drivers::Clocks::getSystemCoreFrequency()
+ .text._ZN4core7drivers6Clocks17getClockFrequencyEm
+                0x0000000008000804        0xc src/core/drivers/Clocks.o
+                0x0000000008000804                core::drivers::Clocks::getClockFrequency(unsigned long)
+ .text.Reset_Handler
+                0x0000000008000810       0x50 src/core/vendor/startup_stm32wl55jcix.o
+                0x0000000008000810                Reset_Handler
+ .text.Default_Handler
+                0x0000000008000860        0x2 src/core/vendor/startup_stm32wl55jcix.o
+                0x0000000008000860                RTC_Alarm_IRQHandler
+                0x0000000008000860                EXTI2_IRQHandler
+                0x0000000008000860                DebugMon_Handler
+                0x0000000008000860                TIM1_CC_IRQHandler
+                0x0000000008000860                HardFault_Handler
+                0x0000000008000860                SysTick_Handler
+                0x0000000008000860                PendSV_Handler
+                0x0000000008000860                NMI_Handler
+                0x0000000008000860                EXTI3_IRQHandler
+                0x0000000008000860                LPTIM2_IRQHandler
+                0x0000000008000860                I2C3_ER_IRQHandler
+                0x0000000008000860                LPTIM3_IRQHandler
+                0x0000000008000860                EXTI0_IRQHandler
+                0x0000000008000860                I2C2_EV_IRQHandler
+                0x0000000008000860                UsageFault_Handler
+                0x0000000008000860                TAMP_STAMP_LSECSS_SSRU_IRQHandler
+                0x0000000008000860                SPI1_IRQHandler
+                0x0000000008000860                DMA2_Channel2_IRQHandler
+                0x0000000008000860                DMA1_Channel4_IRQHandler
+                0x0000000008000860                PKA_IRQHandler
+                0x0000000008000860                TIM17_IRQHandler
+                0x0000000008000860                DMA1_Channel7_IRQHandler
+                0x0000000008000860                SUBGHZSPI_IRQHandler
+                0x0000000008000860                IPCC_C1_TX_IRQHandler
+                0x0000000008000860                DMA2_Channel1_IRQHandler
+                0x0000000008000860                I2C1_EV_IRQHandler
+                0x0000000008000860                SUBGHZ_Radio_IRQHandler
+                0x0000000008000860                DMAMUX1_OVR_IRQHandler
+                0x0000000008000860                DMA1_Channel6_IRQHandler
+                0x0000000008000860                TIM16_IRQHandler
+                0x0000000008000860                DMA2_Channel4_IRQHandler
+                0x0000000008000860                RCC_IRQHandler
+                0x0000000008000860                TIM1_TRG_COM_IRQHandler
+                0x0000000008000860                DMA1_Channel1_IRQHandler
+                0x0000000008000860                Default_Handler
+                0x0000000008000860                DMA2_Channel7_IRQHandler
+                0x0000000008000860                EXTI15_10_IRQHandler
+                0x0000000008000860                IPCC_C1_RX_IRQHandler
+                0x0000000008000860                ADC_IRQHandler
+                0x0000000008000860                C2SEV_PWR_C2H_IRQHandler
+                0x0000000008000860                I2C3_EV_IRQHandler
+                0x0000000008000860                EXTI9_5_IRQHandler
+                0x0000000008000860                RTC_WKUP_IRQHandler
+                0x0000000008000860                PVD_PVM_IRQHandler
+                0x0000000008000860                SPI2_IRQHandler
+                0x0000000008000860                MemManage_Handler
+                0x0000000008000860                SVC_Handler
+                0x0000000008000860                DMA2_Channel5_IRQHandler
+                0x0000000008000860                DMA1_Channel5_IRQHandler
+                0x0000000008000860                EXTI4_IRQHandler
+                0x0000000008000860                RNG_IRQHandler
+                0x0000000008000860                DMA1_Channel3_IRQHandler
+                0x0000000008000860                COMP_IRQHandler
+                0x0000000008000860                HSEM_IRQHandler
+                0x0000000008000860                TIM1_UP_IRQHandler
+                0x0000000008000860                WWDG_IRQHandler
+                0x0000000008000860                LPUART1_IRQHandler
+                0x0000000008000860                DMA2_Channel6_IRQHandler
+                0x0000000008000860                TIM2_IRQHandler
+                0x0000000008000860                TIM1_BRK_IRQHandler
+                0x0000000008000860                DAC_IRQHandler
+                0x0000000008000860                EXTI1_IRQHandler
+                0x0000000008000860                AES_IRQHandler
+                0x0000000008000860                USART2_IRQHandler
+                0x0000000008000860                I2C2_ER_IRQHandler
+                0x0000000008000860                DMA1_Channel2_IRQHandler
+                0x0000000008000860                FLASH_IRQHandler
+                0x0000000008000860                BusFault_Handler
+                0x0000000008000860                USART1_IRQHandler
+                0x0000000008000860                I2C1_ER_IRQHandler
+                0x0000000008000860                LPTIM1_IRQHandler
+                0x0000000008000860                DMA2_Channel3_IRQHandler
+ *fill*         0x0000000008000862        0x2 
+ .text._ZN6kernel4TaskC2EPmmPFvmEmmbPKc
+                0x0000000008000864       0xbc src/main.o
+                0x0000000008000864                kernel::Task::Task(unsigned long*, unsigned long, void (*)(unsigned long), unsigned long, unsigned long, bool, char const*)
+                0x0000000008000864                kernel::Task::Task(unsigned long*, unsigned long, void (*)(unsigned long), unsigned long, unsigned long, bool, char const*)
+ .text._ZNUlmE_4_FUNEm
+                0x0000000008000920       0x44 src/main.o
+ .text.startup.main
+                0x0000000008000964       0x20 src/main.o
+                0x0000000008000964                main
+ .text._ZN4core4Core14supervisorCallILN6kernel11ServiceCall9SvcNumberE10EvmEET0_T1_
+                0x0000000008000984        0xe src/main.o
+                0x0000000008000984                void core::Core::supervisorCall<(kernel::ServiceCall::SvcNumber)10, void, unsigned long>(unsigned long)
+ *fill*         0x0000000008000992        0x2 
+ .text.startup._GLOBAL__sub_I_led
+                0x0000000008000994       0x9c src/main.o
+ .text._ZN6kernel4Task12sleepCompareEPS0_S1_
+                0x0000000008000a30       0x38 src/yggdrasil/kernel/Event.o
+                0x0000000008000a30                kernel::Task::sleepCompare(kernel::Task*, kernel::Task*)
+ .text._ZN6kernel4Task15priorityCompareEPS0_S1_
+                0x0000000008000a68       0x18 src/yggdrasil/kernel/Event.o
+                0x0000000008000a68                kernel::Task::priorityCompare(kernel::Task*, kernel::Task*)
+ .text._ZN6kernel5Event17kernelSignalEventEPS0_
+                0x0000000008000a80       0x3c src/yggdrasil/kernel/Event.o
+                0x0000000008000a80                kernel::Event::kernelSignalEvent(kernel::Event*)
+ .text._ZN6kernel5Event15kernelWaitEventEPS0_m
+                0x0000000008000abc      0x14c src/yggdrasil/kernel/Event.o
+                0x0000000008000abc                kernel::Event::kernelWaitEvent(kernel::Event*, unsigned long)
+ .text._ZN6kernel5Event8stopWaitEPNS_4TaskE
+                0x0000000008000c08       0x50 src/yggdrasil/kernel/Event.o
+                0x0000000008000c08                kernel::Event::stopWait(kernel::Task*)
+ .text._ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E
+                0x0000000008000c58       0xae src/yggdrasil/kernel/Event.o
+                0x0000000008000c58                framework::DualLinkedList<kernel::Task, kernel::ReadyList>::insert(kernel::Task*, signed char (*)(kernel::Task*, kernel::Task*))
+ *fill*         0x0000000008000d06        0x2 
+ .text.startup._GLOBAL__sub_I__ZN6kernel5Event17kernelSignalEventEPS0_
+                0x0000000008000d08      0x108 src/yggdrasil/kernel/Event.o
+ .text._ZN6kernel5Mutex15kernelLockMutexEPS0_m
+                0x0000000008000e10      0x200 src/yggdrasil/kernel/Mutex.o
+                0x0000000008000e10                kernel::Mutex::kernelLockMutex(kernel::Mutex*, unsigned long)
+ .text._ZN6kernel5Mutex18kernelReleaseMutexEPS0_
+                0x0000000008001010       0x58 src/yggdrasil/kernel/Mutex.o
+                0x0000000008001010                kernel::Mutex::kernelReleaseMutex(kernel::Mutex*)
+ .text.startup._GLOBAL__sub_I__ZN6kernel5Mutex4lockEm
+                0x0000000008001068      0x108 src/yggdrasil/kernel/Mutex.o
+ .text._ZN6kernel4Task15setStackPointerEPm
+                0x0000000008001170        0x4 src/yggdrasil/kernel/Scheduler.o
+                0x0000000008001170                kernel::Task::setStackPointer(unsigned long*)
+ .text._ZN6kernel9Scheduler11setupKernelEh
+                0x0000000008001174        0xc src/yggdrasil/kernel/Scheduler.o
+                0x0000000008001174                kernel::Scheduler::setupKernel(unsigned char)
+ .text._ZN6kernel9Scheduler11startKernelEv
+                0x0000000008001180       0x6c src/yggdrasil/kernel/Scheduler.o
+                0x0000000008001180                kernel::Scheduler::startKernel()
+ .text._ZN6kernel9Scheduler22installKernelInterruptEv
+                0x00000000080011ec       0x94 src/yggdrasil/kernel/Scheduler.o
+                0x00000000080011ec                kernel::Scheduler::installKernelInterrupt()
+ .text._ZN6kernel9Scheduler14startFirstTaskEv
+                0x0000000008001280       0x38 src/yggdrasil/kernel/Scheduler.o
+                0x0000000008001280                kernel::Scheduler::startFirstTask()
+ .text._ZN6kernel9Scheduler9startTaskERNS_4TaskE
+                0x00000000080012b8       0xe8 src/yggdrasil/kernel/Scheduler.o
+                0x00000000080012b8                kernel::Scheduler::startTask(kernel::Task&)
+ .text._ZN6kernel9Scheduler8scheduleENS0_17changeTaskTriggerE
+                0x00000000080013a0       0x74 src/yggdrasil/kernel/Scheduler.o
+                0x00000000080013a0                kernel::Scheduler::schedule(kernel::Scheduler::changeTaskTrigger)
+ .text._ZN6kernel9Scheduler8stopTaskERNS_4TaskE
+                0x0000000008001414       0xec src/yggdrasil/kernel/Scheduler.o
+                0x0000000008001414                kernel::Scheduler::stopTask(kernel::Task&)
+ .text._ZN6kernel9Scheduler5sleepEm
+                0x0000000008001500       0x78 src/yggdrasil/kernel/Scheduler.o
+                0x0000000008001500                kernel::Scheduler::sleep(unsigned long)
+ .text._ZN6kernel9Scheduler9setPendSvENS0_17changeTaskTriggerE
+                0x0000000008001578        0xc src/yggdrasil/kernel/Scheduler.o
+                0x0000000008001578                kernel::Scheduler::setPendSv(kernel::Scheduler::changeTaskTrigger)
+ .text._ZN6kernel9Scheduler10taskSwitchEPm
+                0x0000000008001584       0x6c src/yggdrasil/kernel/Scheduler.o
+                0x0000000008001584                kernel::Scheduler::taskSwitch(unsigned long*)
+ .text._ZN6kernel9Scheduler15systemTimerTickEv
+                0x00000000080015f0       0xc8 src/yggdrasil/kernel/Scheduler.o
+                0x00000000080015f0                kernel::Scheduler::systemTimerTick()
+ .text._ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm
+                0x00000000080016b8      0x170 src/yggdrasil/kernel/Scheduler.o
+                0x00000000080016b8                kernel::Scheduler::supervisorCall(kernel::ServiceCall::SvcNumber, unsigned long*)
+ .text._ZN4core4Core14supervisorCallILN6kernel11ServiceCall9SvcNumberE0EvEET0_v
+                0x0000000008001828        0xe src/yggdrasil/kernel/Scheduler.o
+                0x0000000008001828                void core::Core::supervisorCall<(kernel::ServiceCall::SvcNumber)0, void>()
+ .text._ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE8getFirstEv
+                0x0000000008001836       0x22 src/yggdrasil/kernel/Scheduler.o
+                0x0000000008001836                framework::DualLinkedList<kernel::Task, kernel::ReadyList>::getFirst()
+ .text._ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E
+                0x0000000008001858       0xae src/yggdrasil/kernel/Scheduler.o
+                0x0000000008001858                framework::DualLinkedList<kernel::Task, kernel::SleepingList>::insert(kernel::Task*, signed char (*)(kernel::Task*, kernel::Task*))
+ *fill*         0x0000000008001906        0x2 
+ .text.startup._GLOBAL__sub_I__ZN6kernel9Scheduler18s_schedulerStartedE
+                0x0000000008001908      0x108 src/yggdrasil/kernel/Scheduler.o
+ .text._ZN6kernel4Task5startEv
+                0x0000000008001a10       0x1c src/yggdrasil/kernel/Task.o
+                0x0000000008001a10                kernel::Task::start()
+ .text._ZN6kernel4Task4stopEv
+                0x0000000008001a2c        0x4 src/yggdrasil/kernel/Task.o
+                0x0000000008001a2c                kernel::Task::stop()
+ .text._ZN6kernel4Task12taskFinishedEv
+                0x0000000008001a30        0x2 src/yggdrasil/kernel/Task.o
+                0x0000000008001a30                kernel::Task::taskFinished()
+ .text._ZN4core4Core14supervisorCallILN6kernel11ServiceCall9SvcNumberE8EbPNS2_4TaskEEET0_T1_
+                0x0000000008001a32        0xe src/yggdrasil/kernel/Task.o
+                0x0000000008001a32                bool core::Core::supervisorCall<(kernel::ServiceCall::SvcNumber)8, bool, kernel::Task*>(kernel::Task*)
+ .text.startup._GLOBAL__sub_I__ZN6kernel4Task13startTaskStubE
+                0x0000000008001a40      0x108 src/yggdrasil/kernel/Task.o
+ .text.__libc_init_array
+                0x0000000008001b48       0x48 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-init.o)
+                0x0000000008001b48                __libc_init_array
+ *(.glue_7)
+ .glue_7        0x0000000008001b90        0x0 linker stubs
+ *(.glue_7t)
+ .glue_7t       0x0000000008001b90        0x0 linker stubs
+ *(.eh_frame)
+ .eh_frame      0x0000000008001b90        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtbegin.o
+ *(.init)
+ .init          0x0000000008001b90        0x4 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crti.o
+                0x0000000008001b90                _init
+ .init          0x0000000008001b94        0x8 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtn.o
+ *(.fini)
+ .fini          0x0000000008001b9c        0x4 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crti.o
+                0x0000000008001b9c                _fini
+ .fini          0x0000000008001ba0        0x8 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtn.o
+                0x0000000008001ba8                . = ALIGN (0x4)
+                0x0000000008001ba8                _etext = .
+
+.vfp11_veneer   0x0000000008001ba8        0x0
+ .vfp11_veneer  0x0000000008001ba8        0x0 linker stubs
+
+.v4_bx          0x0000000008001ba8        0x0
+ .v4_bx         0x0000000008001ba8        0x0 linker stubs
+
+.iplt           0x0000000008001ba8        0x0
+ .iplt          0x0000000008001ba8        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtbegin.o
+
+.rodata         0x0000000008001ba8       0xbc
+                0x0000000008001ba8                . = ALIGN (0x4)
+ *(.rodata)
+ .rodata        0x0000000008001ba8        0x5 src/core/Core.o
+ .rodata        0x0000000008001bad        0xd src/main.o
+ .rodata        0x0000000008001bba        0x5 src/yggdrasil/kernel/Event.o
+ .rodata        0x0000000008001bbf        0x5 src/yggdrasil/kernel/Mutex.o
+ .rodata        0x0000000008001bc4        0x5 src/yggdrasil/kernel/Scheduler.o
+ .rodata        0x0000000008001bc9        0x5 src/yggdrasil/kernel/Task.o
+ *(.rodata*)
+ *fill*         0x0000000008001bce        0x2 
+ .rodata._ZTVN6kernel13TaskWithStackILm128EEE
+                0x0000000008001bd0       0x10 src/core/Core.o
+                0x0000000008001bd0                vtable for kernel::TaskWithStack<128ul>
+ .rodata._ZTVN14implementation7vectors20DynamicVectorManagerE
+                0x0000000008001be0       0x4c src/core/Core.o
+                0x0000000008001be0                vtable for implementation::vectors::DynamicVectorManager
+ .rodata._ZTVN4core7drivers6ClocksE
+                0x0000000008001c2c       0x14 src/core/drivers/Clocks.o
+                0x0000000008001c2c                vtable for core::drivers::Clocks
+ .rodata._ZTVN6kernel13TaskWithStackILm256EEE
+                0x0000000008001c40       0x10 src/main.o
+                0x0000000008001c40                vtable for kernel::TaskWithStack<256ul>
+ .rodata._ZN4core4Core19supervisorIrqNumberE
+                0x0000000008001c50        0x2 src/yggdrasil/kernel/Scheduler.o
+                0x0000000008001c50                core::Core::supervisorIrqNumber
+ .rodata._ZN4core4Core19taskSwitchIrqNumberE
+                0x0000000008001c52        0x2 src/yggdrasil/kernel/Scheduler.o
+                0x0000000008001c52                core::Core::taskSwitchIrqNumber
+ .rodata._ZTVN6kernel4TaskE
+                0x0000000008001c54       0x10 src/yggdrasil/kernel/Task.o
+                0x0000000008001c54                vtable for kernel::Task
+                0x0000000008001c64                . = ALIGN (0x4)
+
+.rel.dyn        0x0000000008001c64        0x0
+ .rel.iplt      0x0000000008001c64        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtbegin.o
+
+.ARM.extab      0x0000000008001c64        0x0
+                0x0000000008001c64                . = ALIGN (0x4)
+ *(.ARM.extab* .gnu.linkonce.armextab.*)
+                0x0000000008001c64                . = ALIGN (0x4)
+
+.ARM            0x0000000008001c64        0x0
+                0x0000000008001c64                . = ALIGN (0x4)
+                0x0000000008001c64                __exidx_start = .
+ *(.ARM.exidx*)
+                0x0000000008001c64                __exidx_end = .
+                0x0000000008001c64                . = ALIGN (0x4)
+
+.preinit_array  0x0000000008001c64        0x0
+                0x0000000008001c64                . = ALIGN (0x4)
+                0x0000000008001c64                PROVIDE (__preinit_array_start = .)
+ *(.preinit_array*)
+                0x0000000008001c64                PROVIDE (__preinit_array_end = .)
+                0x0000000008001c64                . = ALIGN (0x4)
+
+.init_array     0x0000000008001c64       0x1c
+                0x0000000008001c64                . = ALIGN (0x4)
+                0x0000000008001c64                PROVIDE (__init_array_start = .)
+ *(SORT_BY_NAME(.init_array.*))
+ *(.init_array*)
+ .init_array    0x0000000008001c64        0x4 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtbegin.o
+ .init_array    0x0000000008001c68        0x4 src/core/Core.o
+ .init_array    0x0000000008001c6c        0x4 src/main.o
+ .init_array    0x0000000008001c70        0x4 src/yggdrasil/kernel/Event.o
+ .init_array    0x0000000008001c74        0x4 src/yggdrasil/kernel/Mutex.o
+ .init_array    0x0000000008001c78        0x4 src/yggdrasil/kernel/Scheduler.o
+ .init_array    0x0000000008001c7c        0x4 src/yggdrasil/kernel/Task.o
+                0x0000000008001c80                PROVIDE (__init_array_end = .)
+                0x0000000008001c80                . = ALIGN (0x4)
+
+.fini_array     0x0000000008001c80        0x4
+                0x0000000008001c80                . = ALIGN (0x4)
+                [!provide]                        PROVIDE (__fini_array_start = .)
+ *(SORT_BY_NAME(.fini_array.*))
+ *(.fini_array*)
+ .fini_array    0x0000000008001c80        0x4 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtbegin.o
+                [!provide]                        PROVIDE (__fini_array_end = .)
+                0x0000000008001c84                . = ALIGN (0x4)
+                0x0000000008001c84                _sidata = LOADADDR (.data)
+
+.data           0x0000000020000000       0x1c load address 0x0000000008001c84
+                0x0000000020000000                . = ALIGN (0x4)
+                0x0000000020000000                _sdata = .
+ *(.data)
+ *(.data*)
+ .data._ZN4core7drivers6Clocks10s_instanceE
+                0x0000000020000000        0x4 src/core/drivers/Clocks.o
+                0x0000000020000000                core::drivers::Clocks::s_instance
+ .data._ZN4core7drivers6Clocks8s_clocksE
+                0x0000000020000004       0x10 src/core/drivers/Clocks.o
+                0x0000000020000004                core::drivers::Clocks::s_clocks
+ .data._ZN6kernel9Scheduler13s_sysTickFreqE
+                0x0000000020000014        0x4 src/yggdrasil/kernel/Scheduler.o
+                0x0000000020000014                kernel::Scheduler::s_sysTickFreq
+ .data._ZN6kernel9Scheduler9s_triggerE
+                0x0000000020000018        0x4 src/yggdrasil/kernel/Scheduler.o
+                0x0000000020000018                kernel::Scheduler::s_trigger
+ *(.RamFunc)
+ *(.RamFunc*)
+                0x000000002000001c                . = ALIGN (0x4)
+                0x000000002000001c                _edata = .
+
+.igot.plt       0x000000002000001c        0x0 load address 0x0000000008001ca0
+ .igot.plt      0x000000002000001c        0x0 c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtbegin.o
+                0x000000002000001c                . = ALIGN (0x4)
+
+.bss            0x0000000020000200      0xc94 load address 0x0000000008001ca0
+                0x0000000020000200                _sbss = .
+                0x0000000020000200                __bss_start__ = _sbss
+ *(.bss)
+ .bss           0x0000000020000200       0x1c c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtbegin.o
+ *(.bss*)
+ .bss._ZN4core4Core10coreClocksE
+                0x000000002000021c        0x4 src/core/Core.o
+                0x000000002000021c                core::Core::coreClocks
+ .bss._ZN4core4Core8idleTaskE
+                0x0000000020000220      0x254 src/core/Core.o
+                0x0000000020000220                core::Core::idleTask
+ .bss._ZGVN4core4Core10coreClocksE
+                0x0000000020000474        0x4 src/core/Core.o
+                0x0000000020000474                guard variable for core::Core::coreClocks
+ .bss._ZGVN4core4Core8idleTaskE
+                0x0000000020000478        0x4 src/core/Core.o
+                0x0000000020000478                guard variable for core::Core::idleTask
+ *fill*         0x000000002000047c      0x184 
+ .bss._ZN4core4Core13vectorManagerE
+                0x0000000020000600      0x400 src/core/Core.o
+                0x0000000020000600                core::Core::vectorManager
+ .bss._ZN4core7drivers6Clocks13s_initializedE
+                0x0000000020000a00        0x1 src/core/drivers/Clocks.o
+                0x0000000020000a00                core::drivers::Clocks::s_initialized
+ *fill*         0x0000000020000a01        0x3 
+ .bss.led       0x0000000020000a04      0x454 src/main.o
+                0x0000000020000a04                led
+ .bss._ZN6kernel9Scheduler10s_sleepingE
+                0x0000000020000e58        0x8 src/yggdrasil/kernel/Scheduler.o
+                0x0000000020000e58                kernel::Scheduler::s_sleeping
+ .bss._ZN6kernel9Scheduler11s_lockLevelE
+                0x0000000020000e60        0x1 src/yggdrasil/kernel/Scheduler.o
+                0x0000000020000e60                kernel::Scheduler::s_lockLevel
+ *fill*         0x0000000020000e61        0x3 
+ .bss._ZN6kernel9Scheduler12s_activeTaskE
+                0x0000000020000e64        0x4 src/yggdrasil/kernel/Scheduler.o
+                0x0000000020000e64                kernel::Scheduler::s_activeTask
+ .bss._ZN6kernel9Scheduler13s_taskToStackE
+                0x0000000020000e68        0x4 src/yggdrasil/kernel/Scheduler.o
+                0x0000000020000e68                kernel::Scheduler::s_taskToStack
+ .bss._ZN6kernel9Scheduler16s_isKernelLockedE
+                0x0000000020000e6c        0x1 src/yggdrasil/kernel/Scheduler.o
+                0x0000000020000e6c                kernel::Scheduler::s_isKernelLocked
+ .bss._ZN6kernel9Scheduler16s_systemPriorityE
+                0x0000000020000e6d        0x1 src/yggdrasil/kernel/Scheduler.o
+                0x0000000020000e6d                kernel::Scheduler::s_systemPriority
+ .bss._ZN6kernel9Scheduler18s_schedulerStartedE
+                0x0000000020000e6e        0x1 src/yggdrasil/kernel/Scheduler.o
+                0x0000000020000e6e                kernel::Scheduler::s_schedulerStarted
+ .bss._ZN6kernel9Scheduler20s_interruptInstalledE
+                0x0000000020000e6f        0x1 src/yggdrasil/kernel/Scheduler.o
+                0x0000000020000e6f                kernel::Scheduler::s_interruptInstalled
+ .bss._ZN6kernel9Scheduler7s_readyE
+                0x0000000020000e70        0x8 src/yggdrasil/kernel/Scheduler.o
+                0x0000000020000e70                kernel::Scheduler::s_ready
+ .bss._ZN6kernel9Scheduler7s_ticksE
+                0x0000000020000e78        0x8 src/yggdrasil/kernel/Scheduler.o
+                0x0000000020000e78                kernel::Scheduler::s_ticks
+ .bss._ZN6kernel9Scheduler9s_startedE
+                0x0000000020000e80        0x8 src/yggdrasil/kernel/Scheduler.o
+                0x0000000020000e80                kernel::Scheduler::s_started
+ .bss._ZN6kernel9Scheduler9s_waitingE
+                0x0000000020000e88        0x8 src/yggdrasil/kernel/Scheduler.o
+                0x0000000020000e88                kernel::Scheduler::s_waiting
+ .bss._ZN6kernel9Scheduler9scheduledE
+                0x0000000020000e90        0x1 src/yggdrasil/kernel/Scheduler.o
+                0x0000000020000e90                kernel::Scheduler::scheduled
+ *(COMMON)
+                0x0000000020000e94                . = ALIGN (0x4)
+ *fill*         0x0000000020000e91        0x3 
+                0x0000000020000e94                _ebss = .
+                0x0000000020000e94                __bss_end__ = _ebss
+
+._user_heap_stack
+                0x0000000020000e94      0x604 load address 0x0000000008001ca0
+                0x0000000020000e98                . = ALIGN (0x8)
+ *fill*         0x0000000020000e94        0x4 
+                [!provide]                        PROVIDE (end = .)
+                [!provide]                        PROVIDE (_end = .)
+                0x0000000020001098                . = (. + _Min_Heap_Size)
+ *fill*         0x0000000020000e98      0x200 
+                0x0000000020001498                . = (. + _Min_Stack_Size)
+ *fill*         0x0000000020001098      0x400 
+                0x0000000020001498                . = ALIGN (0x8)
+
+/DISCARD/
+ libc.a(*)
+ libm.a(*)
+ libgcc.a(*)
+
+.ARM.attributes
+                0x0000000000000000       0x2a
+ *(.ARM.attributes)
+ .ARM.attributes
+                0x0000000000000000       0x1e c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crti.o
+ .ARM.attributes
+                0x000000000000001e       0x2e c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtbegin.o
+ .ARM.attributes
+                0x000000000000004c       0x33 src/core/Core.o
+ .ARM.attributes
+                0x000000000000007f       0x33 src/core/drivers/Clocks.o
+ .ARM.attributes
+                0x00000000000000b2       0x21 src/core/vendor/startup_stm32wl55jcix.o
+ .ARM.attributes
+                0x00000000000000d3       0x33 src/main.o
+ .ARM.attributes
+                0x0000000000000106       0x33 src/yggdrasil/kernel/Event.o
+ .ARM.attributes
+                0x0000000000000139       0x33 src/yggdrasil/kernel/Mutex.o
+ .ARM.attributes
+                0x000000000000016c       0x33 src/yggdrasil/kernel/Scheduler.o
+ .ARM.attributes
+                0x000000000000019f       0x33 src/yggdrasil/kernel/Task.o
+ .ARM.attributes
+                0x00000000000001d2       0x2e c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-init.o)
+ .ARM.attributes
+                0x0000000000000200       0x1e c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/thumb/v7e-m/crtn.o
+OUTPUT(test_yggdrasil_CM4.elf elf32-littlearm)
+
+.comment        0x0000000000000000       0x7b
+ .comment       0x0000000000000000       0x7b src/core/Core.o
+                                         0x7c (size before relaxing)
+ .comment       0x000000000000007b       0x7c src/core/drivers/Clocks.o
+ .comment       0x000000000000007b       0x7c src/main.o
+ .comment       0x000000000000007b       0x7c src/yggdrasil/kernel/Event.o
+ .comment       0x000000000000007b       0x7c src/yggdrasil/kernel/Mutex.o
+ .comment       0x000000000000007b       0x7c src/yggdrasil/kernel/Scheduler.o
+ .comment       0x000000000000007b       0x7c src/yggdrasil/kernel/Task.o
+
+.debug_line     0x0000000000000000       0x8c
+ .debug_line    0x0000000000000000       0x8c src/core/vendor/startup_stm32wl55jcix.o
+
+.debug_info     0x0000000000000000       0x22
+ .debug_info    0x0000000000000000       0x22 src/core/vendor/startup_stm32wl55jcix.o
+
+.debug_abbrev   0x0000000000000000       0x12
+ .debug_abbrev  0x0000000000000000       0x12 src/core/vendor/startup_stm32wl55jcix.o
+
+.debug_aranges  0x0000000000000000       0x28
+ .debug_aranges
+                0x0000000000000000       0x28 src/core/vendor/startup_stm32wl55jcix.o
+
+.debug_str      0x0000000000000000       0x7e
+ .debug_str     0x0000000000000000       0x7e src/core/vendor/startup_stm32wl55jcix.o
+
+.debug_ranges   0x0000000000000000       0x20
+ .debug_ranges  0x0000000000000000       0x20 src/core/vendor/startup_stm32wl55jcix.o
+
+.debug_frame    0x0000000000000000       0x2c
+ .debug_frame   0x0000000000000000       0x2c c:/st/stm32cubeide_1.4.0/stm32cubeide/plugins/com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.7-2018-q2-update.win32_1.5.0.202011040924/tools/bin/../lib/gcc/arm-none-eabi/7.3.1/../../../../arm-none-eabi/lib/thumb/v7e-m\libc_nano.a(lib_a-init.o)

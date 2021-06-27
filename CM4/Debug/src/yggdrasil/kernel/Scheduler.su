@@ -1,0 +1,30 @@
+Task.hpp:202:17:static int8_t kernel::Task::sleepCompare(kernel::Task*, kernel::Task*)	0	static
+Task.hpp:224:17:static int8_t kernel::Task::priorityCompare(kernel::Task*, kernel::Task*)	0	static
+Task.hpp:253:15:void kernel::Task::setStackPointer(uint32_t*)	0	static
+IVectorsManager.hpp:49:14:constexpr core::interfaces::Irq::operator int16_t()	0	static
+core_cm4.h:1679:22:void __NVIC_EnableIRQ(IRQn_Type)	0	static,ignoring_inline_asm
+core_cm4.h:1809:22:void __NVIC_SetPriority(IRQn_Type, uint32_t)	0	static
+DynamicVectorManager.hpp:53:47:virtual void implementation::vectors::DynamicVectorManager::registerHandler(core::interfaces::Irq, core::interfaces::IVectorManager::IrqHandler, const char*)	32	static
+DynamicVectorManager.hpp:74:47:virtual void implementation::vectors::DynamicVectorManager::irqPriority(core::interfaces::Irq, uint8_t, uint8_t)	24	static
+DynamicVectorManager.hpp:93:47:virtual void implementation::vectors::DynamicVectorManager::irqPriority(core::interfaces::Irq, uint8_t)	24	static
+DynamicVectorManager.hpp:126:54:virtual void implementation::vectors::DynamicVectorManager::enableIrq(core::interfaces::Irq)	16	static
+Scheduler.cpp:59:7:static void kernel::Scheduler::setupKernel(uint8_t)	0	static
+Scheduler.cpp:65:7:static bool kernel::Scheduler::startKernel()	8	static
+Scheduler.cpp:83:7:static bool kernel::Scheduler::installKernelInterrupt()	16	static
+Scheduler.cpp:108:51:static bool kernel::Scheduler::startFirstTask()	8	static
+Scheduler.cpp:157:7:static bool kernel::Scheduler::startTask(kernel::Task&)	40	static
+Scheduler.cpp:171:7:static bool kernel::Scheduler::schedule(kernel::Scheduler::changeTaskTrigger)	16	static
+Scheduler.cpp:205:7:static bool kernel::Scheduler::stopTask(kernel::Task&)	8	static
+Scheduler.cpp:219:39:static bool kernel::Scheduler::sleep(uint32_t)	24	static
+Scheduler.cpp:238:7:static void kernel::Scheduler::setPendSv(kernel::Scheduler::changeTaskTrigger)	0	static
+Scheduler.cpp:244:7:static bool kernel::Scheduler::inThreadMode()	8	static
+Scheduler.cpp:249:53:static volatile uint32_t* kernel::Scheduler::taskSwitch(uint32_t*)	16	static
+Scheduler.cpp:274:7:static void kernel::Scheduler::systemTimerTick()	32	static
+Scheduler.cpp:299:7:static void kernel::Scheduler::supervisorCall(kernel::ServiceCall::SvcNumber, uint32_t*)	16	static,ignoring_inline_asm
+Scheduler.cpp:377:11:static uint64_t kernel::Scheduler::getTicks()	0	static
+Core.hpp:91:41:static Return core::Core::supervisorCall() [with kernel::ServiceCall::SvcNumber Number = (kernel::ServiceCall::SvcNumber)0; Return = void]	0	static,ignoring_inline_asm
+DualLinkedList.hpp:287:20:UnderLyingType* framework::DualLinkedList<UnderLyingType, List>::getFirst() [with UnderLyingType = kernel::Task; List = kernel::ReadyList]	0	static
+DualLinkedList.hpp:139:9:void framework::DualLinkedList<UnderLyingType, List>::insert(UnderLyingType*, framework::DualLinkedList<UnderLyingType, List>::Comparator) [with UnderLyingType = kernel::Task; List = kernel::ReadyList]	32	static
+DualLinkedList.hpp:139:9:void framework::DualLinkedList<UnderLyingType, List>::insert(UnderLyingType*, framework::DualLinkedList<UnderLyingType, List>::Comparator) [with UnderLyingType = kernel::Task; List = kernel::SleepingList]	32	static
+Scheduler.cpp:381:1:cpp)	16	static
+Hooks.hpp:29:15:static void kernel::Hooks::onTaskStartExec(kernel::Task*)	0	static

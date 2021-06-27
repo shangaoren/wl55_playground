@@ -1,0 +1,38 @@
+core_cm4.h:1679:22:void __NVIC_EnableIRQ(IRQn_Type)	0	static,ignoring_inline_asm
+core_cm4.h:1809:22:void __NVIC_SetPriority(IRQn_Type, uint32_t)	0	static
+IVectorsManager.hpp:49:14:constexpr core::interfaces::Irq::operator int16_t()	0	static
+DynamicVectorManager.hpp:53:47:virtual void implementation::vectors::DynamicVectorManager::registerHandler(core::interfaces::Irq, core::interfaces::IVectorManager::IrqHandler, const char*)	32	static
+DynamicVectorManager.hpp:58:15:virtual void implementation::vectors::DynamicVectorManager::unregisterHandler(core::interfaces::Irq)	0	static
+DynamicVectorManager.hpp:63:19:virtual uint32_t implementation::vectors::DynamicVectorManager::tableBaseAddress()	0	static
+DynamicVectorManager.hpp:69:21:virtual void (* implementation::vectors::DynamicVectorManager::getIsr(uint32_t))()	0	static
+DynamicVectorManager.hpp:74:47:virtual void implementation::vectors::DynamicVectorManager::irqPriority(core::interfaces::Irq, uint8_t, uint8_t)	24	static
+DynamicVectorManager.hpp:93:47:virtual void implementation::vectors::DynamicVectorManager::irqPriority(core::interfaces::Irq, uint8_t)	24	static
+DynamicVectorManager.hpp:104:15:virtual void implementation::vectors::DynamicVectorManager::subPriorityBits(uint8_t)	0	static
+DynamicVectorManager.hpp:120:18:virtual uint8_t implementation::vectors::DynamicVectorManager::subPriorityBits()	0	static
+DynamicVectorManager.hpp:126:54:virtual void implementation::vectors::DynamicVectorManager::enableIrq(core::interfaces::Irq)	16	static
+DynamicVectorManager.hpp:132:22:virtual void implementation::vectors::DynamicVectorManager::disableIrq(core::interfaces::Irq)	0	static,ignoring_inline_asm
+DynamicVectorManager.hpp:137:22:virtual void implementation::vectors::DynamicVectorManager::clearIrq(core::interfaces::Irq)	0	static
+DynamicVectorManager.hpp:143:25:virtual uint8_t implementation::vectors::DynamicVectorManager::lockInterruptsHigherThan(uint8_t)	0	static,ignoring_inline_asm
+DynamicVectorManager.hpp:153:22:virtual void implementation::vectors::DynamicVectorManager::unlockInterruptsHigherThan(uint8_t)	0	static,ignoring_inline_asm
+DynamicVectorManager.hpp:163:54:virtual void implementation::vectors::DynamicVectorManager::lockAllInterrupts()	16	static,ignoring_inline_asm
+DynamicVectorManager.hpp:170:54:virtual void implementation::vectors::DynamicVectorManager::enableAllInterrupts()	16	static,ignoring_inline_asm
+DynamicVectorManager.hpp:178:22:virtual bool implementation::vectors::DynamicVectorManager::isInstalled()	0	static
+DynamicVectorManager.hpp:183:22:virtual bool implementation::vectors::DynamicVectorManager::installVectorManager()	0	static
+DynamicVectorManager.hpp:205:14:static void implementation::vectors::DynamicVectorManager::defaultIsrHandler()	0	static,ignoring_inline_asm
+Clocks.hpp:15:7:virtual bool core::drivers::Clocks::init()	0	static
+Core.cpp:14:7:static void core::Core::initCore()	8	static
+Core.cpp:24:7:static void core::Core::enterStopMode()	0	static
+Core.cpp:30:7:static void core::Core::exitFromStopMode()	8	static
+Core.cpp:47:39:static void core::Core::restoreTask(volatile uint32_t*)	0	static,ignoring_inline_asm
+Core.cpp:59:7:static void core::Core::idleFunc(uint32_t)	0	static,ignoring_inline_asm
+Core.cpp:67:7:static void core::Core::contextSwitchTrigger()	0	static
+Core.cpp:73:46:static void core::Core::contextSwitchHandler()	0	static,ignoring_inline_asm
+Core.cpp:106:7:static void core::Core::systemTimerHandler()	0	static
+Core.cpp:112:46:static void core::Core::supervisorCallHandler()	0	static,ignoring_inline_asm
+Core.cpp:130:7:static void core::Core::hardFault()	8	static,ignoring_inline_asm
+Core.cpp:146:7:static void core::Core::nmi()	0	static,ignoring_inline_asm
+Core.cpp:151:7:static void core::Core::usageFault()	0	static,ignoring_inline_asm
+Core.cpp:156:7:static void core::Core::busFault()	0	static,ignoring_inline_asm
+Core.cpp:161:11:static uint32_t core::Core::getCurrentInterruptNumber()	0	static,ignoring_inline_asm
+Core.cpp:166:7:static void core::Core::HardFaultAnalyzer(uint32_t*)	40	static,ignoring_inline_asm
+Core.cpp:241:1:cpp)	16	static

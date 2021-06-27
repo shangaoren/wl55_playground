@@ -1,0 +1,5 @@
+Task.hpp:131:13:constexpr kernel::Task::Task(uint32_t*, uint32_t, kernel::Task::TaskFunc, uint32_t, uint32_t, bool, const char*)	20	static
+main.cpp:5:42:static void<lambda(uint32_t)>::_FUN(uint32_t)	8	static
+main.cpp:17:5:int main()	8	static
+Core.hpp:101:40:static Return core::Core::supervisorCall(Param0) [with kernel::ServiceCall::SvcNumber Number = (kernel::ServiceCall::SvcNumber)10; Return = void; Param0 = long unsigned int]	0	static,ignoring_inline_asm
+main.cpp:22:1:cpp)	24	static

@@ -1,0 +1,4 @@
+Systick.hpp:16:17:virtual void core::drivers::Systick::initSystemTimer(uint32_t, uint32_t)	0	static
+Systick.hpp:23:17:virtual void core::drivers::Systick::startSystemTimer()	0	static
+Systick.hpp:28:17:virtual void core::drivers::Systick::stopSystemTimer()	0	static
+Systick.hpp:33:34:virtual core::interfaces::Irq core::drivers::Systick::getIrq()	0	static

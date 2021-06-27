@@ -1,0 +1,3 @@
+Clocks.hpp:62:19:virtual uint32_t core::drivers::Clocks::getSystemCoreFrequency()	0	static
+Clocks.hpp:67:19:virtual uint32_t core::drivers::Clocks::getClockFrequency(uint32_t)	0	static
+Clocks.hpp:15:7:virtual bool core::drivers::Clocks::init()	0	static

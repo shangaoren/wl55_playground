@@ -1,0 +1,2908 @@
+
+test_yggdrasil_CM4.elf:     file format elf32-littlearm
+
+Sections:
+Idx Name          Size      VMA       LMA       File off  Algn
+  0 .isr_vector   00000138  08000000  08000000  00010000  2**0
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  1 .text         00001a70  08000138  08000138  00010138  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, CODE
+  2 .rodata       000000bc  08001ba8  08001ba8  00011ba8  2**2
+                  CONTENTS, ALLOC, LOAD, READONLY, DATA
+  3 .ARM.extab    00000000  08001c64  08001c64  0002001c  2**0
+                  CONTENTS
+  4 .ARM          00000000  08001c64  08001c64  0002001c  2**0
+                  CONTENTS
+  5 .preinit_array 00000000  08001c64  08001c64  0002001c  2**0
+                  CONTENTS, ALLOC, LOAD, DATA
+  6 .init_array   0000001c  08001c64  08001c64  00011c64  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  7 .fini_array   00000004  08001c80  08001c80  00011c80  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  8 .data         0000001c  20000000  08001c84  00020000  2**2
+                  CONTENTS, ALLOC, LOAD, DATA
+  9 .bss          00000c94  20000200  08001ca0  00020200  2**9
+                  ALLOC
+ 10 ._user_heap_stack 00000604  20000e94  08001ca0  00020e94  2**0
+                  ALLOC
+ 11 .ARM.attributes 0000002a  00000000  00000000  0002001c  2**0
+                  CONTENTS, READONLY
+ 12 .comment      0000007b  00000000  00000000  00020046  2**0
+                  CONTENTS, READONLY
+ 13 .debug_line   0000008c  00000000  00000000  000200c1  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 14 .debug_info   00000022  00000000  00000000  0002014d  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 15 .debug_abbrev 00000012  00000000  00000000  0002016f  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 16 .debug_aranges 00000028  00000000  00000000  00020188  2**3
+                  CONTENTS, READONLY, DEBUGGING
+ 17 .debug_str    0000007e  00000000  00000000  000201b0  2**0
+                  CONTENTS, READONLY, DEBUGGING
+ 18 .debug_ranges 00000020  00000000  00000000  00020230  2**3
+                  CONTENTS, READONLY, DEBUGGING
+ 19 .debug_frame  0000002c  00000000  00000000  00020250  2**2
+                  CONTENTS, READONLY, DEBUGGING
+
+Disassembly of section .text:
+
+08000138 <__do_global_dtors_aux>:
+ 8000138:	b510      	push	{r4, lr}
+ 800013a:	4c05      	ldr	r4, [pc, #20]	; (8000150 <__do_global_dtors_aux+0x18>)
+ 800013c:	7823      	ldrb	r3, [r4, #0]
+ 800013e:	b933      	cbnz	r3, 800014e <__do_global_dtors_aux+0x16>
+ 8000140:	4b04      	ldr	r3, [pc, #16]	; (8000154 <__do_global_dtors_aux+0x1c>)
+ 8000142:	b113      	cbz	r3, 800014a <__do_global_dtors_aux+0x12>
+ 8000144:	4804      	ldr	r0, [pc, #16]	; (8000158 <__do_global_dtors_aux+0x20>)
+ 8000146:	f3af 8000 	nop.w
+ 800014a:	2301      	movs	r3, #1
+ 800014c:	7023      	strb	r3, [r4, #0]
+ 800014e:	bd10      	pop	{r4, pc}
+ 8000150:	20000200 	.word	0x20000200
+ 8000154:	00000000 	.word	0x00000000
+ 8000158:	08001b90 	.word	0x08001b90
+
+0800015c <frame_dummy>:
+ 800015c:	b508      	push	{r3, lr}
+ 800015e:	4b03      	ldr	r3, [pc, #12]	; (800016c <frame_dummy+0x10>)
+ 8000160:	b11b      	cbz	r3, 800016a <frame_dummy+0xe>
+ 8000162:	4903      	ldr	r1, [pc, #12]	; (8000170 <frame_dummy+0x14>)
+ 8000164:	4803      	ldr	r0, [pc, #12]	; (8000174 <frame_dummy+0x18>)
+ 8000166:	f3af 8000 	nop.w
+ 800016a:	bd08      	pop	{r3, pc}
+ 800016c:	00000000 	.word	0x00000000
+ 8000170:	20000204 	.word	0x20000204
+ 8000174:	08001b90 	.word	0x08001b90
+
+08000178 <__NVIC_EnableIRQ>:
+ 8000178:	2800      	cmp	r0, #0
+ 800017a:	db08      	blt.n	800018e <__NVIC_EnableIRQ+0x16>
+ 800017c:	2301      	movs	r3, #1
+ 800017e:	0942      	lsrs	r2, r0, #5
+ 8000180:	f000 001f 	and.w	r0, r0, #31
+ 8000184:	fa03 f000 	lsl.w	r0, r3, r0
+ 8000188:	4b01      	ldr	r3, [pc, #4]	; (8000190 <__NVIC_EnableIRQ+0x18>)
+ 800018a:	f843 0022 	str.w	r0, [r3, r2, lsl #2]
+ 800018e:	4770      	bx	lr
+ 8000190:	e000e100 	.word	0xe000e100
+
+08000194 <__NVIC_SetPriority>:
+ 8000194:	2800      	cmp	r0, #0
+ 8000196:	bfa8      	it	ge
+ 8000198:	f100 4060 	addge.w	r0, r0, #3758096384	; 0xe0000000
+ 800019c:	ea4f 1101 	mov.w	r1, r1, lsl #4
+ 80001a0:	bfae      	itee	ge
+ 80001a2:	f500 4061 	addge.w	r0, r0, #57600	; 0xe100
+ 80001a6:	f000 000f 	andlt.w	r0, r0, #15
+ 80001aa:	4b03      	ldrlt	r3, [pc, #12]	; (80001b8 <__NVIC_SetPriority+0x24>)
+ 80001ac:	b2c9      	uxtb	r1, r1
+ 80001ae:	bfac      	ite	ge
+ 80001b0:	f880 1300 	strbge.w	r1, [r0, #768]	; 0x300
+ 80001b4:	5419      	strblt	r1, [r3, r0]
+ 80001b6:	4770      	bx	lr
+ 80001b8:	e000ed14 	.word	0xe000ed14
+
+080001bc <_ZN4core10interfaces3IrqcvsEv>:
+ 80001bc:	f9b0 0000 	ldrsh.w	r0, [r0]
+ 80001c0:	4770      	bx	lr
+
+080001c2 <_ZN14implementation7vectors20DynamicVectorManager15registerHandlerEN4core10interfaces3IrqEPFvvEPKc>:
+ 80001c2:	b590      	push	{r4, r7, lr}
+ 80001c4:	b085      	sub	sp, #20
+ 80001c6:	af00      	add	r7, sp, #0
+ 80001c8:	60f8      	str	r0, [r7, #12]
+ 80001ca:	8139      	strh	r1, [r7, #8]
+ 80001cc:	607a      	str	r2, [r7, #4]
+ 80001ce:	603b      	str	r3, [r7, #0]
+ 80001d0:	687c      	ldr	r4, [r7, #4]
+ 80001d2:	f107 0308 	add.w	r3, r7, #8
+ 80001d6:	4618      	mov	r0, r3
+ 80001d8:	f7ff fff0 	bl	80001bc <_ZN4core10interfaces3IrqcvsEv>
+ 80001dc:	4603      	mov	r3, r0
+ 80001de:	f103 0210 	add.w	r2, r3, #16
+ 80001e2:	68fb      	ldr	r3, [r7, #12]
+ 80001e4:	3280      	adds	r2, #128	; 0x80
+ 80001e6:	f843 4022 	str.w	r4, [r3, r2, lsl #2]
+ 80001ea:	bf00      	nop
+ 80001ec:	3714      	adds	r7, #20
+ 80001ee:	46bd      	mov	sp, r7
+ 80001f0:	bd90      	pop	{r4, r7, pc}
+
+080001f2 <_ZN14implementation7vectors20DynamicVectorManager17unregisterHandlerEN4core10interfaces3IrqE>:
+ 80001f2:	b209      	sxth	r1, r1
+ 80001f4:	3190      	adds	r1, #144	; 0x90
+ 80001f6:	f8d0 3334 	ldr.w	r3, [r0, #820]	; 0x334
+ 80001fa:	f840 3021 	str.w	r3, [r0, r1, lsl #2]
+ 80001fe:	4770      	bx	lr
+
+08000200 <_ZN14implementation7vectors20DynamicVectorManager16tableBaseAddressEv>:
+ 8000200:	f500 7000 	add.w	r0, r0, #512	; 0x200
+ 8000204:	4770      	bx	lr
+
+08000206 <_ZN14implementation7vectors20DynamicVectorManager6getIsrEm>:
+ 8000206:	3180      	adds	r1, #128	; 0x80
+ 8000208:	f850 0021 	ldr.w	r0, [r0, r1, lsl #2]
+ 800020c:	4770      	bx	lr
+
+0800020e <_ZN14implementation7vectors20DynamicVectorManager11irqPriorityEN4core10interfaces3IrqEhh>:
+ 800020e:	b580      	push	{r7, lr}
+ 8000210:	b084      	sub	sp, #16
+ 8000212:	af00      	add	r7, sp, #0
+ 8000214:	6078      	str	r0, [r7, #4]
+ 8000216:	8039      	strh	r1, [r7, #0]
+ 8000218:	4611      	mov	r1, r2
+ 800021a:	461a      	mov	r2, r3
+ 800021c:	460b      	mov	r3, r1
+ 800021e:	70fb      	strb	r3, [r7, #3]
+ 8000220:	4613      	mov	r3, r2
+ 8000222:	70bb      	strb	r3, [r7, #2]
+ 8000224:	687b      	ldr	r3, [r7, #4]
+ 8000226:	791b      	ldrb	r3, [r3, #4]
+ 8000228:	f1c3 0308 	rsb	r3, r3, #8
+ 800022c:	22ff      	movs	r2, #255	; 0xff
+ 800022e:	fa42 f303 	asr.w	r3, r2, r3
+ 8000232:	73fb      	strb	r3, [r7, #15]
+ 8000234:	687b      	ldr	r3, [r7, #4]
+ 8000236:	795b      	ldrb	r3, [r3, #5]
+ 8000238:	f1c3 0308 	rsb	r3, r3, #8
+ 800023c:	22ff      	movs	r2, #255	; 0xff
+ 800023e:	fa42 f303 	asr.w	r3, r2, r3
+ 8000242:	73bb      	strb	r3, [r7, #14]
+ 8000244:	78bb      	ldrb	r3, [r7, #2]
+ 8000246:	7bfa      	ldrb	r2, [r7, #15]
+ 8000248:	429a      	cmp	r2, r3
+ 800024a:	d201      	bcs.n	8000250 <_ZN14implementation7vectors20DynamicVectorManager11irqPriorityEN4core10interfaces3IrqEhh+0x42>
+ 800024c:	7bfb      	ldrb	r3, [r7, #15]
+ 800024e:	70bb      	strb	r3, [r7, #2]
+ 8000250:	78fa      	ldrb	r2, [r7, #3]
+ 8000252:	7bbb      	ldrb	r3, [r7, #14]
+ 8000254:	429a      	cmp	r2, r3
+ 8000256:	d901      	bls.n	800025c <_ZN14implementation7vectors20DynamicVectorManager11irqPriorityEN4core10interfaces3IrqEhh+0x4e>
+ 8000258:	7bbb      	ldrb	r3, [r7, #14]
+ 800025a:	70fb      	strb	r3, [r7, #3]
+ 800025c:	78fb      	ldrb	r3, [r7, #3]
+ 800025e:	687a      	ldr	r2, [r7, #4]
+ 8000260:	7912      	ldrb	r2, [r2, #4]
+ 8000262:	4093      	lsls	r3, r2
+ 8000264:	b2da      	uxtb	r2, r3
+ 8000266:	78bb      	ldrb	r3, [r7, #2]
+ 8000268:	4413      	add	r3, r2
+ 800026a:	737b      	strb	r3, [r7, #13]
+ 800026c:	463b      	mov	r3, r7
+ 800026e:	4618      	mov	r0, r3
+ 8000270:	f7ff ffa4 	bl	80001bc <_ZN4core10interfaces3IrqcvsEv>
+ 8000274:	4603      	mov	r3, r0
+ 8000276:	b25b      	sxtb	r3, r3
+ 8000278:	7b7a      	ldrb	r2, [r7, #13]
+ 800027a:	4611      	mov	r1, r2
+ 800027c:	4618      	mov	r0, r3
+ 800027e:	f7ff ff89 	bl	8000194 <__NVIC_SetPriority>
+ 8000282:	bf00      	nop
+ 8000284:	3710      	adds	r7, #16
+ 8000286:	46bd      	mov	sp, r7
+ 8000288:	bd80      	pop	{r7, pc}
+
+0800028a <_ZN14implementation7vectors20DynamicVectorManager11irqPriorityEN4core10interfaces3IrqEh>:
+ 800028a:	b580      	push	{r7, lr}
+ 800028c:	b084      	sub	sp, #16
+ 800028e:	af00      	add	r7, sp, #0
+ 8000290:	6078      	str	r0, [r7, #4]
+ 8000292:	8039      	strh	r1, [r7, #0]
+ 8000294:	4613      	mov	r3, r2
+ 8000296:	70fb      	strb	r3, [r7, #3]
+ 8000298:	230f      	movs	r3, #15
+ 800029a:	73fb      	strb	r3, [r7, #15]
+ 800029c:	78fa      	ldrb	r2, [r7, #3]
+ 800029e:	7bfb      	ldrb	r3, [r7, #15]
+ 80002a0:	429a      	cmp	r2, r3
+ 80002a2:	d901      	bls.n	80002a8 <_ZN14implementation7vectors20DynamicVectorManager11irqPriorityEN4core10interfaces3IrqEh+0x1e>
+ 80002a4:	7bfb      	ldrb	r3, [r7, #15]
+ 80002a6:	70fb      	strb	r3, [r7, #3]
+ 80002a8:	463b      	mov	r3, r7
+ 80002aa:	4618      	mov	r0, r3
+ 80002ac:	f7ff ff86 	bl	80001bc <_ZN4core10interfaces3IrqcvsEv>
+ 80002b0:	4603      	mov	r3, r0
+ 80002b2:	b25b      	sxtb	r3, r3
+ 80002b4:	78fa      	ldrb	r2, [r7, #3]
+ 80002b6:	4611      	mov	r1, r2
+ 80002b8:	4618      	mov	r0, r3
+ 80002ba:	f7ff ff6b 	bl	8000194 <__NVIC_SetPriority>
+ 80002be:	bf00      	nop
+ 80002c0:	3710      	adds	r7, #16
+ 80002c2:	46bd      	mov	sp, r7
+ 80002c4:	bd80      	pop	{r7, pc}
+	...
+
+080002c8 <_ZN14implementation7vectors20DynamicVectorManager15subPriorityBitsEh>:
+ 80002c8:	2904      	cmp	r1, #4
+ 80002ca:	bf28      	it	cs
+ 80002cc:	2104      	movcs	r1, #4
+ 80002ce:	f1c1 0304 	rsb	r3, r1, #4
+ 80002d2:	4a08      	ldr	r2, [pc, #32]	; (80002f4 <_ZN14implementation7vectors20DynamicVectorManager15subPriorityBitsEh+0x2c>)
+ 80002d4:	7101      	strb	r1, [r0, #4]
+ 80002d6:	7143      	strb	r3, [r0, #5]
+ 80002d8:	68d3      	ldr	r3, [r2, #12]
+ 80002da:	f423 63e0 	bic.w	r3, r3, #1792	; 0x700
+ 80002de:	041b      	lsls	r3, r3, #16
+ 80002e0:	0c1b      	lsrs	r3, r3, #16
+ 80002e2:	f043 63bf 	orr.w	r3, r3, #100139008	; 0x5f80000
+ 80002e6:	f443 3300 	orr.w	r3, r3, #131072	; 0x20000
+ 80002ea:	ea43 2301 	orr.w	r3, r3, r1, lsl #8
+ 80002ee:	60d3      	str	r3, [r2, #12]
+ 80002f0:	4770      	bx	lr
+ 80002f2:	bf00      	nop
+ 80002f4:	e000ed00 	.word	0xe000ed00
+
+080002f8 <_ZN14implementation7vectors20DynamicVectorManager15subPriorityBitsEv>:
+ 80002f8:	4b01      	ldr	r3, [pc, #4]	; (8000300 <_ZN14implementation7vectors20DynamicVectorManager15subPriorityBitsEv+0x8>)
+ 80002fa:	2000      	movs	r0, #0
+ 80002fc:	68db      	ldr	r3, [r3, #12]
+ 80002fe:	4770      	bx	lr
+ 8000300:	e000ed00 	.word	0xe000ed00
+
+08000304 <_ZN14implementation7vectors20DynamicVectorManager9enableIrqEN4core10interfaces3IrqE>:
+ 8000304:	b580      	push	{r7, lr}
+ 8000306:	b082      	sub	sp, #8
+ 8000308:	af00      	add	r7, sp, #0
+ 800030a:	6078      	str	r0, [r7, #4]
+ 800030c:	8039      	strh	r1, [r7, #0]
+ 800030e:	463b      	mov	r3, r7
+ 8000310:	4618      	mov	r0, r3
+ 8000312:	f7ff ff53 	bl	80001bc <_ZN4core10interfaces3IrqcvsEv>
+ 8000316:	4603      	mov	r3, r0
+ 8000318:	b25b      	sxtb	r3, r3
+ 800031a:	4618      	mov	r0, r3
+ 800031c:	f7ff ff2c 	bl	8000178 <__NVIC_EnableIRQ>
+ 8000320:	bf00      	nop
+ 8000322:	3708      	adds	r7, #8
+ 8000324:	46bd      	mov	sp, r7
+ 8000326:	bd80      	pop	{r7, pc}
+
+08000328 <_ZN14implementation7vectors20DynamicVectorManager10disableIrqEN4core10interfaces3IrqE>:
+ 8000328:	b209      	sxth	r1, r1
+ 800032a:	b24b      	sxtb	r3, r1
+ 800032c:	2b00      	cmp	r3, #0
+ 800032e:	db0d      	blt.n	800034c <_ZN14implementation7vectors20DynamicVectorManager10disableIrqEN4core10interfaces3IrqE+0x24>
+ 8000330:	2201      	movs	r2, #1
+ 8000332:	095b      	lsrs	r3, r3, #5
+ 8000334:	f001 011f 	and.w	r1, r1, #31
+ 8000338:	fa02 f101 	lsl.w	r1, r2, r1
+ 800033c:	3320      	adds	r3, #32
+ 800033e:	4a04      	ldr	r2, [pc, #16]	; (8000350 <_ZN14implementation7vectors20DynamicVectorManager10disableIrqEN4core10interfaces3IrqE+0x28>)
+ 8000340:	f842 1023 	str.w	r1, [r2, r3, lsl #2]
+ 8000344:	f3bf 8f4f 	dsb	sy
+ 8000348:	f3bf 8f6f 	isb	sy
+ 800034c:	4770      	bx	lr
+ 800034e:	bf00      	nop
+ 8000350:	e000e100 	.word	0xe000e100
+
+08000354 <_ZN14implementation7vectors20DynamicVectorManager8clearIrqEN4core10interfaces3IrqE>:
+ 8000354:	b209      	sxth	r1, r1
+ 8000356:	b24b      	sxtb	r3, r1
+ 8000358:	2b00      	cmp	r3, #0
+ 800035a:	db09      	blt.n	8000370 <_ZN14implementation7vectors20DynamicVectorManager8clearIrqEN4core10interfaces3IrqE+0x1c>
+ 800035c:	2201      	movs	r2, #1
+ 800035e:	095b      	lsrs	r3, r3, #5
+ 8000360:	f001 011f 	and.w	r1, r1, #31
+ 8000364:	fa02 f101 	lsl.w	r1, r2, r1
+ 8000368:	3360      	adds	r3, #96	; 0x60
+ 800036a:	4a02      	ldr	r2, [pc, #8]	; (8000374 <_ZN14implementation7vectors20DynamicVectorManager8clearIrqEN4core10interfaces3IrqE+0x20>)
+ 800036c:	f842 1023 	str.w	r1, [r2, r3, lsl #2]
+ 8000370:	4770      	bx	lr
+ 8000372:	bf00      	nop
+ 8000374:	e000e100 	.word	0xe000e100
+
+08000378 <_ZN14implementation7vectors20DynamicVectorManager24lockInterruptsHigherThanEh>:
+ 8000378:	f3ef 8011 	mrs	r0, BASEPRI
+ 800037c:	f3c0 1007 	ubfx	r0, r0, #4, #8
+ 8000380:	4288      	cmp	r0, r1
+ 8000382:	d800      	bhi.n	8000386 <_ZN14implementation7vectors20DynamicVectorManager24lockInterruptsHigherThanEh+0xe>
+ 8000384:	b910      	cbnz	r0, 800038c <_ZN14implementation7vectors20DynamicVectorManager24lockInterruptsHigherThanEh+0x14>
+ 8000386:	0109      	lsls	r1, r1, #4
+ 8000388:	f381 8811 	msr	BASEPRI, r1
+ 800038c:	4770      	bx	lr
+
+0800038e <_ZN14implementation7vectors20DynamicVectorManager26unlockInterruptsHigherThanEh>:
+ 800038e:	f3ef 8311 	mrs	r3, BASEPRI
+ 8000392:	f3c3 1307 	ubfx	r3, r3, #4, #8
+ 8000396:	428b      	cmp	r3, r1
+ 8000398:	d300      	bcc.n	800039c <_ZN14implementation7vectors20DynamicVectorManager26unlockInterruptsHigherThanEh+0xe>
+ 800039a:	b911      	cbnz	r1, 80003a2 <_ZN14implementation7vectors20DynamicVectorManager26unlockInterruptsHigherThanEh+0x14>
+ 800039c:	0109      	lsls	r1, r1, #4
+ 800039e:	f381 8811 	msr	BASEPRI, r1
+ 80003a2:	f3bf 8f6f 	isb	sy
+ 80003a6:	4770      	bx	lr
+
+080003a8 <_ZN14implementation7vectors20DynamicVectorManager17lockAllInterruptsEv>:
+ 80003a8:	b480      	push	{r7}
+ 80003aa:	b083      	sub	sp, #12
+ 80003ac:	af00      	add	r7, sp, #0
+ 80003ae:	6078      	str	r0, [r7, #4]
+ 80003b0:	2301      	movs	r3, #1
+ 80003b2:	f383 8810 	msr	PRIMASK, r3
+ 80003b6:	bf00      	nop
+ 80003b8:	370c      	adds	r7, #12
+ 80003ba:	46bd      	mov	sp, r7
+ 80003bc:	bc80      	pop	{r7}
+ 80003be:	4770      	bx	lr
+
+080003c0 <_ZN14implementation7vectors20DynamicVectorManager19enableAllInterruptsEv>:
+ 80003c0:	b480      	push	{r7}
+ 80003c2:	b083      	sub	sp, #12
+ 80003c4:	af00      	add	r7, sp, #0
+ 80003c6:	6078      	str	r0, [r7, #4]
+ 80003c8:	2300      	movs	r3, #0
+ 80003ca:	f383 8810 	msr	PRIMASK, r3
+ 80003ce:	f3bf 8f6f 	isb	sy
+ 80003d2:	bf00      	nop
+ 80003d4:	370c      	adds	r7, #12
+ 80003d6:	46bd      	mov	sp, r7
+ 80003d8:	bc80      	pop	{r7}
+ 80003da:	4770      	bx	lr
+
+080003dc <_ZN14implementation7vectors20DynamicVectorManager11isInstalledEv>:
+ 80003dc:	4b03      	ldr	r3, [pc, #12]	; (80003ec <_ZN14implementation7vectors20DynamicVectorManager11isInstalledEv+0x10>)
+ 80003de:	689b      	ldr	r3, [r3, #8]
+ 80003e0:	f500 7000 	add.w	r0, r0, #512	; 0x200
+ 80003e4:	1ac3      	subs	r3, r0, r3
+ 80003e6:	4258      	negs	r0, r3
+ 80003e8:	4158      	adcs	r0, r3
+ 80003ea:	4770      	bx	lr
+ 80003ec:	e000ed00 	.word	0xe000ed00
+
+080003f0 <_ZN14implementation7vectors20DynamicVectorManager20installVectorManagerEv>:
+ 80003f0:	4b02      	ldr	r3, [pc, #8]	; (80003fc <_ZN14implementation7vectors20DynamicVectorManager20installVectorManagerEv+0xc>)
+ 80003f2:	f500 7000 	add.w	r0, r0, #512	; 0x200
+ 80003f6:	6098      	str	r0, [r3, #8]
+ 80003f8:	2001      	movs	r0, #1
+ 80003fa:	4770      	bx	lr
+ 80003fc:	e000ed00 	.word	0xe000ed00
+
+08000400 <_ZN14implementation7vectors20DynamicVectorManager17defaultIsrHandlerEv>:
+ 8000400:	4b02      	ldr	r3, [pc, #8]	; (800040c <_ZN14implementation7vectors20DynamicVectorManager17defaultIsrHandlerEv+0xc>)
+ 8000402:	685b      	ldr	r3, [r3, #4]
+ 8000404:	be00      	bkpt	0x0000
+ 8000406:	f3ef 8305 	mrs	r3, IPSR
+ 800040a:	4770      	bx	lr
+ 800040c:	e000ed00 	.word	0xe000ed00
+
+08000410 <_ZN4core7drivers6Clocks4initEv>:
+ 8000410:	492f      	ldr	r1, [pc, #188]	; (80004d0 <_ZN4core7drivers6Clocks4initEv+0xc0>)
+ 8000412:	780b      	ldrb	r3, [r1, #0]
+ 8000414:	2b00      	cmp	r3, #0
+ 8000416:	d159      	bne.n	80004cc <_ZN4core7drivers6Clocks4initEv+0xbc>
+ 8000418:	4b2e      	ldr	r3, [pc, #184]	; (80004d4 <_ZN4core7drivers6Clocks4initEv+0xc4>)
+ 800041a:	681a      	ldr	r2, [r3, #0]
+ 800041c:	f022 0207 	bic.w	r2, r2, #7
+ 8000420:	f042 0202 	orr.w	r2, r2, #2
+ 8000424:	601a      	str	r2, [r3, #0]
+ 8000426:	681a      	ldr	r2, [r3, #0]
+ 8000428:	f002 0207 	and.w	r2, r2, #7
+ 800042c:	2a02      	cmp	r2, #2
+ 800042e:	d1fa      	bne.n	8000426 <_ZN4core7drivers6Clocks4initEv+0x16>
+ 8000430:	4a29      	ldr	r2, [pc, #164]	; (80004d8 <_ZN4core7drivers6Clocks4initEv+0xc8>)
+ 8000432:	6813      	ldr	r3, [r2, #0]
+ 8000434:	f423 63c0 	bic.w	r3, r3, #1536	; 0x600
+ 8000438:	f443 7300 	orr.w	r3, r3, #512	; 0x200
+ 800043c:	6013      	str	r3, [r2, #0]
+ 800043e:	f04f 43b0 	mov.w	r3, #1476395008	; 0x58000000
+ 8000442:	681a      	ldr	r2, [r3, #0]
+ 8000444:	f442 7280 	orr.w	r2, r2, #256	; 0x100
+ 8000448:	601a      	str	r2, [r3, #0]
+ 800044a:	681a      	ldr	r2, [r3, #0]
+ 800044c:	0550      	lsls	r0, r2, #21
+ 800044e:	d5fc      	bpl.n	800044a <_ZN4core7drivers6Clocks4initEv+0x3a>
+ 8000450:	685a      	ldr	r2, [r3, #4]
+ 8000452:	4822      	ldr	r0, [pc, #136]	; (80004dc <_ZN4core7drivers6Clocks4initEv+0xcc>)
+ 8000454:	f022 42fe 	bic.w	r2, r2, #2130706432	; 0x7f000000
+ 8000458:	f042 4280 	orr.w	r2, r2, #1073741824	; 0x40000000
+ 800045c:	605a      	str	r2, [r3, #4]
+ 800045e:	68da      	ldr	r2, [r3, #12]
+ 8000460:	4010      	ands	r0, r2
+ 8000462:	4a1f      	ldr	r2, [pc, #124]	; (80004e0 <_ZN4core7drivers6Clocks4initEv+0xd0>)
+ 8000464:	4302      	orrs	r2, r0
+ 8000466:	60da      	str	r2, [r3, #12]
+ 8000468:	68da      	ldr	r2, [r3, #12]
+ 800046a:	f042 5280 	orr.w	r2, r2, #268435456	; 0x10000000
+ 800046e:	60da      	str	r2, [r3, #12]
+ 8000470:	681a      	ldr	r2, [r3, #0]
+ 8000472:	f042 7280 	orr.w	r2, r2, #16777216	; 0x1000000
+ 8000476:	601a      	str	r2, [r3, #0]
+ 8000478:	f04f 43b0 	mov.w	r3, #1476395008	; 0x58000000
+ 800047c:	681a      	ldr	r2, [r3, #0]
+ 800047e:	0192      	lsls	r2, r2, #6
+ 8000480:	d4fc      	bmi.n	800047c <_ZN4core7drivers6Clocks4initEv+0x6c>
+ 8000482:	689a      	ldr	r2, [r3, #8]
+ 8000484:	f042 0203 	orr.w	r2, r2, #3
+ 8000488:	609a      	str	r2, [r3, #8]
+ 800048a:	f04f 43b0 	mov.w	r3, #1476395008	; 0x58000000
+ 800048e:	689a      	ldr	r2, [r3, #8]
+ 8000490:	f002 020c 	and.w	r2, r2, #12
+ 8000494:	2a0c      	cmp	r2, #12
+ 8000496:	d1fa      	bne.n	800048e <_ZN4core7drivers6Clocks4initEv+0x7e>
+ 8000498:	689a      	ldr	r2, [r3, #8]
+ 800049a:	f022 02f0 	bic.w	r2, r2, #240	; 0xf0
+ 800049e:	609a      	str	r2, [r3, #8]
+ 80004a0:	f8d3 2108 	ldr.w	r2, [r3, #264]	; 0x108
+ 80004a4:	f022 020f 	bic.w	r2, r2, #15
+ 80004a8:	f8c3 2108 	str.w	r2, [r3, #264]	; 0x108
+ 80004ac:	689a      	ldr	r2, [r3, #8]
+ 80004ae:	f422 62e0 	bic.w	r2, r2, #1792	; 0x700
+ 80004b2:	609a      	str	r2, [r3, #8]
+ 80004b4:	689a      	ldr	r2, [r3, #8]
+ 80004b6:	f422 5260 	bic.w	r2, r2, #14336	; 0x3800
+ 80004ba:	609a      	str	r2, [r3, #8]
+ 80004bc:	4b09      	ldr	r3, [pc, #36]	; (80004e4 <_ZN4core7drivers6Clocks4initEv+0xd4>)
+ 80004be:	4a0a      	ldr	r2, [pc, #40]	; (80004e8 <_ZN4core7drivers6Clocks4initEv+0xd8>)
+ 80004c0:	e9c3 2200 	strd	r2, r2, [r3]
+ 80004c4:	e9c3 2202 	strd	r2, r2, [r3, #8]
+ 80004c8:	2301      	movs	r3, #1
+ 80004ca:	700b      	strb	r3, [r1, #0]
+ 80004cc:	2001      	movs	r0, #1
+ 80004ce:	4770      	bx	lr
+ 80004d0:	20000a00 	.word	0x20000a00
+ 80004d4:	58004000 	.word	0x58004000
+ 80004d8:	58000400 	.word	0x58000400
+ 80004dc:	0fff808c 	.word	0x0fff808c
+ 80004e0:	70000c02 	.word	0x70000c02
+ 80004e4:	20000004 	.word	0x20000004
+ 80004e8:	02dc6c00 	.word	0x02dc6c00
+
+080004ec <_ZN4core4Core8initCoreEv>:
+ 80004ec:	b510      	push	{r4, lr}
+ 80004ee:	4c11      	ldr	r4, [pc, #68]	; (8000534 <_ZN4core4Core8initCoreEv+0x48>)
+ 80004f0:	4a11      	ldr	r2, [pc, #68]	; (8000538 <_ZN4core4Core8initCoreEv+0x4c>)
+ 80004f2:	4620      	mov	r0, r4
+ 80004f4:	2300      	movs	r3, #0
+ 80004f6:	f64f 71f3 	movw	r1, #65523	; 0xfff3
+ 80004fa:	f7ff fe62 	bl	80001c2 <_ZN14implementation7vectors20DynamicVectorManager15registerHandlerEN4core10interfaces3IrqEPFvvEPKc>
+ 80004fe:	4620      	mov	r0, r4
+ 8000500:	2300      	movs	r3, #0
+ 8000502:	4a0e      	ldr	r2, [pc, #56]	; (800053c <_ZN4core4Core8initCoreEv+0x50>)
+ 8000504:	f64f 71f2 	movw	r1, #65522	; 0xfff2
+ 8000508:	f7ff fe5b 	bl	80001c2 <_ZN14implementation7vectors20DynamicVectorManager15registerHandlerEN4core10interfaces3IrqEPFvvEPKc>
+ 800050c:	4620      	mov	r0, r4
+ 800050e:	2300      	movs	r3, #0
+ 8000510:	4a0b      	ldr	r2, [pc, #44]	; (8000540 <_ZN4core4Core8initCoreEv+0x54>)
+ 8000512:	f64f 71f6 	movw	r1, #65526	; 0xfff6
+ 8000516:	f7ff fe54 	bl	80001c2 <_ZN14implementation7vectors20DynamicVectorManager15registerHandlerEN4core10interfaces3IrqEPFvvEPKc>
+ 800051a:	4620      	mov	r0, r4
+ 800051c:	2300      	movs	r3, #0
+ 800051e:	4a09      	ldr	r2, [pc, #36]	; (8000544 <_ZN4core4Core8initCoreEv+0x58>)
+ 8000520:	f64f 71f5 	movw	r1, #65525	; 0xfff5
+ 8000524:	f7ff fe4d 	bl	80001c2 <_ZN14implementation7vectors20DynamicVectorManager15registerHandlerEN4core10interfaces3IrqEPFvvEPKc>
+ 8000528:	4b07      	ldr	r3, [pc, #28]	; (8000548 <_ZN4core4Core8initCoreEv+0x5c>)
+ 800052a:	6818      	ldr	r0, [r3, #0]
+ 800052c:	f7ff ff70 	bl	8000410 <_ZN4core7drivers6Clocks4initEv>
+ 8000530:	bd10      	pop	{r4, pc}
+ 8000532:	bf00      	nop
+ 8000534:	20000600 	.word	0x20000600
+ 8000538:	080005cf 	.word	0x080005cf
+ 800053c:	080005eb 	.word	0x080005eb
+ 8000540:	080005ef 	.word	0x080005ef
+ 8000544:	080005f3 	.word	0x080005f3
+ 8000548:	2000021c 	.word	0x2000021c
+
+0800054c <_ZN4core4Core11restoreTaskEPVm>:
+ 800054c:	4600      	mov	r0, r0
+ 800054e:	e8b0 0ffc 	ldmia.w	r0!, {r2, r3, r4, r5, r6, r7, r8, r9, sl, fp}
+ 8000552:	4696      	mov	lr, r2
+ 8000554:	f383 8814 	msr	CONTROL, r3
+ 8000558:	f3bf 8f6f 	isb	sy
+ 800055c:	f380 8809 	msr	PSP, r0
+ 8000560:	4770      	bx	lr
+ 8000562:	4770      	bx	lr
+
+08000564 <_ZN4core4Core8idleFuncEm>:
+ 8000564:	bf30      	wfi
+ 8000566:	e7fd      	b.n	8000564 <_ZN4core4Core8idleFuncEm>
+
+08000568 <_ZN4core4Core20contextSwitchTriggerEv>:
+ 8000568:	4a02      	ldr	r2, [pc, #8]	; (8000574 <_ZN4core4Core20contextSwitchTriggerEv+0xc>)
+ 800056a:	6853      	ldr	r3, [r2, #4]
+ 800056c:	f043 5380 	orr.w	r3, r3, #268435456	; 0x10000000
+ 8000570:	6053      	str	r3, [r2, #4]
+ 8000572:	4770      	bx	lr
+ 8000574:	e000ed00 	.word	0xe000ed00
+
+08000578 <_ZN4core4Core20contextSwitchHandlerEv>:
+ 8000578:	b672      	cpsid	i
+ 800057a:	f3bf 8f4f 	dsb	sy
+ 800057e:	f3ef 8009 	mrs	r0, PSP
+ 8000582:	4672      	mov	r2, lr
+ 8000584:	f3ef 8314 	mrs	r3, CONTROL
+ 8000588:	e920 0ffc 	stmdb	r0!, {r2, r3, r4, r5, r6, r7, r8, r9, sl, fp}
+ 800058c:	f000 fffa 	bl	8001584 <_ZN6kernel9Scheduler10taskSwitchEPm>
+ 8000590:	e8b0 0ffc 	ldmia.w	r0!, {r2, r3, r4, r5, r6, r7, r8, r9, sl, fp}
+ 8000594:	4696      	mov	lr, r2
+ 8000596:	f383 8814 	msr	CONTROL, r3
+ 800059a:	f3bf 8f6f 	isb	sy
+ 800059e:	f380 8809 	msr	PSP, r0
+ 80005a2:	b662      	cpsie	i
+ 80005a4:	f3bf 8f6f 	isb	sy
+ 80005a8:	4770      	bx	lr
+
+080005aa <_ZN4core4Core18systemTimerHandlerEv>:
+ 80005aa:	f001 b821 	b.w	80015f0 <_ZN6kernel9Scheduler15systemTimerTickEv>
+
+080005ae <_ZN4core4Core21supervisorCallHandlerEv>:
+ 80005ae:	f01e 0f04 	tst.w	lr, #4
+ 80005b2:	bf0c      	ite	eq
+ 80005b4:	f3ef 8108 	mrseq	r1, MSP
+ 80005b8:	f3ef 8109 	mrsne	r1, PSP
+ 80005bc:	6988      	ldr	r0, [r1, #24]
+ 80005be:	f810 0c02 	ldrb.w	r0, [r0, #-2]
+ 80005c2:	b500      	push	{lr}
+ 80005c4:	f001 f878 	bl	80016b8 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm>
+ 80005c8:	f85d eb04 	ldr.w	lr, [sp], #4
+ 80005cc:	4770      	bx	lr
+
+080005ce <_ZN4core4Core9hardFaultEv>:
+ 80005ce:	b508      	push	{r3, lr}
+ 80005d0:	f01e 0f04 	tst.w	lr, #4
+ 80005d4:	bf0c      	ite	eq
+ 80005d6:	f3ef 8008 	mrseq	r0, MSP
+ 80005da:	f3ef 8009 	mrsne	r0, PSP
+ 80005de:	4600      	mov	r0, r0
+ 80005e0:	b500      	push	{lr}
+ 80005e2:	f000 f809 	bl	80005f8 <_ZN4core4Core17HardFaultAnalyzerEPm>
+ 80005e6:	bd00      	pop	{pc}
+ 80005e8:	bd08      	pop	{r3, pc}
+
+080005ea <_ZN4core4Core3nmiEv>:
+ 80005ea:	be00      	bkpt	0x0000
+ 80005ec:	4770      	bx	lr
+
+080005ee <_ZN4core4Core10usageFaultEv>:
+ 80005ee:	be00      	bkpt	0x0000
+ 80005f0:	4770      	bx	lr
+
+080005f2 <_ZN4core4Core8busFaultEv>:
+ 80005f2:	be00      	bkpt	0x0000
+ 80005f4:	4770      	bx	lr
+	...
+
+080005f8 <_ZN4core4Core17HardFaultAnalyzerEPm>:
+ 80005f8:	b08a      	sub	sp, #40	; 0x28
+ 80005fa:	6803      	ldr	r3, [r0, #0]
+ 80005fc:	9301      	str	r3, [sp, #4]
+ 80005fe:	6843      	ldr	r3, [r0, #4]
+ 8000600:	9302      	str	r3, [sp, #8]
+ 8000602:	6883      	ldr	r3, [r0, #8]
+ 8000604:	9303      	str	r3, [sp, #12]
+ 8000606:	68c3      	ldr	r3, [r0, #12]
+ 8000608:	9304      	str	r3, [sp, #16]
+ 800060a:	6903      	ldr	r3, [r0, #16]
+ 800060c:	9305      	str	r3, [sp, #20]
+ 800060e:	6943      	ldr	r3, [r0, #20]
+ 8000610:	9306      	str	r3, [sp, #24]
+ 8000612:	6983      	ldr	r3, [r0, #24]
+ 8000614:	9307      	str	r3, [sp, #28]
+ 8000616:	69c3      	ldr	r3, [r0, #28]
+ 8000618:	9308      	str	r3, [sp, #32]
+ 800061a:	6a03      	ldr	r3, [r0, #32]
+ 800061c:	9309      	str	r3, [sp, #36]	; 0x24
+ 800061e:	4b27      	ldr	r3, [pc, #156]	; (80006bc <_ZN4core4Core17HardFaultAnalyzerEPm+0xc4>)
+ 8000620:	6a9a      	ldr	r2, [r3, #40]	; 0x28
+ 8000622:	0612      	lsls	r2, r2, #24
+ 8000624:	d501      	bpl.n	800062a <_ZN4core4Core17HardFaultAnalyzerEPm+0x32>
+ 8000626:	6b5a      	ldr	r2, [r3, #52]	; 0x34
+ 8000628:	be00      	bkpt	0x0000
+ 800062a:	6a9a      	ldr	r2, [r3, #40]	; 0x28
+ 800062c:	06d0      	lsls	r0, r2, #27
+ 800062e:	d500      	bpl.n	8000632 <_ZN4core4Core17HardFaultAnalyzerEPm+0x3a>
+ 8000630:	be00      	bkpt	0x0000
+ 8000632:	6a9b      	ldr	r3, [r3, #40]	; 0x28
+ 8000634:	0719      	lsls	r1, r3, #28
+ 8000636:	d500      	bpl.n	800063a <_ZN4core4Core17HardFaultAnalyzerEPm+0x42>
+ 8000638:	be00      	bkpt	0x0000
+ 800063a:	4b20      	ldr	r3, [pc, #128]	; (80006bc <_ZN4core4Core17HardFaultAnalyzerEPm+0xc4>)
+ 800063c:	6a9a      	ldr	r2, [r3, #40]	; 0x28
+ 800063e:	0792      	lsls	r2, r2, #30
+ 8000640:	d500      	bpl.n	8000644 <_ZN4core4Core17HardFaultAnalyzerEPm+0x4c>
+ 8000642:	be00      	bkpt	0x0000
+ 8000644:	6a9a      	ldr	r2, [r3, #40]	; 0x28
+ 8000646:	07d0      	lsls	r0, r2, #31
+ 8000648:	d500      	bpl.n	800064c <_ZN4core4Core17HardFaultAnalyzerEPm+0x54>
+ 800064a:	be00      	bkpt	0x0000
+ 800064c:	6a9a      	ldr	r2, [r3, #40]	; 0x28
+ 800064e:	0411      	lsls	r1, r2, #16
+ 8000650:	d501      	bpl.n	8000656 <_ZN4core4Core17HardFaultAnalyzerEPm+0x5e>
+ 8000652:	6b9b      	ldr	r3, [r3, #56]	; 0x38
+ 8000654:	be00      	bkpt	0x0000
+ 8000656:	4b19      	ldr	r3, [pc, #100]	; (80006bc <_ZN4core4Core17HardFaultAnalyzerEPm+0xc4>)
+ 8000658:	6a9a      	ldr	r2, [r3, #40]	; 0x28
+ 800065a:	04d2      	lsls	r2, r2, #19
+ 800065c:	d500      	bpl.n	8000660 <_ZN4core4Core17HardFaultAnalyzerEPm+0x68>
+ 800065e:	be00      	bkpt	0x0000
+ 8000660:	6a9a      	ldr	r2, [r3, #40]	; 0x28
+ 8000662:	0510      	lsls	r0, r2, #20
+ 8000664:	d500      	bpl.n	8000668 <_ZN4core4Core17HardFaultAnalyzerEPm+0x70>
+ 8000666:	be00      	bkpt	0x0000
+ 8000668:	6a9b      	ldr	r3, [r3, #40]	; 0x28
+ 800066a:	0559      	lsls	r1, r3, #21
+ 800066c:	d500      	bpl.n	8000670 <_ZN4core4Core17HardFaultAnalyzerEPm+0x78>
+ 800066e:	be00      	bkpt	0x0000
+ 8000670:	4b12      	ldr	r3, [pc, #72]	; (80006bc <_ZN4core4Core17HardFaultAnalyzerEPm+0xc4>)
+ 8000672:	6a9a      	ldr	r2, [r3, #40]	; 0x28
+ 8000674:	0592      	lsls	r2, r2, #22
+ 8000676:	d500      	bpl.n	800067a <_ZN4core4Core17HardFaultAnalyzerEPm+0x82>
+ 8000678:	be00      	bkpt	0x0000
+ 800067a:	6a9a      	ldr	r2, [r3, #40]	; 0x28
+ 800067c:	05d0      	lsls	r0, r2, #23
+ 800067e:	d500      	bpl.n	8000682 <_ZN4core4Core17HardFaultAnalyzerEPm+0x8a>
+ 8000680:	be00      	bkpt	0x0000
+ 8000682:	6a9b      	ldr	r3, [r3, #40]	; 0x28
+ 8000684:	0199      	lsls	r1, r3, #6
+ 8000686:	d500      	bpl.n	800068a <_ZN4core4Core17HardFaultAnalyzerEPm+0x92>
+ 8000688:	be00      	bkpt	0x0000
+ 800068a:	4b0c      	ldr	r3, [pc, #48]	; (80006bc <_ZN4core4Core17HardFaultAnalyzerEPm+0xc4>)
+ 800068c:	6a9a      	ldr	r2, [r3, #40]	; 0x28
+ 800068e:	01d2      	lsls	r2, r2, #7
+ 8000690:	d500      	bpl.n	8000694 <_ZN4core4Core17HardFaultAnalyzerEPm+0x9c>
+ 8000692:	be00      	bkpt	0x0000
+ 8000694:	6a9a      	ldr	r2, [r3, #40]	; 0x28
+ 8000696:	0310      	lsls	r0, r2, #12
+ 8000698:	d500      	bpl.n	800069c <_ZN4core4Core17HardFaultAnalyzerEPm+0xa4>
+ 800069a:	be00      	bkpt	0x0000
+ 800069c:	6a9b      	ldr	r3, [r3, #40]	; 0x28
+ 800069e:	0359      	lsls	r1, r3, #13
+ 80006a0:	d500      	bpl.n	80006a4 <_ZN4core4Core17HardFaultAnalyzerEPm+0xac>
+ 80006a2:	be00      	bkpt	0x0000
+ 80006a4:	4b05      	ldr	r3, [pc, #20]	; (80006bc <_ZN4core4Core17HardFaultAnalyzerEPm+0xc4>)
+ 80006a6:	6a9a      	ldr	r2, [r3, #40]	; 0x28
+ 80006a8:	0392      	lsls	r2, r2, #14
+ 80006aa:	d500      	bpl.n	80006ae <_ZN4core4Core17HardFaultAnalyzerEPm+0xb6>
+ 80006ac:	be00      	bkpt	0x0000
+ 80006ae:	6a9b      	ldr	r3, [r3, #40]	; 0x28
+ 80006b0:	03db      	lsls	r3, r3, #15
+ 80006b2:	d500      	bpl.n	80006b6 <_ZN4core4Core17HardFaultAnalyzerEPm+0xbe>
+ 80006b4:	be00      	bkpt	0x0000
+ 80006b6:	b00a      	add	sp, #40	; 0x28
+ 80006b8:	4770      	bx	lr
+ 80006ba:	bf00      	nop
+ 80006bc:	e000ed00 	.word	0xe000ed00
+
+080006c0 <_GLOBAL__sub_I__ZN4core4Core13vectorManagerE>:
+ 80006c0:	4a41      	ldr	r2, [pc, #260]	; (80007c8 <_GLOBAL__sub_I__ZN4core4Core13vectorManagerE+0x108>)
+ 80006c2:	6813      	ldr	r3, [r2, #0]
+ 80006c4:	3301      	adds	r3, #1
+ 80006c6:	2b01      	cmp	r3, #1
+ 80006c8:	b570      	push	{r4, r5, r6, lr}
+ 80006ca:	6013      	str	r3, [r2, #0]
+ 80006cc:	bf02      	ittt	eq
+ 80006ce:	4b3f      	ldreq	r3, [pc, #252]	; (80007cc <_GLOBAL__sub_I__ZN4core4Core13vectorManagerE+0x10c>)
+ 80006d0:	4a3f      	ldreq	r2, [pc, #252]	; (80007d0 <_GLOBAL__sub_I__ZN4core4Core13vectorManagerE+0x110>)
+ 80006d2:	601a      	streq	r2, [r3, #0]
+ 80006d4:	4b3f      	ldr	r3, [pc, #252]	; (80007d4 <_GLOBAL__sub_I__ZN4core4Core13vectorManagerE+0x114>)
+ 80006d6:	6819      	ldr	r1, [r3, #0]
+ 80006d8:	3101      	adds	r1, #1
+ 80006da:	2901      	cmp	r1, #1
+ 80006dc:	6019      	str	r1, [r3, #0]
+ 80006de:	d160      	bne.n	80007a2 <_GLOBAL__sub_I__ZN4core4Core13vectorManagerE+0xe2>
+ 80006e0:	4b3d      	ldr	r3, [pc, #244]	; (80007d8 <_GLOBAL__sub_I__ZN4core4Core13vectorManagerE+0x118>)
+ 80006e2:	4e3e      	ldr	r6, [pc, #248]	; (80007dc <_GLOBAL__sub_I__ZN4core4Core13vectorManagerE+0x11c>)
+ 80006e4:	f883 1048 	strb.w	r1, [r3, #72]	; 0x48
+ 80006e8:	f503 7002 	add.w	r0, r3, #520	; 0x208
+ 80006ec:	62d8      	str	r0, [r3, #44]	; 0x2c
+ 80006ee:	f103 0054 	add.w	r0, r3, #84	; 0x54
+ 80006f2:	6318      	str	r0, [r3, #48]	; 0x30
+ 80006f4:	2080      	movs	r0, #128	; 0x80
+ 80006f6:	6358      	str	r0, [r3, #52]	; 0x34
+ 80006f8:	4839      	ldr	r0, [pc, #228]	; (80007e0 <_GLOBAL__sub_I__ZN4core4Core13vectorManagerE+0x120>)
+ 80006fa:	6518      	str	r0, [r3, #80]	; 0x50
+ 80006fc:	f64d 64ad 	movw	r4, #57005	; 0xdead
+ 8000700:	f64b 60ef 	movw	r0, #48879	; 0xbeef
+ 8000704:	2200      	movs	r2, #0
+ 8000706:	e9c3 4015 	strd	r4, r0, [r3, #84]	; 0x54
+ 800070a:	e9c3 4017 	strd	r4, r0, [r3, #92]	; 0x5c
+ 800070e:	e9c3 4019 	strd	r4, r0, [r3, #100]	; 0x64
+ 8000712:	e9c3 401b 	strd	r4, r0, [r3, #108]	; 0x6c
+ 8000716:	f04f 7080 	mov.w	r0, #16777216	; 0x1000000
+ 800071a:	639a      	str	r2, [r3, #56]	; 0x38
+ 800071c:	63da      	str	r2, [r3, #60]	; 0x3c
+ 800071e:	f8c3 024c 	str.w	r0, [r3, #588]	; 0x24c
+ 8000722:	4830      	ldr	r0, [pc, #192]	; (80007e4 <_GLOBAL__sub_I__ZN4core4Core13vectorManagerE+0x124>)
+ 8000724:	f8c3 6248 	str.w	r6, [r3, #584]	; 0x248
+ 8000728:	2503      	movs	r5, #3
+ 800072a:	f8c3 0244 	str.w	r0, [r3, #580]	; 0x244
+ 800072e:	2404      	movs	r4, #4
+ 8000730:	2002      	movs	r0, #2
+ 8000732:	e9c3 2201 	strd	r2, r2, [r3, #4]
+ 8000736:	e9c3 2203 	strd	r2, r2, [r3, #12]
+ 800073a:	e9c3 2205 	strd	r2, r2, [r3, #20]
+ 800073e:	e9c3 2207 	strd	r2, r2, [r3, #28]
+ 8000742:	e9c3 2209 	strd	r2, r2, [r3, #36]	; 0x24
+ 8000746:	e9c3 6210 	strd	r6, r2, [r3, #64]	; 0x40
+ 800074a:	f883 2049 	strb.w	r2, [r3, #73]	; 0x49
+ 800074e:	64dd      	str	r5, [r3, #76]	; 0x4c
+ 8000750:	f8c3 4240 	str.w	r4, [r3, #576]	; 0x240
+ 8000754:	f8c3 523c 	str.w	r5, [r3, #572]	; 0x23c
+ 8000758:	f8c3 0238 	str.w	r0, [r3, #568]	; 0x238
+ 800075c:	f8c3 1234 	str.w	r1, [r3, #564]	; 0x234
+ 8000760:	f8c3 2230 	str.w	r2, [r3, #560]	; 0x230
+ 8000764:	220b      	movs	r2, #11
+ 8000766:	f8c3 222c 	str.w	r2, [r3, #556]	; 0x22c
+ 800076a:	220a      	movs	r2, #10
+ 800076c:	f8c3 2228 	str.w	r2, [r3, #552]	; 0x228
+ 8000770:	2209      	movs	r2, #9
+ 8000772:	f8c3 2224 	str.w	r2, [r3, #548]	; 0x224
+ 8000776:	2208      	movs	r2, #8
+ 8000778:	f8c3 2220 	str.w	r2, [r3, #544]	; 0x220
+ 800077c:	2207      	movs	r2, #7
+ 800077e:	f8c3 221c 	str.w	r2, [r3, #540]	; 0x21c
+ 8000782:	2206      	movs	r2, #6
+ 8000784:	f8c3 2218 	str.w	r2, [r3, #536]	; 0x218
+ 8000788:	2205      	movs	r2, #5
+ 800078a:	f8c3 2214 	str.w	r2, [r3, #532]	; 0x214
+ 800078e:	f06f 0202 	mvn.w	r2, #2
+ 8000792:	f8c3 4210 	str.w	r4, [r3, #528]	; 0x210
+ 8000796:	f8c3 020c 	str.w	r0, [r3, #524]	; 0x20c
+ 800079a:	f8c3 2208 	str.w	r2, [r3, #520]	; 0x208
+ 800079e:	4a12      	ldr	r2, [pc, #72]	; (80007e8 <_GLOBAL__sub_I__ZN4core4Core13vectorManagerE+0x128>)
+ 80007a0:	601a      	str	r2, [r3, #0]
+ 80007a2:	4b12      	ldr	r3, [pc, #72]	; (80007ec <_GLOBAL__sub_I__ZN4core4Core13vectorManagerE+0x12c>)
+ 80007a4:	4a12      	ldr	r2, [pc, #72]	; (80007f0 <_GLOBAL__sub_I__ZN4core4Core13vectorManagerE+0x130>)
+ 80007a6:	601a      	str	r2, [r3, #0]
+ 80007a8:	4912      	ldr	r1, [pc, #72]	; (80007f4 <_GLOBAL__sub_I__ZN4core4Core13vectorManagerE+0x134>)
+ 80007aa:	f8c3 1334 	str.w	r1, [r3, #820]	; 0x334
+ 80007ae:	f240 2202 	movw	r2, #514	; 0x202
+ 80007b2:	809a      	strh	r2, [r3, #4]
+ 80007b4:	2200      	movs	r2, #0
+ 80007b6:	1898      	adds	r0, r3, r2
+ 80007b8:	3204      	adds	r2, #4
+ 80007ba:	f5b2 7f9a 	cmp.w	r2, #308	; 0x134
+ 80007be:	f8c0 1200 	str.w	r1, [r0, #512]	; 0x200
+ 80007c2:	d1f8      	bne.n	80007b6 <_GLOBAL__sub_I__ZN4core4Core13vectorManagerE+0xf6>
+ 80007c4:	bd70      	pop	{r4, r5, r6, pc}
+ 80007c6:	bf00      	nop
+ 80007c8:	20000474 	.word	0x20000474
+ 80007cc:	2000021c 	.word	0x2000021c
+ 80007d0:	20000000 	.word	0x20000000
+ 80007d4:	20000478 	.word	0x20000478
+ 80007d8:	20000220 	.word	0x20000220
+ 80007dc:	08000565 	.word	0x08000565
+ 80007e0:	08001ba8 	.word	0x08001ba8
+ 80007e4:	08001a31 	.word	0x08001a31
+ 80007e8:	08001bd8 	.word	0x08001bd8
+ 80007ec:	20000600 	.word	0x20000600
+ 80007f0:	08001be8 	.word	0x08001be8
+ 80007f4:	08000401 	.word	0x08000401
+
+080007f8 <_ZN4core7drivers6Clocks22getSystemCoreFrequencyEv>:
+ 80007f8:	4b01      	ldr	r3, [pc, #4]	; (8000800 <_ZN4core7drivers6Clocks22getSystemCoreFrequencyEv+0x8>)
+ 80007fa:	6818      	ldr	r0, [r3, #0]
+ 80007fc:	4770      	bx	lr
+ 80007fe:	bf00      	nop
+ 8000800:	20000004 	.word	0x20000004
+
+08000804 <_ZN4core7drivers6Clocks17getClockFrequencyEm>:
+ 8000804:	4b01      	ldr	r3, [pc, #4]	; (800080c <_ZN4core7drivers6Clocks17getClockFrequencyEm+0x8>)
+ 8000806:	f853 0021 	ldr.w	r0, [r3, r1, lsl #2]
+ 800080a:	4770      	bx	lr
+ 800080c:	20000004 	.word	0x20000004
+
+08000810 <Reset_Handler>:
+
+  .section .text.Reset_Handler
+  .weak Reset_Handler
+  .type Reset_Handler, %function
+Reset_Handler:
+  ldr   r0, =_estack
+ 8000810:	480d      	ldr	r0, [pc, #52]	; (8000848 <LoopForever+0x2>)
+  mov   sp, r0          /* set stack pointer */
+ 8000812:	4685      	mov	sp, r0
+
+/* Call the clock system initialization function.*/
+  bl  SystemInit
+ 8000814:	f3af 8000 	nop.w
+
+/* Copy the data segment initializers from flash to SRAM */
+  ldr r0, =_sdata
+ 8000818:	480c      	ldr	r0, [pc, #48]	; (800084c <LoopForever+0x6>)
+  ldr r1, =_edata
+ 800081a:	490d      	ldr	r1, [pc, #52]	; (8000850 <LoopForever+0xa>)
+  ldr r2, =_sidata
+ 800081c:	4a0d      	ldr	r2, [pc, #52]	; (8000854 <LoopForever+0xe>)
+  movs r3, #0
+ 800081e:	2300      	movs	r3, #0
+  b LoopCopyDataInit
+ 8000820:	e002      	b.n	8000828 <LoopCopyDataInit>
+
+08000822 <CopyDataInit>:
+
+CopyDataInit:
+  ldr r4, [r2, r3]
+ 8000822:	58d4      	ldr	r4, [r2, r3]
+  str r4, [r0, r3]
+ 8000824:	50c4      	str	r4, [r0, r3]
+  adds r3, r3, #4
+ 8000826:	3304      	adds	r3, #4
+
+08000828 <LoopCopyDataInit>:
+
+LoopCopyDataInit:
+  adds r4, r0, r3
+ 8000828:	18c4      	adds	r4, r0, r3
+  cmp r4, r1
+ 800082a:	428c      	cmp	r4, r1
+  bcc CopyDataInit
+ 800082c:	d3f9      	bcc.n	8000822 <CopyDataInit>
+
+/* Zero fill the bss segment. */
+  ldr r2, =_sbss
+ 800082e:	4a0a      	ldr	r2, [pc, #40]	; (8000858 <LoopForever+0x12>)
+  ldr r4, =_ebss
+ 8000830:	4c0a      	ldr	r4, [pc, #40]	; (800085c <LoopForever+0x16>)
+  movs r3, #0
+ 8000832:	2300      	movs	r3, #0
+  b LoopFillZerobss
+ 8000834:	e001      	b.n	800083a <LoopFillZerobss>
+
+08000836 <FillZerobss>:
+
+FillZerobss:
+  str  r3, [r2]
+ 8000836:	6013      	str	r3, [r2, #0]
+  adds r2, r2, #4
+ 8000838:	3204      	adds	r2, #4
+
+0800083a <LoopFillZerobss>:
+
+LoopFillZerobss:
+  cmp r2, r4
+ 800083a:	42a2      	cmp	r2, r4
+  bcc FillZerobss
+ 800083c:	d3fb      	bcc.n	8000836 <FillZerobss>
+
+/* Call static constructors */
+  bl __libc_init_array
+ 800083e:	f001 f983 	bl	8001b48 <__libc_init_array>
+/* Call the application's entry point.*/
+  bl main
+ 8000842:	f000 f88f 	bl	8000964 <main>
+
+08000846 <LoopForever>:
+
+LoopForever:
+    b LoopForever
+ 8000846:	e7fe      	b.n	8000846 <LoopForever>
+  ldr   r0, =_estack
+ 8000848:	20008000 	.word	0x20008000
+  ldr r0, =_sdata
+ 800084c:	20000000 	.word	0x20000000
+  ldr r1, =_edata
+ 8000850:	2000001c 	.word	0x2000001c
+  ldr r2, =_sidata
+ 8000854:	08001c84 	.word	0x08001c84
+  ldr r2, =_sbss
+ 8000858:	20000200 	.word	0x20000200
+  ldr r4, =_ebss
+ 800085c:	20000e94 	.word	0x20000e94
+
+08000860 <ADC_IRQHandler>:
+ * @retval : None
+*/
+  .section .text.Default_Handler,"ax",%progbits
+Default_Handler:
+Infinite_Loop:
+  b Infinite_Loop
+ 8000860:	e7fe      	b.n	8000860 <ADC_IRQHandler>
+	...
+
+08000864 <_ZN6kernel4TaskC1EPmmPFvmEmmbPKc>:
+ 8000864:	b5f0      	push	{r4, r5, r6, r7, lr}
+ 8000866:	6342      	str	r2, [r0, #52]	; 0x34
+ 8000868:	f102 4c80 	add.w	ip, r2, #1073741824	; 0x40000000
+ 800086c:	9a05      	ldr	r2, [sp, #20]
+ 800086e:	6442      	str	r2, [r0, #68]	; 0x44
+ 8000870:	2600      	movs	r6, #0
+ 8000872:	9a08      	ldr	r2, [sp, #32]
+ 8000874:	4d28      	ldr	r5, [pc, #160]	; (8000918 <_ZN6kernel4TaskC1EPmmPFvmEmmbPKc+0xb4>)
+ 8000876:	6386      	str	r6, [r0, #56]	; 0x38
+ 8000878:	f1ac 0c13 	sub.w	ip, ip, #19
+ 800087c:	e9c0 6601 	strd	r6, r6, [r0, #4]
+ 8000880:	e9c0 6603 	strd	r6, r6, [r0, #12]
+ 8000884:	e9c0 6605 	strd	r6, r6, [r0, #20]
+ 8000888:	e9c0 6607 	strd	r6, r6, [r0, #28]
+ 800088c:	e9c0 6609 	strd	r6, r6, [r0, #36]	; 0x24
+ 8000890:	6005      	str	r5, [r0, #0]
+ 8000892:	63c6      	str	r6, [r0, #60]	; 0x3c
+ 8000894:	eb01 058c 	add.w	r5, r1, ip, lsl #2
+ 8000898:	f880 6049 	strb.w	r6, [r0, #73]	; 0x49
+ 800089c:	6502      	str	r2, [r0, #80]	; 0x50
+ 800089e:	f64d 64ad 	movw	r4, #57005	; 0xdead
+ 80008a2:	f64b 62ef 	movw	r2, #48879	; 0xbeef
+ 80008a6:	f89d 701c 	ldrb.w	r7, [sp, #28]
+ 80008aa:	6403      	str	r3, [r0, #64]	; 0x40
+ 80008ac:	2603      	movs	r6, #3
+ 80008ae:	f880 7048 	strb.w	r7, [r0, #72]	; 0x48
+ 80008b2:	e9c0 510b 	strd	r5, r1, [r0, #44]	; 0x2c
+ 80008b6:	64c6      	str	r6, [r0, #76]	; 0x4c
+ 80008b8:	e9c1 4200 	strd	r4, r2, [r1]
+ 80008bc:	e9c1 4202 	strd	r4, r2, [r1, #8]
+ 80008c0:	e9c1 4204 	strd	r4, r2, [r1, #16]
+ 80008c4:	e9c1 4206 	strd	r4, r2, [r1, #24]
+ 80008c8:	f04f 7280 	mov.w	r2, #16777216	; 0x1000000
+ 80008cc:	646a      	str	r2, [r5, #68]	; 0x44
+ 80008ce:	642b      	str	r3, [r5, #64]	; 0x40
+ 80008d0:	4b12      	ldr	r3, [pc, #72]	; (800091c <_ZN6kernel4TaskC1EPmmPFvmEmmbPKc+0xb8>)
+ 80008d2:	63eb      	str	r3, [r5, #60]	; 0x3c
+ 80008d4:	2202      	movs	r2, #2
+ 80008d6:	2304      	movs	r3, #4
+ 80008d8:	63ab      	str	r3, [r5, #56]	; 0x38
+ 80008da:	636e      	str	r6, [r5, #52]	; 0x34
+ 80008dc:	632a      	str	r2, [r5, #48]	; 0x30
+ 80008de:	2201      	movs	r2, #1
+ 80008e0:	62ea      	str	r2, [r5, #44]	; 0x2c
+ 80008e2:	9a06      	ldr	r2, [sp, #24]
+ 80008e4:	62aa      	str	r2, [r5, #40]	; 0x28
+ 80008e6:	220b      	movs	r2, #11
+ 80008e8:	626a      	str	r2, [r5, #36]	; 0x24
+ 80008ea:	220a      	movs	r2, #10
+ 80008ec:	622a      	str	r2, [r5, #32]
+ 80008ee:	2209      	movs	r2, #9
+ 80008f0:	61ea      	str	r2, [r5, #28]
+ 80008f2:	2208      	movs	r2, #8
+ 80008f4:	61aa      	str	r2, [r5, #24]
+ 80008f6:	2207      	movs	r2, #7
+ 80008f8:	616a      	str	r2, [r5, #20]
+ 80008fa:	2206      	movs	r2, #6
+ 80008fc:	612a      	str	r2, [r5, #16]
+ 80008fe:	f087 0701 	eor.w	r7, r7, #1
+ 8000902:	2205      	movs	r2, #5
+ 8000904:	60ea      	str	r2, [r5, #12]
+ 8000906:	f047 0702 	orr.w	r7, r7, #2
+ 800090a:	60ab      	str	r3, [r5, #8]
+ 800090c:	f06f 0302 	mvn.w	r3, #2
+ 8000910:	606f      	str	r7, [r5, #4]
+ 8000912:	f841 302c 	str.w	r3, [r1, ip, lsl #2]
+ 8000916:	bdf0      	pop	{r4, r5, r6, r7, pc}
+ 8000918:	08001c5c 	.word	0x08001c5c
+ 800091c:	08001a31 	.word	0x08001a31
+
+08000920 <_ZNUlmE_4_FUNEm>:
+ 8000920:	f04f 42b0 	mov.w	r2, #1476395008	; 0x58000000
+ 8000924:	b508      	push	{r3, lr}
+ 8000926:	6cd3      	ldr	r3, [r2, #76]	; 0x4c
+ 8000928:	4c0d      	ldr	r4, [pc, #52]	; (8000960 <_ZNUlmE_4_FUNEm+0x40>)
+ 800092a:	f043 0302 	orr.w	r3, r3, #2
+ 800092e:	64d3      	str	r3, [r2, #76]	; 0x4c
+ 8000930:	6823      	ldr	r3, [r4, #0]
+ 8000932:	f023 4340 	bic.w	r3, r3, #3221225472	; 0xc0000000
+ 8000936:	f043 4380 	orr.w	r3, r3, #1073741824	; 0x40000000
+ 800093a:	6023      	str	r3, [r4, #0]
+ 800093c:	69a3      	ldr	r3, [r4, #24]
+ 800093e:	f043 4300 	orr.w	r3, r3, #2147483648	; 0x80000000
+ 8000942:	61a3      	str	r3, [r4, #24]
+ 8000944:	f44f 70fa 	mov.w	r0, #500	; 0x1f4
+ 8000948:	f000 f81c 	bl	8000984 <_ZN4core4Core14supervisorCallILN6kernel11ServiceCall9SvcNumberE10EvmEET0_T1_>
+ 800094c:	69a3      	ldr	r3, [r4, #24]
+ 800094e:	f443 4300 	orr.w	r3, r3, #32768	; 0x8000
+ 8000952:	61a3      	str	r3, [r4, #24]
+ 8000954:	f44f 70fa 	mov.w	r0, #500	; 0x1f4
+ 8000958:	f000 f814 	bl	8000984 <_ZN4core4Core14supervisorCallILN6kernel11ServiceCall9SvcNumberE10EvmEET0_T1_>
+ 800095c:	e7ee      	b.n	800093c <_ZNUlmE_4_FUNEm+0x1c>
+ 800095e:	bf00      	nop
+ 8000960:	48000400 	.word	0x48000400
+
+08000964 <main>:
+ 8000964:	b508      	push	{r3, lr}
+ 8000966:	2002      	movs	r0, #2
+ 8000968:	f000 fc04 	bl	8001174 <_ZN6kernel9Scheduler11setupKernelEh>
+ 800096c:	f7ff fdbe 	bl	80004ec <_ZN4core4Core8initCoreEv>
+ 8000970:	4803      	ldr	r0, [pc, #12]	; (8000980 <main+0x1c>)
+ 8000972:	f001 f84d 	bl	8001a10 <_ZN6kernel4Task5startEv>
+ 8000976:	f000 fc03 	bl	8001180 <_ZN6kernel9Scheduler11startKernelEv>
+ 800097a:	2000      	movs	r0, #0
+ 800097c:	bd08      	pop	{r3, pc}
+ 800097e:	bf00      	nop
+ 8000980:	20000a04 	.word	0x20000a04
+
+08000984 <_ZN4core4Core14supervisorCallILN6kernel11ServiceCall9SvcNumberE10EvmEET0_T1_>:
+ 8000984:	b500      	push	{lr}
+ 8000986:	f3bf 8f4f 	dsb	sy
+ 800098a:	df0a      	svc	10
+ 800098c:	f85d eb04 	ldr.w	lr, [sp], #4
+ 8000990:	4770      	bx	lr
+	...
+
+08000994 <_GLOBAL__sub_I_led>:
+ 8000994:	b51f      	push	{r0, r1, r2, r3, r4, lr}
+ 8000996:	4a1a      	ldr	r2, [pc, #104]	; (8000a00 <_GLOBAL__sub_I_led+0x6c>)
+ 8000998:	6813      	ldr	r3, [r2, #0]
+ 800099a:	3301      	adds	r3, #1
+ 800099c:	2b01      	cmp	r3, #1
+ 800099e:	6013      	str	r3, [r2, #0]
+ 80009a0:	bf02      	ittt	eq
+ 80009a2:	4b18      	ldreq	r3, [pc, #96]	; (8000a04 <_GLOBAL__sub_I_led+0x70>)
+ 80009a4:	4a18      	ldreq	r2, [pc, #96]	; (8000a08 <_GLOBAL__sub_I_led+0x74>)
+ 80009a6:	601a      	streq	r2, [r3, #0]
+ 80009a8:	4a18      	ldr	r2, [pc, #96]	; (8000a0c <_GLOBAL__sub_I_led+0x78>)
+ 80009aa:	6813      	ldr	r3, [r2, #0]
+ 80009ac:	3301      	adds	r3, #1
+ 80009ae:	2b01      	cmp	r3, #1
+ 80009b0:	6013      	str	r3, [r2, #0]
+ 80009b2:	d110      	bne.n	80009d6 <_GLOBAL__sub_I_led+0x42>
+ 80009b4:	4a16      	ldr	r2, [pc, #88]	; (8000a10 <_GLOBAL__sub_I_led+0x7c>)
+ 80009b6:	4c17      	ldr	r4, [pc, #92]	; (8000a14 <_GLOBAL__sub_I_led+0x80>)
+ 80009b8:	e9cd 3202 	strd	r3, r2, [sp, #8]
+ 80009bc:	2300      	movs	r3, #0
+ 80009be:	e9cd 3300 	strd	r3, r3, [sp]
+ 80009c2:	2280      	movs	r2, #128	; 0x80
+ 80009c4:	4b14      	ldr	r3, [pc, #80]	; (8000a18 <_GLOBAL__sub_I_led+0x84>)
+ 80009c6:	4621      	mov	r1, r4
+ 80009c8:	f1a4 0054 	sub.w	r0, r4, #84	; 0x54
+ 80009cc:	f7ff ff4a 	bl	8000864 <_ZN6kernel4TaskC1EPmmPFvmEmmbPKc>
+ 80009d0:	4b12      	ldr	r3, [pc, #72]	; (8000a1c <_GLOBAL__sub_I_led+0x88>)
+ 80009d2:	f844 3c54 	str.w	r3, [r4, #-84]
+ 80009d6:	4b12      	ldr	r3, [pc, #72]	; (8000a20 <_GLOBAL__sub_I_led+0x8c>)
+ 80009d8:	4c12      	ldr	r4, [pc, #72]	; (8000a24 <_GLOBAL__sub_I_led+0x90>)
+ 80009da:	9303      	str	r3, [sp, #12]
+ 80009dc:	2201      	movs	r2, #1
+ 80009de:	2300      	movs	r3, #0
+ 80009e0:	e9cd 3201 	strd	r3, r2, [sp, #4]
+ 80009e4:	2303      	movs	r3, #3
+ 80009e6:	9300      	str	r3, [sp, #0]
+ 80009e8:	f44f 7280 	mov.w	r2, #256	; 0x100
+ 80009ec:	4b0e      	ldr	r3, [pc, #56]	; (8000a28 <_GLOBAL__sub_I_led+0x94>)
+ 80009ee:	f104 0154 	add.w	r1, r4, #84	; 0x54
+ 80009f2:	4620      	mov	r0, r4
+ 80009f4:	f7ff ff36 	bl	8000864 <_ZN6kernel4TaskC1EPmmPFvmEmmbPKc>
+ 80009f8:	4b0c      	ldr	r3, [pc, #48]	; (8000a2c <_GLOBAL__sub_I_led+0x98>)
+ 80009fa:	6023      	str	r3, [r4, #0]
+ 80009fc:	b004      	add	sp, #16
+ 80009fe:	bd10      	pop	{r4, pc}
+ 8000a00:	20000474 	.word	0x20000474
+ 8000a04:	2000021c 	.word	0x2000021c
+ 8000a08:	20000000 	.word	0x20000000
+ 8000a0c:	20000478 	.word	0x20000478
+ 8000a10:	08001bad 	.word	0x08001bad
+ 8000a14:	20000274 	.word	0x20000274
+ 8000a18:	08000565 	.word	0x08000565
+ 8000a1c:	08001bd8 	.word	0x08001bd8
+ 8000a20:	08001bb2 	.word	0x08001bb2
+ 8000a24:	20000a04 	.word	0x20000a04
+ 8000a28:	08000921 	.word	0x08000921
+ 8000a2c:	08001c48 	.word	0x08001c48
+
+08000a30 <_ZN6kernel4Task12sleepCompareEPS0_S1_>:
+ 8000a30:	6b82      	ldr	r2, [r0, #56]	; 0x38
+ 8000a32:	6b8b      	ldr	r3, [r1, #56]	; 0x38
+ 8000a34:	429a      	cmp	r2, r3
+ 8000a36:	d810      	bhi.n	8000a5a <_ZN6kernel4Task12sleepCompareEPS0_S1_+0x2a>
+ 8000a38:	6b82      	ldr	r2, [r0, #56]	; 0x38
+ 8000a3a:	6b8b      	ldr	r3, [r1, #56]	; 0x38
+ 8000a3c:	429a      	cmp	r2, r3
+ 8000a3e:	d310      	bcc.n	8000a62 <_ZN6kernel4Task12sleepCompareEPS0_S1_+0x32>
+ 8000a40:	6b82      	ldr	r2, [r0, #56]	; 0x38
+ 8000a42:	6b8b      	ldr	r3, [r1, #56]	; 0x38
+ 8000a44:	429a      	cmp	r2, r3
+ 8000a46:	d10a      	bne.n	8000a5e <_ZN6kernel4Task12sleepCompareEPS0_S1_+0x2e>
+ 8000a48:	6c42      	ldr	r2, [r0, #68]	; 0x44
+ 8000a4a:	6c4b      	ldr	r3, [r1, #68]	; 0x44
+ 8000a4c:	429a      	cmp	r2, r3
+ 8000a4e:	d808      	bhi.n	8000a62 <_ZN6kernel4Task12sleepCompareEPS0_S1_+0x32>
+ 8000a50:	bf34      	ite	cc
+ 8000a52:	2001      	movcc	r0, #1
+ 8000a54:	2000      	movcs	r0, #0
+ 8000a56:	b240      	sxtb	r0, r0
+ 8000a58:	4770      	bx	lr
+ 8000a5a:	2001      	movs	r0, #1
+ 8000a5c:	4770      	bx	lr
+ 8000a5e:	2000      	movs	r0, #0
+ 8000a60:	4770      	bx	lr
+ 8000a62:	f04f 30ff 	mov.w	r0, #4294967295
+ 8000a66:	4770      	bx	lr
+
+08000a68 <_ZN6kernel4Task15priorityCompareEPS0_S1_>:
+ 8000a68:	6c42      	ldr	r2, [r0, #68]	; 0x44
+ 8000a6a:	6c4b      	ldr	r3, [r1, #68]	; 0x44
+ 8000a6c:	429a      	cmp	r2, r3
+ 8000a6e:	d804      	bhi.n	8000a7a <_ZN6kernel4Task15priorityCompareEPS0_S1_+0x12>
+ 8000a70:	bf34      	ite	cc
+ 8000a72:	2001      	movcc	r0, #1
+ 8000a74:	2000      	movcs	r0, #0
+ 8000a76:	b240      	sxtb	r0, r0
+ 8000a78:	4770      	bx	lr
+ 8000a7a:	f04f 30ff 	mov.w	r0, #4294967295
+ 8000a7e:	4770      	bx	lr
+
+08000a80 <_ZN6kernel5Event17kernelSignalEventEPS0_>:
+ 8000a80:	6842      	ldr	r2, [r0, #4]
+ 8000a82:	b510      	push	{r4, lr}
+ 8000a84:	b192      	cbz	r2, 8000aac <_ZN6kernel5Event17kernelSignalEventEPS0_+0x2c>
+ 8000a86:	6844      	ldr	r4, [r0, #4]
+ 8000a88:	2200      	movs	r2, #0
+ 8000a8a:	6042      	str	r2, [r0, #4]
+ 8000a8c:	4621      	mov	r1, r4
+ 8000a8e:	63e2      	str	r2, [r4, #60]	; 0x3c
+ 8000a90:	f000 f8ba 	bl	8000c08 <_ZN6kernel5Event8stopWaitEPNS_4TaskE>
+ 8000a94:	4807      	ldr	r0, [pc, #28]	; (8000ab4 <_ZN6kernel5Event17kernelSignalEventEPS0_+0x34>)
+ 8000a96:	4a08      	ldr	r2, [pc, #32]	; (8000ab8 <_ZN6kernel5Event17kernelSignalEventEPS0_+0x38>)
+ 8000a98:	4621      	mov	r1, r4
+ 8000a9a:	f000 f8dd 	bl	8000c58 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E>
+ 8000a9e:	2304      	movs	r3, #4
+ 8000aa0:	64e3      	str	r3, [r4, #76]	; 0x4c
+ 8000aa2:	2003      	movs	r0, #3
+ 8000aa4:	f000 fc7c 	bl	80013a0 <_ZN6kernel9Scheduler8scheduleENS0_17changeTaskTriggerE>
+ 8000aa8:	2001      	movs	r0, #1
+ 8000aaa:	bd10      	pop	{r4, pc}
+ 8000aac:	2201      	movs	r2, #1
+ 8000aae:	7202      	strb	r2, [r0, #8]
+ 8000ab0:	e7fa      	b.n	8000aa8 <_ZN6kernel5Event17kernelSignalEventEPS0_+0x28>
+ 8000ab2:	bf00      	nop
+ 8000ab4:	20000e70 	.word	0x20000e70
+ 8000ab8:	08000a69 	.word	0x08000a69
+
+08000abc <_ZN6kernel5Event15kernelWaitEventEPS0_m>:
+ 8000abc:	e92d 4ff8 	stmdb	sp!, {r3, r4, r5, r6, r7, r8, r9, sl, fp, lr}
+ 8000ac0:	4682      	mov	sl, r0
+ 8000ac2:	7a00      	ldrb	r0, [r0, #8]
+ 8000ac4:	b128      	cbz	r0, 8000ad2 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x16>
+ 8000ac6:	2300      	movs	r3, #0
+ 8000ac8:	f88a 3008 	strb.w	r3, [sl, #8]
+ 8000acc:	2001      	movs	r0, #1
+ 8000ace:	e8bd 8ff8 	ldmia.w	sp!, {r3, r4, r5, r6, r7, r8, r9, sl, fp, pc}
+ 8000ad2:	f8da 6004 	ldr.w	r6, [sl, #4]
+ 8000ad6:	2e00      	cmp	r6, #0
+ 8000ad8:	d1f9      	bne.n	8000ace <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x12>
+ 8000ada:	4b46      	ldr	r3, [pc, #280]	; (8000bf4 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x138>)
+ 8000adc:	681a      	ldr	r2, [r3, #0]
+ 8000ade:	f8ca 2004 	str.w	r2, [sl, #4]
+ 8000ae2:	4698      	mov	r8, r3
+ 8000ae4:	b1b1      	cbz	r1, 8000b14 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x58>
+ 8000ae6:	4b44      	ldr	r3, [pc, #272]	; (8000bf8 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x13c>)
+ 8000ae8:	e9d3 2300 	ldrd	r2, r3, [r3]
+ 8000aec:	f8d8 3000 	ldr.w	r3, [r8]
+ 8000af0:	4411      	add	r1, r2
+ 8000af2:	6399      	str	r1, [r3, #56]	; 0x38
+ 8000af4:	f8d8 5000 	ldr.w	r5, [r8]
+ 8000af8:	2d00      	cmp	r5, #0
+ 8000afa:	d079      	beq.n	8000bf0 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x134>
+ 8000afc:	4b3f      	ldr	r3, [pc, #252]	; (8000bfc <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x140>)
+ 8000afe:	685a      	ldr	r2, [r3, #4]
+ 8000b00:	f105 091c 	add.w	r9, r5, #28
+ 8000b04:	e9c5 6607 	strd	r6, r6, [r5, #28]
+ 8000b08:	461f      	mov	r7, r3
+ 8000b0a:	bb2a      	cbnz	r2, 8000b58 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x9c>
+ 8000b0c:	2201      	movs	r2, #1
+ 8000b0e:	f8c3 9000 	str.w	r9, [r3]
+ 8000b12:	605a      	str	r2, [r3, #4]
+ 8000b14:	f8d8 3000 	ldr.w	r3, [r8]
+ 8000b18:	f8c3 a03c 	str.w	sl, [r3, #60]	; 0x3c
+ 8000b1c:	f8d8 3000 	ldr.w	r3, [r8]
+ 8000b20:	2202      	movs	r2, #2
+ 8000b22:	64da      	str	r2, [r3, #76]	; 0x4c
+ 8000b24:	4b36      	ldr	r3, [pc, #216]	; (8000c00 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x144>)
+ 8000b26:	f8d8 2000 	ldr.w	r2, [r8]
+ 8000b2a:	601a      	str	r2, [r3, #0]
+ 8000b2c:	4a35      	ldr	r2, [pc, #212]	; (8000c04 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x148>)
+ 8000b2e:	6851      	ldr	r1, [r2, #4]
+ 8000b30:	b151      	cbz	r1, 8000b48 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x8c>
+ 8000b32:	6816      	ldr	r6, [r2, #0]
+ 8000b34:	3901      	subs	r1, #1
+ 8000b36:	6051      	str	r1, [r2, #4]
+ 8000b38:	6871      	ldr	r1, [r6, #4]
+ 8000b3a:	6011      	str	r1, [r2, #0]
+ 8000b3c:	2200      	movs	r2, #0
+ 8000b3e:	b101      	cbz	r1, 8000b42 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x86>
+ 8000b40:	600a      	str	r2, [r1, #0]
+ 8000b42:	6072      	str	r2, [r6, #4]
+ 8000b44:	f846 290c 	str.w	r2, [r6], #-12
+ 8000b48:	f8c8 6000 	str.w	r6, [r8]
+ 8000b4c:	2002      	movs	r0, #2
+ 8000b4e:	681b      	ldr	r3, [r3, #0]
+ 8000b50:	f000 fd12 	bl	8001578 <_ZN6kernel9Scheduler9setPendSvENS0_17changeTaskTriggerE>
+ 8000b54:	2001      	movs	r0, #1
+ 8000b56:	e7ba      	b.n	8000ace <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x12>
+ 8000b58:	681c      	ldr	r4, [r3, #0]
+ 8000b5a:	46b3      	mov	fp, r6
+ 8000b5c:	687b      	ldr	r3, [r7, #4]
+ 8000b5e:	3b01      	subs	r3, #1
+ 8000b60:	455b      	cmp	r3, fp
+ 8000b62:	d91f      	bls.n	8000ba4 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0xe8>
+ 8000b64:	b1c4      	cbz	r4, 8000b98 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0xdc>
+ 8000b66:	f1a4 001c 	sub.w	r0, r4, #28
+ 8000b6a:	4629      	mov	r1, r5
+ 8000b6c:	f7ff ff60 	bl	8000a30 <_ZN6kernel4Task12sleepCompareEPS0_S1_>
+ 8000b70:	2800      	cmp	r0, #0
+ 8000b72:	dd13      	ble.n	8000b9c <_ZN6kernel5Event15kernelWaitEventEPS0_m+0xe0>
+ 8000b74:	6823      	ldr	r3, [r4, #0]
+ 8000b76:	e9c5 3407 	strd	r3, r4, [r5, #28]
+ 8000b7a:	f8c4 9000 	str.w	r9, [r4]
+ 8000b7e:	69eb      	ldr	r3, [r5, #28]
+ 8000b80:	b10b      	cbz	r3, 8000b86 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0xca>
+ 8000b82:	f8c3 9004 	str.w	r9, [r3, #4]
+ 8000b86:	687b      	ldr	r3, [r7, #4]
+ 8000b88:	3301      	adds	r3, #1
+ 8000b8a:	607b      	str	r3, [r7, #4]
+ 8000b8c:	683b      	ldr	r3, [r7, #0]
+ 8000b8e:	429c      	cmp	r4, r3
+ 8000b90:	d1c0      	bne.n	8000b14 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x58>
+ 8000b92:	f8c7 9000 	str.w	r9, [r7]
+ 8000b96:	e7bd      	b.n	8000b14 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x58>
+ 8000b98:	4620      	mov	r0, r4
+ 8000b9a:	e7e6      	b.n	8000b6a <_ZN6kernel5Event15kernelWaitEventEPS0_m+0xae>
+ 8000b9c:	6864      	ldr	r4, [r4, #4]
+ 8000b9e:	f10b 0b01 	add.w	fp, fp, #1
+ 8000ba2:	e7db      	b.n	8000b5c <_ZN6kernel5Event15kernelWaitEventEPS0_m+0xa0>
+ 8000ba4:	b19c      	cbz	r4, 8000bce <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x112>
+ 8000ba6:	f1a4 001c 	sub.w	r0, r4, #28
+ 8000baa:	4629      	mov	r1, r5
+ 8000bac:	f7ff ff40 	bl	8000a30 <_ZN6kernel4Task12sleepCompareEPS0_S1_>
+ 8000bb0:	2800      	cmp	r0, #0
+ 8000bb2:	dc0e      	bgt.n	8000bd2 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x116>
+ 8000bb4:	6863      	ldr	r3, [r4, #4]
+ 8000bb6:	622b      	str	r3, [r5, #32]
+ 8000bb8:	61ec      	str	r4, [r5, #28]
+ 8000bba:	f8c4 9004 	str.w	r9, [r4, #4]
+ 8000bbe:	6a2b      	ldr	r3, [r5, #32]
+ 8000bc0:	b10b      	cbz	r3, 8000bc6 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x10a>
+ 8000bc2:	f8c3 9000 	str.w	r9, [r3]
+ 8000bc6:	687b      	ldr	r3, [r7, #4]
+ 8000bc8:	3301      	adds	r3, #1
+ 8000bca:	607b      	str	r3, [r7, #4]
+ 8000bcc:	e7a2      	b.n	8000b14 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x58>
+ 8000bce:	4620      	mov	r0, r4
+ 8000bd0:	e7eb      	b.n	8000baa <_ZN6kernel5Event15kernelWaitEventEPS0_m+0xee>
+ 8000bd2:	6823      	ldr	r3, [r4, #0]
+ 8000bd4:	e9c5 3407 	strd	r3, r4, [r5, #28]
+ 8000bd8:	f8c4 9000 	str.w	r9, [r4]
+ 8000bdc:	69eb      	ldr	r3, [r5, #28]
+ 8000bde:	b10b      	cbz	r3, 8000be4 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x128>
+ 8000be0:	f8c3 9004 	str.w	r9, [r3, #4]
+ 8000be4:	683b      	ldr	r3, [r7, #0]
+ 8000be6:	429c      	cmp	r4, r3
+ 8000be8:	bf08      	it	eq
+ 8000bea:	f8c7 9000 	streq.w	r9, [r7]
+ 8000bee:	e7ea      	b.n	8000bc6 <_ZN6kernel5Event15kernelWaitEventEPS0_m+0x10a>
+ 8000bf0:	606d      	str	r5, [r5, #4]
+ 8000bf2:	deff      	udf	#255	; 0xff
+ 8000bf4:	20000e64 	.word	0x20000e64
+ 8000bf8:	20000e78 	.word	0x20000e78
+ 8000bfc:	20000e88 	.word	0x20000e88
+ 8000c00:	20000e68 	.word	0x20000e68
+ 8000c04:	20000e70 	.word	0x20000e70
+
+08000c08 <_ZN6kernel5Event8stopWaitEPNS_4TaskE>:
+ 8000c08:	6b8b      	ldr	r3, [r1, #56]	; 0x38
+ 8000c0a:	b18b      	cbz	r3, 8000c30 <_ZN6kernel5Event8stopWaitEPNS_4TaskE+0x28>
+ 8000c0c:	4b11      	ldr	r3, [pc, #68]	; (8000c54 <_ZN6kernel5Event8stopWaitEPNS_4TaskE+0x4c>)
+ 8000c0e:	681a      	ldr	r2, [r3, #0]
+ 8000c10:	f101 001c 	add.w	r0, r1, #28
+ 8000c14:	4290      	cmp	r0, r2
+ 8000c16:	d10c      	bne.n	8000c32 <_ZN6kernel5Event8stopWaitEPNS_4TaskE+0x2a>
+ 8000c18:	6a0a      	ldr	r2, [r1, #32]
+ 8000c1a:	601a      	str	r2, [r3, #0]
+ 8000c1c:	2000      	movs	r0, #0
+ 8000c1e:	e9c1 0007 	strd	r0, r0, [r1, #28]
+ 8000c22:	b102      	cbz	r2, 8000c26 <_ZN6kernel5Event8stopWaitEPNS_4TaskE+0x1e>
+ 8000c24:	6010      	str	r0, [r2, #0]
+ 8000c26:	685a      	ldr	r2, [r3, #4]
+ 8000c28:	3a01      	subs	r2, #1
+ 8000c2a:	605a      	str	r2, [r3, #4]
+ 8000c2c:	2300      	movs	r3, #0
+ 8000c2e:	638b      	str	r3, [r1, #56]	; 0x38
+ 8000c30:	4770      	bx	lr
+ 8000c32:	6852      	ldr	r2, [r2, #4]
+ 8000c34:	2a00      	cmp	r2, #0
+ 8000c36:	d0f9      	beq.n	8000c2c <_ZN6kernel5Event8stopWaitEPNS_4TaskE+0x24>
+ 8000c38:	4290      	cmp	r0, r2
+ 8000c3a:	d1fa      	bne.n	8000c32 <_ZN6kernel5Event8stopWaitEPNS_4TaskE+0x2a>
+ 8000c3c:	6a0a      	ldr	r2, [r1, #32]
+ 8000c3e:	b10a      	cbz	r2, 8000c44 <_ZN6kernel5Event8stopWaitEPNS_4TaskE+0x3c>
+ 8000c40:	69c8      	ldr	r0, [r1, #28]
+ 8000c42:	6010      	str	r0, [r2, #0]
+ 8000c44:	69c8      	ldr	r0, [r1, #28]
+ 8000c46:	b100      	cbz	r0, 8000c4a <_ZN6kernel5Event8stopWaitEPNS_4TaskE+0x42>
+ 8000c48:	6042      	str	r2, [r0, #4]
+ 8000c4a:	2200      	movs	r2, #0
+ 8000c4c:	e9c1 2207 	strd	r2, r2, [r1, #28]
+ 8000c50:	e7e9      	b.n	8000c26 <_ZN6kernel5Event8stopWaitEPNS_4TaskE+0x1e>
+ 8000c52:	bf00      	nop
+ 8000c54:	20000e88 	.word	0x20000e88
+
+08000c58 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E>:
+ 8000c58:	e92d 43f8 	stmdb	sp!, {r3, r4, r5, r6, r7, r8, r9, lr}
+ 8000c5c:	4606      	mov	r6, r0
+ 8000c5e:	4691      	mov	r9, r2
+ 8000c60:	460d      	mov	r5, r1
+ 8000c62:	2900      	cmp	r1, #0
+ 8000c64:	d04d      	beq.n	8000d02 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E+0xaa>
+ 8000c66:	6842      	ldr	r2, [r0, #4]
+ 8000c68:	2300      	movs	r3, #0
+ 8000c6a:	f101 070c 	add.w	r7, r1, #12
+ 8000c6e:	e9c1 3303 	strd	r3, r3, [r1, #12]
+ 8000c72:	b922      	cbnz	r2, 8000c7e <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E+0x26>
+ 8000c74:	2301      	movs	r3, #1
+ 8000c76:	6007      	str	r7, [r0, #0]
+ 8000c78:	6043      	str	r3, [r0, #4]
+ 8000c7a:	e8bd 83f8 	ldmia.w	sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
+ 8000c7e:	6804      	ldr	r4, [r0, #0]
+ 8000c80:	4698      	mov	r8, r3
+ 8000c82:	6873      	ldr	r3, [r6, #4]
+ 8000c84:	3b01      	subs	r3, #1
+ 8000c86:	4543      	cmp	r3, r8
+ 8000c88:	d91b      	bls.n	8000cc2 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E+0x6a>
+ 8000c8a:	b1a4      	cbz	r4, 8000cb6 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E+0x5e>
+ 8000c8c:	f1a4 000c 	sub.w	r0, r4, #12
+ 8000c90:	4629      	mov	r1, r5
+ 8000c92:	47c8      	blx	r9
+ 8000c94:	2800      	cmp	r0, #0
+ 8000c96:	dd10      	ble.n	8000cba <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E+0x62>
+ 8000c98:	6823      	ldr	r3, [r4, #0]
+ 8000c9a:	e9c5 3403 	strd	r3, r4, [r5, #12]
+ 8000c9e:	6027      	str	r7, [r4, #0]
+ 8000ca0:	68eb      	ldr	r3, [r5, #12]
+ 8000ca2:	b103      	cbz	r3, 8000ca6 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E+0x4e>
+ 8000ca4:	605f      	str	r7, [r3, #4]
+ 8000ca6:	6873      	ldr	r3, [r6, #4]
+ 8000ca8:	3301      	adds	r3, #1
+ 8000caa:	6073      	str	r3, [r6, #4]
+ 8000cac:	6833      	ldr	r3, [r6, #0]
+ 8000cae:	42a3      	cmp	r3, r4
+ 8000cb0:	d1e3      	bne.n	8000c7a <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E+0x22>
+ 8000cb2:	6037      	str	r7, [r6, #0]
+ 8000cb4:	e7e1      	b.n	8000c7a <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E+0x22>
+ 8000cb6:	4620      	mov	r0, r4
+ 8000cb8:	e7ea      	b.n	8000c90 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E+0x38>
+ 8000cba:	6864      	ldr	r4, [r4, #4]
+ 8000cbc:	f108 0801 	add.w	r8, r8, #1
+ 8000cc0:	e7df      	b.n	8000c82 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E+0x2a>
+ 8000cc2:	b184      	cbz	r4, 8000ce6 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E+0x8e>
+ 8000cc4:	f1a4 000c 	sub.w	r0, r4, #12
+ 8000cc8:	4629      	mov	r1, r5
+ 8000cca:	47c8      	blx	r9
+ 8000ccc:	2800      	cmp	r0, #0
+ 8000cce:	dc0c      	bgt.n	8000cea <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E+0x92>
+ 8000cd0:	6863      	ldr	r3, [r4, #4]
+ 8000cd2:	612b      	str	r3, [r5, #16]
+ 8000cd4:	60ec      	str	r4, [r5, #12]
+ 8000cd6:	6067      	str	r7, [r4, #4]
+ 8000cd8:	692b      	ldr	r3, [r5, #16]
+ 8000cda:	b103      	cbz	r3, 8000cde <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E+0x86>
+ 8000cdc:	601f      	str	r7, [r3, #0]
+ 8000cde:	6873      	ldr	r3, [r6, #4]
+ 8000ce0:	3301      	adds	r3, #1
+ 8000ce2:	6073      	str	r3, [r6, #4]
+ 8000ce4:	e7c9      	b.n	8000c7a <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E+0x22>
+ 8000ce6:	4620      	mov	r0, r4
+ 8000ce8:	e7ee      	b.n	8000cc8 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E+0x70>
+ 8000cea:	6823      	ldr	r3, [r4, #0]
+ 8000cec:	e9c5 3403 	strd	r3, r4, [r5, #12]
+ 8000cf0:	6027      	str	r7, [r4, #0]
+ 8000cf2:	68eb      	ldr	r3, [r5, #12]
+ 8000cf4:	b103      	cbz	r3, 8000cf8 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E+0xa0>
+ 8000cf6:	605f      	str	r7, [r3, #4]
+ 8000cf8:	6833      	ldr	r3, [r6, #0]
+ 8000cfa:	42a3      	cmp	r3, r4
+ 8000cfc:	bf08      	it	eq
+ 8000cfe:	6037      	streq	r7, [r6, #0]
+ 8000d00:	e7ed      	b.n	8000cde <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E+0x86>
+ 8000d02:	6069      	str	r1, [r5, #4]
+ 8000d04:	deff      	udf	#255	; 0xff
+	...
+
+08000d08 <_GLOBAL__sub_I__ZN6kernel5Event17kernelSignalEventEPS0_>:
+ 8000d08:	4a38      	ldr	r2, [pc, #224]	; (8000dec <_GLOBAL__sub_I__ZN6kernel5Event17kernelSignalEventEPS0_+0xe4>)
+ 8000d0a:	6813      	ldr	r3, [r2, #0]
+ 8000d0c:	3301      	adds	r3, #1
+ 8000d0e:	2b01      	cmp	r3, #1
+ 8000d10:	b570      	push	{r4, r5, r6, lr}
+ 8000d12:	6013      	str	r3, [r2, #0]
+ 8000d14:	bf02      	ittt	eq
+ 8000d16:	4b36      	ldreq	r3, [pc, #216]	; (8000df0 <_GLOBAL__sub_I__ZN6kernel5Event17kernelSignalEventEPS0_+0xe8>)
+ 8000d18:	4a36      	ldreq	r2, [pc, #216]	; (8000df4 <_GLOBAL__sub_I__ZN6kernel5Event17kernelSignalEventEPS0_+0xec>)
+ 8000d1a:	601a      	streq	r2, [r3, #0]
+ 8000d1c:	4b36      	ldr	r3, [pc, #216]	; (8000df8 <_GLOBAL__sub_I__ZN6kernel5Event17kernelSignalEventEPS0_+0xf0>)
+ 8000d1e:	6819      	ldr	r1, [r3, #0]
+ 8000d20:	3101      	adds	r1, #1
+ 8000d22:	2901      	cmp	r1, #1
+ 8000d24:	6019      	str	r1, [r3, #0]
+ 8000d26:	d160      	bne.n	8000dea <_GLOBAL__sub_I__ZN6kernel5Event17kernelSignalEventEPS0_+0xe2>
+ 8000d28:	4b34      	ldr	r3, [pc, #208]	; (8000dfc <_GLOBAL__sub_I__ZN6kernel5Event17kernelSignalEventEPS0_+0xf4>)
+ 8000d2a:	4e35      	ldr	r6, [pc, #212]	; (8000e00 <_GLOBAL__sub_I__ZN6kernel5Event17kernelSignalEventEPS0_+0xf8>)
+ 8000d2c:	f883 1048 	strb.w	r1, [r3, #72]	; 0x48
+ 8000d30:	f503 7002 	add.w	r0, r3, #520	; 0x208
+ 8000d34:	62d8      	str	r0, [r3, #44]	; 0x2c
+ 8000d36:	f103 0054 	add.w	r0, r3, #84	; 0x54
+ 8000d3a:	6318      	str	r0, [r3, #48]	; 0x30
+ 8000d3c:	2080      	movs	r0, #128	; 0x80
+ 8000d3e:	6358      	str	r0, [r3, #52]	; 0x34
+ 8000d40:	4830      	ldr	r0, [pc, #192]	; (8000e04 <_GLOBAL__sub_I__ZN6kernel5Event17kernelSignalEventEPS0_+0xfc>)
+ 8000d42:	6518      	str	r0, [r3, #80]	; 0x50
+ 8000d44:	f64d 64ad 	movw	r4, #57005	; 0xdead
+ 8000d48:	f64b 60ef 	movw	r0, #48879	; 0xbeef
+ 8000d4c:	2200      	movs	r2, #0
+ 8000d4e:	e9c3 4015 	strd	r4, r0, [r3, #84]	; 0x54
+ 8000d52:	e9c3 4017 	strd	r4, r0, [r3, #92]	; 0x5c
+ 8000d56:	e9c3 4019 	strd	r4, r0, [r3, #100]	; 0x64
+ 8000d5a:	e9c3 401b 	strd	r4, r0, [r3, #108]	; 0x6c
+ 8000d5e:	f04f 7080 	mov.w	r0, #16777216	; 0x1000000
+ 8000d62:	639a      	str	r2, [r3, #56]	; 0x38
+ 8000d64:	63da      	str	r2, [r3, #60]	; 0x3c
+ 8000d66:	f8c3 024c 	str.w	r0, [r3, #588]	; 0x24c
+ 8000d6a:	4827      	ldr	r0, [pc, #156]	; (8000e08 <_GLOBAL__sub_I__ZN6kernel5Event17kernelSignalEventEPS0_+0x100>)
+ 8000d6c:	f8c3 6248 	str.w	r6, [r3, #584]	; 0x248
+ 8000d70:	2503      	movs	r5, #3
+ 8000d72:	f8c3 0244 	str.w	r0, [r3, #580]	; 0x244
+ 8000d76:	2404      	movs	r4, #4
+ 8000d78:	2002      	movs	r0, #2
+ 8000d7a:	e9c3 2201 	strd	r2, r2, [r3, #4]
+ 8000d7e:	e9c3 2203 	strd	r2, r2, [r3, #12]
+ 8000d82:	e9c3 2205 	strd	r2, r2, [r3, #20]
+ 8000d86:	e9c3 2207 	strd	r2, r2, [r3, #28]
+ 8000d8a:	e9c3 2209 	strd	r2, r2, [r3, #36]	; 0x24
+ 8000d8e:	e9c3 6210 	strd	r6, r2, [r3, #64]	; 0x40
+ 8000d92:	f883 2049 	strb.w	r2, [r3, #73]	; 0x49
+ 8000d96:	64dd      	str	r5, [r3, #76]	; 0x4c
+ 8000d98:	f8c3 4240 	str.w	r4, [r3, #576]	; 0x240
+ 8000d9c:	f8c3 523c 	str.w	r5, [r3, #572]	; 0x23c
+ 8000da0:	f8c3 0238 	str.w	r0, [r3, #568]	; 0x238
+ 8000da4:	f8c3 1234 	str.w	r1, [r3, #564]	; 0x234
+ 8000da8:	f8c3 2230 	str.w	r2, [r3, #560]	; 0x230
+ 8000dac:	220b      	movs	r2, #11
+ 8000dae:	f8c3 222c 	str.w	r2, [r3, #556]	; 0x22c
+ 8000db2:	220a      	movs	r2, #10
+ 8000db4:	f8c3 2228 	str.w	r2, [r3, #552]	; 0x228
+ 8000db8:	2209      	movs	r2, #9
+ 8000dba:	f8c3 2224 	str.w	r2, [r3, #548]	; 0x224
+ 8000dbe:	2208      	movs	r2, #8
+ 8000dc0:	f8c3 2220 	str.w	r2, [r3, #544]	; 0x220
+ 8000dc4:	2207      	movs	r2, #7
+ 8000dc6:	f8c3 221c 	str.w	r2, [r3, #540]	; 0x21c
+ 8000dca:	2206      	movs	r2, #6
+ 8000dcc:	f8c3 2218 	str.w	r2, [r3, #536]	; 0x218
+ 8000dd0:	2205      	movs	r2, #5
+ 8000dd2:	f8c3 2214 	str.w	r2, [r3, #532]	; 0x214
+ 8000dd6:	f06f 0202 	mvn.w	r2, #2
+ 8000dda:	f8c3 4210 	str.w	r4, [r3, #528]	; 0x210
+ 8000dde:	f8c3 020c 	str.w	r0, [r3, #524]	; 0x20c
+ 8000de2:	f8c3 2208 	str.w	r2, [r3, #520]	; 0x208
+ 8000de6:	4a09      	ldr	r2, [pc, #36]	; (8000e0c <_GLOBAL__sub_I__ZN6kernel5Event17kernelSignalEventEPS0_+0x104>)
+ 8000de8:	601a      	str	r2, [r3, #0]
+ 8000dea:	bd70      	pop	{r4, r5, r6, pc}
+ 8000dec:	20000474 	.word	0x20000474
+ 8000df0:	2000021c 	.word	0x2000021c
+ 8000df4:	20000000 	.word	0x20000000
+ 8000df8:	20000478 	.word	0x20000478
+ 8000dfc:	20000220 	.word	0x20000220
+ 8000e00:	08000565 	.word	0x08000565
+ 8000e04:	08001bba 	.word	0x08001bba
+ 8000e08:	08001a31 	.word	0x08001a31
+ 8000e0c:	08001bd8 	.word	0x08001bd8
+
+08000e10 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m>:
+ 8000e10:	e92d 4ff7 	stmdb	sp!, {r0, r1, r2, r4, r5, r6, r7, r8, r9, sl, fp, lr}
+ 8000e14:	68c3      	ldr	r3, [r0, #12]
+ 8000e16:	9100      	str	r1, [sp, #0]
+ 8000e18:	4606      	mov	r6, r0
+ 8000e1a:	f8df 81f0 	ldr.w	r8, [pc, #496]	; 800100c <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x1fc>
+ 8000e1e:	b943      	cbnz	r3, 8000e32 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x22>
+ 8000e20:	f8d8 3000 	ldr.w	r3, [r8]
+ 8000e24:	f8d8 3000 	ldr.w	r3, [r8]
+ 8000e28:	60c3      	str	r3, [r0, #12]
+ 8000e2a:	2001      	movs	r0, #1
+ 8000e2c:	b003      	add	sp, #12
+ 8000e2e:	e8bd 8ff0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, fp, pc}
+ 8000e32:	f8d8 5000 	ldr.w	r5, [r8]
+ 8000e36:	2d00      	cmp	r5, #0
+ 8000e38:	f000 80de 	beq.w	8000ff8 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x1e8>
+ 8000e3c:	f8d0 9008 	ldr.w	r9, [r0, #8]
+ 8000e40:	2300      	movs	r3, #0
+ 8000e42:	f105 0724 	add.w	r7, r5, #36	; 0x24
+ 8000e46:	e9c5 3309 	strd	r3, r3, [r5, #36]	; 0x24
+ 8000e4a:	f1b9 0f00 	cmp.w	r9, #0
+ 8000e4e:	d140      	bne.n	8000ed2 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0xc2>
+ 8000e50:	2301      	movs	r3, #1
+ 8000e52:	6047      	str	r7, [r0, #4]
+ 8000e54:	6083      	str	r3, [r0, #8]
+ 8000e56:	9b00      	ldr	r3, [sp, #0]
+ 8000e58:	b1d3      	cbz	r3, 8000e90 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x80>
+ 8000e5a:	4b68      	ldr	r3, [pc, #416]	; (8000ffc <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x1ec>)
+ 8000e5c:	9900      	ldr	r1, [sp, #0]
+ 8000e5e:	e9d3 2300 	ldrd	r2, r3, [r3]
+ 8000e62:	4411      	add	r1, r2
+ 8000e64:	f8d8 2000 	ldr.w	r2, [r8]
+ 8000e68:	6391      	str	r1, [r2, #56]	; 0x38
+ 8000e6a:	f8d8 5000 	ldr.w	r5, [r8]
+ 8000e6e:	2d00      	cmp	r5, #0
+ 8000e70:	f000 80c2 	beq.w	8000ff8 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x1e8>
+ 8000e74:	4a62      	ldr	r2, [pc, #392]	; (8001000 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x1f0>)
+ 8000e76:	6851      	ldr	r1, [r2, #4]
+ 8000e78:	2300      	movs	r3, #0
+ 8000e7a:	f105 091c 	add.w	r9, r5, #28
+ 8000e7e:	e9c5 3307 	strd	r3, r3, [r5, #28]
+ 8000e82:	4617      	mov	r7, r2
+ 8000e84:	2900      	cmp	r1, #0
+ 8000e86:	d16a      	bne.n	8000f5e <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x14e>
+ 8000e88:	2301      	movs	r3, #1
+ 8000e8a:	f8c2 9000 	str.w	r9, [r2]
+ 8000e8e:	6053      	str	r3, [r2, #4]
+ 8000e90:	f8d8 3000 	ldr.w	r3, [r8]
+ 8000e94:	495b      	ldr	r1, [pc, #364]	; (8001004 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x1f4>)
+ 8000e96:	63de      	str	r6, [r3, #60]	; 0x3c
+ 8000e98:	f8d8 3000 	ldr.w	r3, [r8]
+ 8000e9c:	2205      	movs	r2, #5
+ 8000e9e:	64da      	str	r2, [r3, #76]	; 0x4c
+ 8000ea0:	4a59      	ldr	r2, [pc, #356]	; (8001008 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x1f8>)
+ 8000ea2:	f8d8 3000 	ldr.w	r3, [r8]
+ 8000ea6:	6013      	str	r3, [r2, #0]
+ 8000ea8:	684b      	ldr	r3, [r1, #4]
+ 8000eaa:	b15b      	cbz	r3, 8000ec4 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0xb4>
+ 8000eac:	6808      	ldr	r0, [r1, #0]
+ 8000eae:	3b01      	subs	r3, #1
+ 8000eb0:	604b      	str	r3, [r1, #4]
+ 8000eb2:	6843      	ldr	r3, [r0, #4]
+ 8000eb4:	600b      	str	r3, [r1, #0]
+ 8000eb6:	2100      	movs	r1, #0
+ 8000eb8:	b103      	cbz	r3, 8000ebc <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0xac>
+ 8000eba:	6019      	str	r1, [r3, #0]
+ 8000ebc:	4603      	mov	r3, r0
+ 8000ebe:	6041      	str	r1, [r0, #4]
+ 8000ec0:	f843 190c 	str.w	r1, [r3], #-12
+ 8000ec4:	f8c8 3000 	str.w	r3, [r8]
+ 8000ec8:	2006      	movs	r0, #6
+ 8000eca:	6813      	ldr	r3, [r2, #0]
+ 8000ecc:	f000 fb54 	bl	8001578 <_ZN6kernel9Scheduler9setPendSvENS0_17changeTaskTriggerE>
+ 8000ed0:	e7ab      	b.n	8000e2a <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x1a>
+ 8000ed2:	f8d0 b004 	ldr.w	fp, [r0, #4]
+ 8000ed6:	469a      	mov	sl, r3
+ 8000ed8:	465c      	mov	r4, fp
+ 8000eda:	f109 33ff 	add.w	r3, r9, #4294967295
+ 8000ede:	4553      	cmp	r3, sl
+ 8000ee0:	d91d      	bls.n	8000f1e <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x10e>
+ 8000ee2:	b1b4      	cbz	r4, 8000f12 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x102>
+ 8000ee4:	f1a4 0024 	sub.w	r0, r4, #36	; 0x24
+ 8000ee8:	4629      	mov	r1, r5
+ 8000eea:	9301      	str	r3, [sp, #4]
+ 8000eec:	f7ff fdbc 	bl	8000a68 <_ZN6kernel4Task15priorityCompareEPS0_S1_>
+ 8000ef0:	2800      	cmp	r0, #0
+ 8000ef2:	9b01      	ldr	r3, [sp, #4]
+ 8000ef4:	dd0f      	ble.n	8000f16 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x106>
+ 8000ef6:	6823      	ldr	r3, [r4, #0]
+ 8000ef8:	e9c5 3409 	strd	r3, r4, [r5, #36]	; 0x24
+ 8000efc:	6027      	str	r7, [r4, #0]
+ 8000efe:	6a6b      	ldr	r3, [r5, #36]	; 0x24
+ 8000f00:	b103      	cbz	r3, 8000f04 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0xf4>
+ 8000f02:	605f      	str	r7, [r3, #4]
+ 8000f04:	f109 0301 	add.w	r3, r9, #1
+ 8000f08:	45a3      	cmp	fp, r4
+ 8000f0a:	60b3      	str	r3, [r6, #8]
+ 8000f0c:	d1a3      	bne.n	8000e56 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x46>
+ 8000f0e:	6077      	str	r7, [r6, #4]
+ 8000f10:	e7a1      	b.n	8000e56 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x46>
+ 8000f12:	4620      	mov	r0, r4
+ 8000f14:	e7e8      	b.n	8000ee8 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0xd8>
+ 8000f16:	6864      	ldr	r4, [r4, #4]
+ 8000f18:	f10a 0a01 	add.w	sl, sl, #1
+ 8000f1c:	e7df      	b.n	8000ede <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0xce>
+ 8000f1e:	b18c      	cbz	r4, 8000f44 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x134>
+ 8000f20:	f1a4 0024 	sub.w	r0, r4, #36	; 0x24
+ 8000f24:	4629      	mov	r1, r5
+ 8000f26:	f7ff fd9f 	bl	8000a68 <_ZN6kernel4Task15priorityCompareEPS0_S1_>
+ 8000f2a:	2800      	cmp	r0, #0
+ 8000f2c:	dc0c      	bgt.n	8000f48 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x138>
+ 8000f2e:	6863      	ldr	r3, [r4, #4]
+ 8000f30:	62ab      	str	r3, [r5, #40]	; 0x28
+ 8000f32:	626c      	str	r4, [r5, #36]	; 0x24
+ 8000f34:	6067      	str	r7, [r4, #4]
+ 8000f36:	6aab      	ldr	r3, [r5, #40]	; 0x28
+ 8000f38:	b103      	cbz	r3, 8000f3c <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x12c>
+ 8000f3a:	601f      	str	r7, [r3, #0]
+ 8000f3c:	f109 0301 	add.w	r3, r9, #1
+ 8000f40:	60b3      	str	r3, [r6, #8]
+ 8000f42:	e788      	b.n	8000e56 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x46>
+ 8000f44:	4620      	mov	r0, r4
+ 8000f46:	e7ed      	b.n	8000f24 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x114>
+ 8000f48:	6823      	ldr	r3, [r4, #0]
+ 8000f4a:	e9c5 3409 	strd	r3, r4, [r5, #36]	; 0x24
+ 8000f4e:	6027      	str	r7, [r4, #0]
+ 8000f50:	6a6b      	ldr	r3, [r5, #36]	; 0x24
+ 8000f52:	b103      	cbz	r3, 8000f56 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x146>
+ 8000f54:	605f      	str	r7, [r3, #4]
+ 8000f56:	45a3      	cmp	fp, r4
+ 8000f58:	bf08      	it	eq
+ 8000f5a:	6077      	streq	r7, [r6, #4]
+ 8000f5c:	e7ee      	b.n	8000f3c <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x12c>
+ 8000f5e:	6814      	ldr	r4, [r2, #0]
+ 8000f60:	469a      	mov	sl, r3
+ 8000f62:	687b      	ldr	r3, [r7, #4]
+ 8000f64:	3b01      	subs	r3, #1
+ 8000f66:	4553      	cmp	r3, sl
+ 8000f68:	d920      	bls.n	8000fac <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x19c>
+ 8000f6a:	b1cc      	cbz	r4, 8000fa0 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x190>
+ 8000f6c:	f1a4 001c 	sub.w	r0, r4, #28
+ 8000f70:	4629      	mov	r1, r5
+ 8000f72:	f7ff fd5d 	bl	8000a30 <_ZN6kernel4Task12sleepCompareEPS0_S1_>
+ 8000f76:	2800      	cmp	r0, #0
+ 8000f78:	dd14      	ble.n	8000fa4 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x194>
+ 8000f7a:	6823      	ldr	r3, [r4, #0]
+ 8000f7c:	e9c5 3407 	strd	r3, r4, [r5, #28]
+ 8000f80:	f8c4 9000 	str.w	r9, [r4]
+ 8000f84:	69eb      	ldr	r3, [r5, #28]
+ 8000f86:	b10b      	cbz	r3, 8000f8c <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x17c>
+ 8000f88:	f8c3 9004 	str.w	r9, [r3, #4]
+ 8000f8c:	687b      	ldr	r3, [r7, #4]
+ 8000f8e:	3301      	adds	r3, #1
+ 8000f90:	607b      	str	r3, [r7, #4]
+ 8000f92:	683b      	ldr	r3, [r7, #0]
+ 8000f94:	429c      	cmp	r4, r3
+ 8000f96:	f47f af7b 	bne.w	8000e90 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x80>
+ 8000f9a:	f8c7 9000 	str.w	r9, [r7]
+ 8000f9e:	e777      	b.n	8000e90 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x80>
+ 8000fa0:	4620      	mov	r0, r4
+ 8000fa2:	e7e5      	b.n	8000f70 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x160>
+ 8000fa4:	6864      	ldr	r4, [r4, #4]
+ 8000fa6:	f10a 0a01 	add.w	sl, sl, #1
+ 8000faa:	e7da      	b.n	8000f62 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x152>
+ 8000fac:	b19c      	cbz	r4, 8000fd6 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x1c6>
+ 8000fae:	f1a4 001c 	sub.w	r0, r4, #28
+ 8000fb2:	4629      	mov	r1, r5
+ 8000fb4:	f7ff fd3c 	bl	8000a30 <_ZN6kernel4Task12sleepCompareEPS0_S1_>
+ 8000fb8:	2800      	cmp	r0, #0
+ 8000fba:	dc0e      	bgt.n	8000fda <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x1ca>
+ 8000fbc:	6863      	ldr	r3, [r4, #4]
+ 8000fbe:	622b      	str	r3, [r5, #32]
+ 8000fc0:	61ec      	str	r4, [r5, #28]
+ 8000fc2:	f8c4 9004 	str.w	r9, [r4, #4]
+ 8000fc6:	6a2b      	ldr	r3, [r5, #32]
+ 8000fc8:	b10b      	cbz	r3, 8000fce <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x1be>
+ 8000fca:	f8c3 9000 	str.w	r9, [r3]
+ 8000fce:	687b      	ldr	r3, [r7, #4]
+ 8000fd0:	3301      	adds	r3, #1
+ 8000fd2:	607b      	str	r3, [r7, #4]
+ 8000fd4:	e75c      	b.n	8000e90 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x80>
+ 8000fd6:	4620      	mov	r0, r4
+ 8000fd8:	e7eb      	b.n	8000fb2 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x1a2>
+ 8000fda:	6823      	ldr	r3, [r4, #0]
+ 8000fdc:	e9c5 3407 	strd	r3, r4, [r5, #28]
+ 8000fe0:	f8c4 9000 	str.w	r9, [r4]
+ 8000fe4:	69eb      	ldr	r3, [r5, #28]
+ 8000fe6:	b10b      	cbz	r3, 8000fec <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x1dc>
+ 8000fe8:	f8c3 9004 	str.w	r9, [r3, #4]
+ 8000fec:	683b      	ldr	r3, [r7, #0]
+ 8000fee:	429c      	cmp	r4, r3
+ 8000ff0:	bf08      	it	eq
+ 8000ff2:	f8c7 9000 	streq.w	r9, [r7]
+ 8000ff6:	e7ea      	b.n	8000fce <_ZN6kernel5Mutex15kernelLockMutexEPS0_m+0x1be>
+ 8000ff8:	606d      	str	r5, [r5, #4]
+ 8000ffa:	deff      	udf	#255	; 0xff
+ 8000ffc:	20000e78 	.word	0x20000e78
+ 8001000:	20000e88 	.word	0x20000e88
+ 8001004:	20000e70 	.word	0x20000e70
+ 8001008:	20000e68 	.word	0x20000e68
+ 800100c:	20000e64 	.word	0x20000e64
+
+08001010 <_ZN6kernel5Mutex18kernelReleaseMutexEPS0_>:
+ 8001010:	b570      	push	{r4, r5, r6, lr}
+ 8001012:	4604      	mov	r4, r0
+ 8001014:	68c0      	ldr	r0, [r0, #12]
+ 8001016:	b118      	cbz	r0, 8001020 <_ZN6kernel5Mutex18kernelReleaseMutexEPS0_+0x10>
+ 8001018:	68a3      	ldr	r3, [r4, #8]
+ 800101a:	b913      	cbnz	r3, 8001022 <_ZN6kernel5Mutex18kernelReleaseMutexEPS0_+0x12>
+ 800101c:	60e3      	str	r3, [r4, #12]
+ 800101e:	2001      	movs	r0, #1
+ 8001020:	bd70      	pop	{r4, r5, r6, pc}
+ 8001022:	6866      	ldr	r6, [r4, #4]
+ 8001024:	6872      	ldr	r2, [r6, #4]
+ 8001026:	6062      	str	r2, [r4, #4]
+ 8001028:	3b01      	subs	r3, #1
+ 800102a:	60a3      	str	r3, [r4, #8]
+ 800102c:	2300      	movs	r3, #0
+ 800102e:	b102      	cbz	r2, 8001032 <_ZN6kernel5Mutex18kernelReleaseMutexEPS0_+0x22>
+ 8001030:	6013      	str	r3, [r2, #0]
+ 8001032:	4635      	mov	r5, r6
+ 8001034:	6073      	str	r3, [r6, #4]
+ 8001036:	f845 3924 	str.w	r3, [r5], #-36
+ 800103a:	61b3      	str	r3, [r6, #24]
+ 800103c:	6823      	ldr	r3, [r4, #0]
+ 800103e:	4629      	mov	r1, r5
+ 8001040:	681b      	ldr	r3, [r3, #0]
+ 8001042:	4620      	mov	r0, r4
+ 8001044:	4798      	blx	r3
+ 8001046:	4a06      	ldr	r2, [pc, #24]	; (8001060 <_ZN6kernel5Mutex18kernelReleaseMutexEPS0_+0x50>)
+ 8001048:	4806      	ldr	r0, [pc, #24]	; (8001064 <_ZN6kernel5Mutex18kernelReleaseMutexEPS0_+0x54>)
+ 800104a:	4629      	mov	r1, r5
+ 800104c:	f7ff fe04 	bl	8000c58 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E>
+ 8001050:	2304      	movs	r3, #4
+ 8001052:	62b3      	str	r3, [r6, #40]	; 0x28
+ 8001054:	2007      	movs	r0, #7
+ 8001056:	60e5      	str	r5, [r4, #12]
+ 8001058:	f000 f9a2 	bl	80013a0 <_ZN6kernel9Scheduler8scheduleENS0_17changeTaskTriggerE>
+ 800105c:	2001      	movs	r0, #1
+ 800105e:	e7df      	b.n	8001020 <_ZN6kernel5Mutex18kernelReleaseMutexEPS0_+0x10>
+ 8001060:	08000a69 	.word	0x08000a69
+ 8001064:	20000e70 	.word	0x20000e70
+
+08001068 <_GLOBAL__sub_I__ZN6kernel5Mutex4lockEm>:
+ 8001068:	4a38      	ldr	r2, [pc, #224]	; (800114c <_GLOBAL__sub_I__ZN6kernel5Mutex4lockEm+0xe4>)
+ 800106a:	6813      	ldr	r3, [r2, #0]
+ 800106c:	3301      	adds	r3, #1
+ 800106e:	2b01      	cmp	r3, #1
+ 8001070:	b570      	push	{r4, r5, r6, lr}
+ 8001072:	6013      	str	r3, [r2, #0]
+ 8001074:	bf02      	ittt	eq
+ 8001076:	4b36      	ldreq	r3, [pc, #216]	; (8001150 <_GLOBAL__sub_I__ZN6kernel5Mutex4lockEm+0xe8>)
+ 8001078:	4a36      	ldreq	r2, [pc, #216]	; (8001154 <_GLOBAL__sub_I__ZN6kernel5Mutex4lockEm+0xec>)
+ 800107a:	601a      	streq	r2, [r3, #0]
+ 800107c:	4b36      	ldr	r3, [pc, #216]	; (8001158 <_GLOBAL__sub_I__ZN6kernel5Mutex4lockEm+0xf0>)
+ 800107e:	6819      	ldr	r1, [r3, #0]
+ 8001080:	3101      	adds	r1, #1
+ 8001082:	2901      	cmp	r1, #1
+ 8001084:	6019      	str	r1, [r3, #0]
+ 8001086:	d160      	bne.n	800114a <_GLOBAL__sub_I__ZN6kernel5Mutex4lockEm+0xe2>
+ 8001088:	4b34      	ldr	r3, [pc, #208]	; (800115c <_GLOBAL__sub_I__ZN6kernel5Mutex4lockEm+0xf4>)
+ 800108a:	4e35      	ldr	r6, [pc, #212]	; (8001160 <_GLOBAL__sub_I__ZN6kernel5Mutex4lockEm+0xf8>)
+ 800108c:	f883 1048 	strb.w	r1, [r3, #72]	; 0x48
+ 8001090:	f503 7002 	add.w	r0, r3, #520	; 0x208
+ 8001094:	62d8      	str	r0, [r3, #44]	; 0x2c
+ 8001096:	f103 0054 	add.w	r0, r3, #84	; 0x54
+ 800109a:	6318      	str	r0, [r3, #48]	; 0x30
+ 800109c:	2080      	movs	r0, #128	; 0x80
+ 800109e:	6358      	str	r0, [r3, #52]	; 0x34
+ 80010a0:	4830      	ldr	r0, [pc, #192]	; (8001164 <_GLOBAL__sub_I__ZN6kernel5Mutex4lockEm+0xfc>)
+ 80010a2:	6518      	str	r0, [r3, #80]	; 0x50
+ 80010a4:	f64d 64ad 	movw	r4, #57005	; 0xdead
+ 80010a8:	f64b 60ef 	movw	r0, #48879	; 0xbeef
+ 80010ac:	2200      	movs	r2, #0
+ 80010ae:	e9c3 4015 	strd	r4, r0, [r3, #84]	; 0x54
+ 80010b2:	e9c3 4017 	strd	r4, r0, [r3, #92]	; 0x5c
+ 80010b6:	e9c3 4019 	strd	r4, r0, [r3, #100]	; 0x64
+ 80010ba:	e9c3 401b 	strd	r4, r0, [r3, #108]	; 0x6c
+ 80010be:	f04f 7080 	mov.w	r0, #16777216	; 0x1000000
+ 80010c2:	639a      	str	r2, [r3, #56]	; 0x38
+ 80010c4:	63da      	str	r2, [r3, #60]	; 0x3c
+ 80010c6:	f8c3 024c 	str.w	r0, [r3, #588]	; 0x24c
+ 80010ca:	4827      	ldr	r0, [pc, #156]	; (8001168 <_GLOBAL__sub_I__ZN6kernel5Mutex4lockEm+0x100>)
+ 80010cc:	f8c3 6248 	str.w	r6, [r3, #584]	; 0x248
+ 80010d0:	2503      	movs	r5, #3
+ 80010d2:	f8c3 0244 	str.w	r0, [r3, #580]	; 0x244
+ 80010d6:	2404      	movs	r4, #4
+ 80010d8:	2002      	movs	r0, #2
+ 80010da:	e9c3 2201 	strd	r2, r2, [r3, #4]
+ 80010de:	e9c3 2203 	strd	r2, r2, [r3, #12]
+ 80010e2:	e9c3 2205 	strd	r2, r2, [r3, #20]
+ 80010e6:	e9c3 2207 	strd	r2, r2, [r3, #28]
+ 80010ea:	e9c3 2209 	strd	r2, r2, [r3, #36]	; 0x24
+ 80010ee:	e9c3 6210 	strd	r6, r2, [r3, #64]	; 0x40
+ 80010f2:	f883 2049 	strb.w	r2, [r3, #73]	; 0x49
+ 80010f6:	64dd      	str	r5, [r3, #76]	; 0x4c
+ 80010f8:	f8c3 4240 	str.w	r4, [r3, #576]	; 0x240
+ 80010fc:	f8c3 523c 	str.w	r5, [r3, #572]	; 0x23c
+ 8001100:	f8c3 0238 	str.w	r0, [r3, #568]	; 0x238
+ 8001104:	f8c3 1234 	str.w	r1, [r3, #564]	; 0x234
+ 8001108:	f8c3 2230 	str.w	r2, [r3, #560]	; 0x230
+ 800110c:	220b      	movs	r2, #11
+ 800110e:	f8c3 222c 	str.w	r2, [r3, #556]	; 0x22c
+ 8001112:	220a      	movs	r2, #10
+ 8001114:	f8c3 2228 	str.w	r2, [r3, #552]	; 0x228
+ 8001118:	2209      	movs	r2, #9
+ 800111a:	f8c3 2224 	str.w	r2, [r3, #548]	; 0x224
+ 800111e:	2208      	movs	r2, #8
+ 8001120:	f8c3 2220 	str.w	r2, [r3, #544]	; 0x220
+ 8001124:	2207      	movs	r2, #7
+ 8001126:	f8c3 221c 	str.w	r2, [r3, #540]	; 0x21c
+ 800112a:	2206      	movs	r2, #6
+ 800112c:	f8c3 2218 	str.w	r2, [r3, #536]	; 0x218
+ 8001130:	2205      	movs	r2, #5
+ 8001132:	f8c3 2214 	str.w	r2, [r3, #532]	; 0x214
+ 8001136:	f06f 0202 	mvn.w	r2, #2
+ 800113a:	f8c3 4210 	str.w	r4, [r3, #528]	; 0x210
+ 800113e:	f8c3 020c 	str.w	r0, [r3, #524]	; 0x20c
+ 8001142:	f8c3 2208 	str.w	r2, [r3, #520]	; 0x208
+ 8001146:	4a09      	ldr	r2, [pc, #36]	; (800116c <_GLOBAL__sub_I__ZN6kernel5Mutex4lockEm+0x104>)
+ 8001148:	601a      	str	r2, [r3, #0]
+ 800114a:	bd70      	pop	{r4, r5, r6, pc}
+ 800114c:	20000474 	.word	0x20000474
+ 8001150:	2000021c 	.word	0x2000021c
+ 8001154:	20000000 	.word	0x20000000
+ 8001158:	20000478 	.word	0x20000478
+ 800115c:	20000220 	.word	0x20000220
+ 8001160:	08000565 	.word	0x08000565
+ 8001164:	08001bbf 	.word	0x08001bbf
+ 8001168:	08001a31 	.word	0x08001a31
+ 800116c:	08001bd8 	.word	0x08001bd8
+
+08001170 <_ZN6kernel4Task15setStackPointerEPm>:
+ 8001170:	62c1      	str	r1, [r0, #44]	; 0x2c
+ 8001172:	4770      	bx	lr
+
+08001174 <_ZN6kernel9Scheduler11setupKernelEh>:
+ 8001174:	4b01      	ldr	r3, [pc, #4]	; (800117c <_ZN6kernel9Scheduler11setupKernelEh+0x8>)
+ 8001176:	7018      	strb	r0, [r3, #0]
+ 8001178:	4770      	bx	lr
+ 800117a:	bf00      	nop
+ 800117c:	20000e6d 	.word	0x20000e6d
+
+08001180 <_ZN6kernel9Scheduler11startKernelEv>:
+ 8001180:	b508      	push	{r3, lr}
+ 8001182:	4b14      	ldr	r3, [pc, #80]	; (80011d4 <_ZN6kernel9Scheduler11startKernelEv+0x54>)
+ 8001184:	781b      	ldrb	r3, [r3, #0]
+ 8001186:	bb1b      	cbnz	r3, 80011d0 <_ZN6kernel9Scheduler11startKernelEv+0x50>
+ 8001188:	4b13      	ldr	r3, [pc, #76]	; (80011d8 <_ZN6kernel9Scheduler11startKernelEv+0x58>)
+ 800118a:	685b      	ldr	r3, [r3, #4]
+ 800118c:	b303      	cbz	r3, 80011d0 <_ZN6kernel9Scheduler11startKernelEv+0x50>
+ 800118e:	4813      	ldr	r0, [pc, #76]	; (80011dc <_ZN6kernel9Scheduler11startKernelEv+0x5c>)
+ 8001190:	f000 fc3e 	bl	8001a10 <_ZN6kernel4Task5startEv>
+ 8001194:	f000 f82a 	bl	80011ec <_ZN6kernel9Scheduler22installKernelInterruptEv>
+ 8001198:	b1d0      	cbz	r0, 80011d0 <_ZN6kernel9Scheduler11startKernelEv+0x50>
+ 800119a:	4b11      	ldr	r3, [pc, #68]	; (80011e0 <_ZN6kernel9Scheduler11startKernelEv+0x60>)
+ 800119c:	4a11      	ldr	r2, [pc, #68]	; (80011e4 <_ZN6kernel9Scheduler11startKernelEv+0x64>)
+ 800119e:	6859      	ldr	r1, [r3, #4]
+ 80011a0:	4811      	ldr	r0, [pc, #68]	; (80011e8 <_ZN6kernel9Scheduler11startKernelEv+0x68>)
+ 80011a2:	6812      	ldr	r2, [r2, #0]
+ 80011a4:	6800      	ldr	r0, [r0, #0]
+ 80011a6:	fbb2 f2f0 	udiv	r2, r2, r0
+ 80011aa:	f001 417f 	and.w	r1, r1, #4278190080	; 0xff000000
+ 80011ae:	3a01      	subs	r2, #1
+ 80011b0:	430a      	orrs	r2, r1
+ 80011b2:	605a      	str	r2, [r3, #4]
+ 80011b4:	689a      	ldr	r2, [r3, #8]
+ 80011b6:	f002 427f 	and.w	r2, r2, #4278190080	; 0xff000000
+ 80011ba:	609a      	str	r2, [r3, #8]
+ 80011bc:	681a      	ldr	r2, [r3, #0]
+ 80011be:	f042 0206 	orr.w	r2, r2, #6
+ 80011c2:	601a      	str	r2, [r3, #0]
+ 80011c4:	681a      	ldr	r2, [r3, #0]
+ 80011c6:	f042 0201 	orr.w	r2, r2, #1
+ 80011ca:	601a      	str	r2, [r3, #0]
+ 80011cc:	f000 fb2c 	bl	8001828 <_ZN4core4Core14supervisorCallILN6kernel11ServiceCall9SvcNumberE0EvEET0_v>
+ 80011d0:	2000      	movs	r0, #0
+ 80011d2:	bd08      	pop	{r3, pc}
+ 80011d4:	20000e6e 	.word	0x20000e6e
+ 80011d8:	20000e70 	.word	0x20000e70
+ 80011dc:	20000220 	.word	0x20000220
+ 80011e0:	e000e010 	.word	0xe000e010
+ 80011e4:	20000004 	.word	0x20000004
+ 80011e8:	20000014 	.word	0x20000014
+
+080011ec <_ZN6kernel9Scheduler22installKernelInterruptEv>:
+ 80011ec:	b570      	push	{r4, r5, r6, lr}
+ 80011ee:	4e1a      	ldr	r6, [pc, #104]	; (8001258 <_ZN6kernel9Scheduler22installKernelInterruptEv+0x6c>)
+ 80011f0:	7832      	ldrb	r2, [r6, #0]
+ 80011f2:	2a00      	cmp	r2, #0
+ 80011f4:	d12d      	bne.n	8001252 <_ZN6kernel9Scheduler22installKernelInterruptEv+0x66>
+ 80011f6:	4b19      	ldr	r3, [pc, #100]	; (800125c <_ZN6kernel9Scheduler22installKernelInterruptEv+0x70>)
+ 80011f8:	4a19      	ldr	r2, [pc, #100]	; (8001260 <_ZN6kernel9Scheduler22installKernelInterruptEv+0x74>)
+ 80011fa:	6899      	ldr	r1, [r3, #8]
+ 80011fc:	4d19      	ldr	r5, [pc, #100]	; (8001264 <_ZN6kernel9Scheduler22installKernelInterruptEv+0x78>)
+ 80011fe:	4c1a      	ldr	r4, [pc, #104]	; (8001268 <_ZN6kernel9Scheduler22installKernelInterruptEv+0x7c>)
+ 8001200:	481a      	ldr	r0, [pc, #104]	; (800126c <_ZN6kernel9Scheduler22installKernelInterruptEv+0x80>)
+ 8001202:	4291      	cmp	r1, r2
+ 8001204:	bf18      	it	ne
+ 8001206:	609a      	strne	r2, [r3, #8]
+ 8001208:	782a      	ldrb	r2, [r5, #0]
+ 800120a:	f04f 31ff 	mov.w	r1, #4294967295
+ 800120e:	f7ff f83c 	bl	800028a <_ZN14implementation7vectors20DynamicVectorManager11irqPriorityEN4core10interfaces3IrqEh>
+ 8001212:	2300      	movs	r3, #0
+ 8001214:	4a16      	ldr	r2, [pc, #88]	; (8001270 <_ZN6kernel9Scheduler22installKernelInterruptEv+0x84>)
+ 8001216:	4815      	ldr	r0, [pc, #84]	; (800126c <_ZN6kernel9Scheduler22installKernelInterruptEv+0x80>)
+ 8001218:	f04f 31ff 	mov.w	r1, #4294967295
+ 800121c:	f7fe ffd1 	bl	80001c2 <_ZN14implementation7vectors20DynamicVectorManager15registerHandlerEN4core10interfaces3IrqEPFvvEPKc>
+ 8001220:	8821      	ldrh	r1, [r4, #0]
+ 8001222:	782a      	ldrb	r2, [r5, #0]
+ 8001224:	4811      	ldr	r0, [pc, #68]	; (800126c <_ZN6kernel9Scheduler22installKernelInterruptEv+0x80>)
+ 8001226:	f7ff f830 	bl	800028a <_ZN14implementation7vectors20DynamicVectorManager11irqPriorityEN4core10interfaces3IrqEh>
+ 800122a:	8821      	ldrh	r1, [r4, #0]
+ 800122c:	4c11      	ldr	r4, [pc, #68]	; (8001274 <_ZN6kernel9Scheduler22installKernelInterruptEv+0x88>)
+ 800122e:	4a12      	ldr	r2, [pc, #72]	; (8001278 <_ZN6kernel9Scheduler22installKernelInterruptEv+0x8c>)
+ 8001230:	480e      	ldr	r0, [pc, #56]	; (800126c <_ZN6kernel9Scheduler22installKernelInterruptEv+0x80>)
+ 8001232:	2300      	movs	r3, #0
+ 8001234:	f7fe ffc5 	bl	80001c2 <_ZN14implementation7vectors20DynamicVectorManager15registerHandlerEN4core10interfaces3IrqEPFvvEPKc>
+ 8001238:	22ff      	movs	r2, #255	; 0xff
+ 800123a:	8821      	ldrh	r1, [r4, #0]
+ 800123c:	480b      	ldr	r0, [pc, #44]	; (800126c <_ZN6kernel9Scheduler22installKernelInterruptEv+0x80>)
+ 800123e:	f7ff f824 	bl	800028a <_ZN14implementation7vectors20DynamicVectorManager11irqPriorityEN4core10interfaces3IrqEh>
+ 8001242:	2300      	movs	r3, #0
+ 8001244:	4a0d      	ldr	r2, [pc, #52]	; (800127c <_ZN6kernel9Scheduler22installKernelInterruptEv+0x90>)
+ 8001246:	8821      	ldrh	r1, [r4, #0]
+ 8001248:	4808      	ldr	r0, [pc, #32]	; (800126c <_ZN6kernel9Scheduler22installKernelInterruptEv+0x80>)
+ 800124a:	f7fe ffba 	bl	80001c2 <_ZN14implementation7vectors20DynamicVectorManager15registerHandlerEN4core10interfaces3IrqEPFvvEPKc>
+ 800124e:	2301      	movs	r3, #1
+ 8001250:	7033      	strb	r3, [r6, #0]
+ 8001252:	2001      	movs	r0, #1
+ 8001254:	bd70      	pop	{r4, r5, r6, pc}
+ 8001256:	bf00      	nop
+ 8001258:	20000e6f 	.word	0x20000e6f
+ 800125c:	e000ed00 	.word	0xe000ed00
+ 8001260:	20000800 	.word	0x20000800
+ 8001264:	20000e6d 	.word	0x20000e6d
+ 8001268:	08001c50 	.word	0x08001c50
+ 800126c:	20000600 	.word	0x20000600
+ 8001270:	080005ab 	.word	0x080005ab
+ 8001274:	08001c52 	.word	0x08001c52
+ 8001278:	080005af 	.word	0x080005af
+ 800127c:	08000579 	.word	0x08000579
+
+08001280 <_ZN6kernel9Scheduler14startFirstTaskEv>:
+ 8001280:	b580      	push	{r7, lr}
+ 8001282:	af00      	add	r7, sp, #0
+ 8001284:	4809      	ldr	r0, [pc, #36]	; (80012ac <_ZN6kernel9Scheduler14startFirstTaskEv+0x2c>)
+ 8001286:	f000 fad6 	bl	8001836 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE8getFirstEv>
+ 800128a:	4602      	mov	r2, r0
+ 800128c:	4b08      	ldr	r3, [pc, #32]	; (80012b0 <_ZN6kernel9Scheduler14startFirstTaskEv+0x30>)
+ 800128e:	601a      	str	r2, [r3, #0]
+ 8001290:	4b07      	ldr	r3, [pc, #28]	; (80012b0 <_ZN6kernel9Scheduler14startFirstTaskEv+0x30>)
+ 8001292:	681b      	ldr	r3, [r3, #0]
+ 8001294:	4b07      	ldr	r3, [pc, #28]	; (80012b4 <_ZN6kernel9Scheduler14startFirstTaskEv+0x34>)
+ 8001296:	2201      	movs	r2, #1
+ 8001298:	701a      	strb	r2, [r3, #0]
+ 800129a:	4b05      	ldr	r3, [pc, #20]	; (80012b0 <_ZN6kernel9Scheduler14startFirstTaskEv+0x30>)
+ 800129c:	681b      	ldr	r3, [r3, #0]
+ 800129e:	6adb      	ldr	r3, [r3, #44]	; 0x2c
+ 80012a0:	4618      	mov	r0, r3
+ 80012a2:	f7ff f953 	bl	800054c <_ZN4core4Core11restoreTaskEPVm>
+ 80012a6:	2301      	movs	r3, #1
+ 80012a8:	4618      	mov	r0, r3
+ 80012aa:	bd80      	pop	{r7, pc}
+ 80012ac:	20000e70 	.word	0x20000e70
+ 80012b0:	20000e64 	.word	0x20000e64
+ 80012b4:	20000e6e 	.word	0x20000e6e
+
+080012b8 <_ZN6kernel9Scheduler9startTaskERNS_4TaskE>:
+ 80012b8:	e92d 4ff8 	stmdb	sp!, {r3, r4, r5, r6, r7, r8, r9, sl, fp, lr}
+ 80012bc:	f890 3049 	ldrb.w	r3, [r0, #73]	; 0x49
+ 80012c0:	4605      	mov	r5, r0
+ 80012c2:	2b00      	cmp	r3, #0
+ 80012c4:	d160      	bne.n	8001388 <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0xd0>
+ 80012c6:	4a32      	ldr	r2, [pc, #200]	; (8001390 <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0xd8>)
+ 80012c8:	6857      	ldr	r7, [r2, #4]
+ 80012ca:	1d06      	adds	r6, r0, #4
+ 80012cc:	e9c0 3301 	strd	r3, r3, [r0, #4]
+ 80012d0:	4691      	mov	r9, r2
+ 80012d2:	b9af      	cbnz	r7, 8001300 <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0x48>
+ 80012d4:	2301      	movs	r3, #1
+ 80012d6:	6016      	str	r6, [r2, #0]
+ 80012d8:	6053      	str	r3, [r2, #4]
+ 80012da:	4a2e      	ldr	r2, [pc, #184]	; (8001394 <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0xdc>)
+ 80012dc:	482e      	ldr	r0, [pc, #184]	; (8001398 <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0xe0>)
+ 80012de:	4629      	mov	r1, r5
+ 80012e0:	f7ff fcba 	bl	8000c58 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E>
+ 80012e4:	4a2d      	ldr	r2, [pc, #180]	; (800139c <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0xe4>)
+ 80012e6:	7814      	ldrb	r4, [r2, #0]
+ 80012e8:	2301      	movs	r3, #1
+ 80012ea:	2004      	movs	r0, #4
+ 80012ec:	f885 3049 	strb.w	r3, [r5, #73]	; 0x49
+ 80012f0:	64e8      	str	r0, [r5, #76]	; 0x4c
+ 80012f2:	2c00      	cmp	r4, #0
+ 80012f4:	d04a      	beq.n	800138c <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0xd4>
+ 80012f6:	f000 f853 	bl	80013a0 <_ZN6kernel9Scheduler8scheduleENS0_17changeTaskTriggerE>
+ 80012fa:	4620      	mov	r0, r4
+ 80012fc:	e8bd 8ff8 	ldmia.w	sp!, {r3, r4, r5, r6, r7, r8, r9, sl, fp, pc}
+ 8001300:	f8d2 a000 	ldr.w	sl, [r2]
+ 8001304:	4698      	mov	r8, r3
+ 8001306:	4654      	mov	r4, sl
+ 8001308:	f107 3bff 	add.w	fp, r7, #4294967295
+ 800130c:	45c3      	cmp	fp, r8
+ 800130e:	d91b      	bls.n	8001348 <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0x90>
+ 8001310:	b1a4      	cbz	r4, 800133c <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0x84>
+ 8001312:	1f20      	subs	r0, r4, #4
+ 8001314:	4629      	mov	r1, r5
+ 8001316:	f7ff fba7 	bl	8000a68 <_ZN6kernel4Task15priorityCompareEPS0_S1_>
+ 800131a:	2800      	cmp	r0, #0
+ 800131c:	dd10      	ble.n	8001340 <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0x88>
+ 800131e:	6823      	ldr	r3, [r4, #0]
+ 8001320:	e9c5 3401 	strd	r3, r4, [r5, #4]
+ 8001324:	6026      	str	r6, [r4, #0]
+ 8001326:	686b      	ldr	r3, [r5, #4]
+ 8001328:	b103      	cbz	r3, 800132c <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0x74>
+ 800132a:	605e      	str	r6, [r3, #4]
+ 800132c:	3701      	adds	r7, #1
+ 800132e:	45a2      	cmp	sl, r4
+ 8001330:	f8c9 7004 	str.w	r7, [r9, #4]
+ 8001334:	d1d1      	bne.n	80012da <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0x22>
+ 8001336:	f8c9 6000 	str.w	r6, [r9]
+ 800133a:	e7ce      	b.n	80012da <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0x22>
+ 800133c:	4620      	mov	r0, r4
+ 800133e:	e7e9      	b.n	8001314 <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0x5c>
+ 8001340:	6864      	ldr	r4, [r4, #4]
+ 8001342:	f108 0801 	add.w	r8, r8, #1
+ 8001346:	e7e1      	b.n	800130c <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0x54>
+ 8001348:	b184      	cbz	r4, 800136c <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0xb4>
+ 800134a:	1f20      	subs	r0, r4, #4
+ 800134c:	4629      	mov	r1, r5
+ 800134e:	f7ff fb8b 	bl	8000a68 <_ZN6kernel4Task15priorityCompareEPS0_S1_>
+ 8001352:	2800      	cmp	r0, #0
+ 8001354:	dc0c      	bgt.n	8001370 <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0xb8>
+ 8001356:	6863      	ldr	r3, [r4, #4]
+ 8001358:	60ab      	str	r3, [r5, #8]
+ 800135a:	606c      	str	r4, [r5, #4]
+ 800135c:	6066      	str	r6, [r4, #4]
+ 800135e:	68ab      	ldr	r3, [r5, #8]
+ 8001360:	b103      	cbz	r3, 8001364 <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0xac>
+ 8001362:	601e      	str	r6, [r3, #0]
+ 8001364:	3701      	adds	r7, #1
+ 8001366:	f8c9 7004 	str.w	r7, [r9, #4]
+ 800136a:	e7b6      	b.n	80012da <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0x22>
+ 800136c:	4620      	mov	r0, r4
+ 800136e:	e7ed      	b.n	800134c <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0x94>
+ 8001370:	6823      	ldr	r3, [r4, #0]
+ 8001372:	e9c5 3401 	strd	r3, r4, [r5, #4]
+ 8001376:	6026      	str	r6, [r4, #0]
+ 8001378:	686b      	ldr	r3, [r5, #4]
+ 800137a:	b103      	cbz	r3, 800137e <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0xc6>
+ 800137c:	605e      	str	r6, [r3, #4]
+ 800137e:	45a2      	cmp	sl, r4
+ 8001380:	bf08      	it	eq
+ 8001382:	f8c9 6000 	streq.w	r6, [r9]
+ 8001386:	e7ed      	b.n	8001364 <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0xac>
+ 8001388:	2400      	movs	r4, #0
+ 800138a:	e7b6      	b.n	80012fa <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0x42>
+ 800138c:	461c      	mov	r4, r3
+ 800138e:	e7b4      	b.n	80012fa <_ZN6kernel9Scheduler9startTaskERNS_4TaskE+0x42>
+ 8001390:	20000e80 	.word	0x20000e80
+ 8001394:	08000a69 	.word	0x08000a69
+ 8001398:	20000e70 	.word	0x20000e70
+ 800139c:	20000e6e 	.word	0x20000e6e
+
+080013a0 <_ZN6kernel9Scheduler8scheduleENS0_17changeTaskTriggerE>:
+ 80013a0:	b538      	push	{r3, r4, r5, lr}
+ 80013a2:	4b16      	ldr	r3, [pc, #88]	; (80013fc <_ZN6kernel9Scheduler8scheduleENS0_17changeTaskTriggerE+0x5c>)
+ 80013a4:	4c16      	ldr	r4, [pc, #88]	; (8001400 <_ZN6kernel9Scheduler8scheduleENS0_17changeTaskTriggerE+0x60>)
+ 80013a6:	2201      	movs	r2, #1
+ 80013a8:	701a      	strb	r2, [r3, #0]
+ 80013aa:	4605      	mov	r5, r0
+ 80013ac:	6820      	ldr	r0, [r4, #0]
+ 80013ae:	b300      	cbz	r0, 80013f2 <_ZN6kernel9Scheduler8scheduleENS0_17changeTaskTriggerE+0x52>
+ 80013b0:	4814      	ldr	r0, [pc, #80]	; (8001404 <_ZN6kernel9Scheduler8scheduleENS0_17changeTaskTriggerE+0x64>)
+ 80013b2:	6803      	ldr	r3, [r0, #0]
+ 80013b4:	b303      	cbz	r3, 80013f8 <_ZN6kernel9Scheduler8scheduleENS0_17changeTaskTriggerE+0x58>
+ 80013b6:	6821      	ldr	r1, [r4, #0]
+ 80013b8:	6b9a      	ldr	r2, [r3, #56]	; 0x38
+ 80013ba:	6c4b      	ldr	r3, [r1, #68]	; 0x44
+ 80013bc:	429a      	cmp	r2, r3
+ 80013be:	d919      	bls.n	80013f4 <_ZN6kernel9Scheduler8scheduleENS0_17changeTaskTriggerE+0x54>
+ 80013c0:	4a11      	ldr	r2, [pc, #68]	; (8001408 <_ZN6kernel9Scheduler8scheduleENS0_17changeTaskTriggerE+0x68>)
+ 80013c2:	6821      	ldr	r1, [r4, #0]
+ 80013c4:	f7ff fc48 	bl	8000c58 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E>
+ 80013c8:	6823      	ldr	r3, [r4, #0]
+ 80013ca:	6823      	ldr	r3, [r4, #0]
+ 80013cc:	4b0f      	ldr	r3, [pc, #60]	; (800140c <_ZN6kernel9Scheduler8scheduleENS0_17changeTaskTriggerE+0x6c>)
+ 80013ce:	681a      	ldr	r2, [r3, #0]
+ 80013d0:	b90a      	cbnz	r2, 80013d6 <_ZN6kernel9Scheduler8scheduleENS0_17changeTaskTriggerE+0x36>
+ 80013d2:	6822      	ldr	r2, [r4, #0]
+ 80013d4:	601a      	str	r2, [r3, #0]
+ 80013d6:	2200      	movs	r2, #0
+ 80013d8:	6022      	str	r2, [r4, #0]
+ 80013da:	681b      	ldr	r3, [r3, #0]
+ 80013dc:	4809      	ldr	r0, [pc, #36]	; (8001404 <_ZN6kernel9Scheduler8scheduleENS0_17changeTaskTriggerE+0x64>)
+ 80013de:	2204      	movs	r2, #4
+ 80013e0:	64da      	str	r2, [r3, #76]	; 0x4c
+ 80013e2:	f000 fa28 	bl	8001836 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE8getFirstEv>
+ 80013e6:	4b0a      	ldr	r3, [pc, #40]	; (8001410 <_ZN6kernel9Scheduler8scheduleENS0_17changeTaskTriggerE+0x70>)
+ 80013e8:	6020      	str	r0, [r4, #0]
+ 80013ea:	601d      	str	r5, [r3, #0]
+ 80013ec:	f7ff f8bc 	bl	8000568 <_ZN4core4Core20contextSwitchTriggerEv>
+ 80013f0:	2001      	movs	r0, #1
+ 80013f2:	bd38      	pop	{r3, r4, r5, pc}
+ 80013f4:	2000      	movs	r0, #0
+ 80013f6:	e7fc      	b.n	80013f2 <_ZN6kernel9Scheduler8scheduleENS0_17changeTaskTriggerE+0x52>
+ 80013f8:	6c5b      	ldr	r3, [r3, #68]	; 0x44
+ 80013fa:	deff      	udf	#255	; 0xff
+ 80013fc:	20000e90 	.word	0x20000e90
+ 8001400:	20000e64 	.word	0x20000e64
+ 8001404:	20000e70 	.word	0x20000e70
+ 8001408:	08000a69 	.word	0x08000a69
+ 800140c:	20000e68 	.word	0x20000e68
+ 8001410:	20000018 	.word	0x20000018
+
+08001414 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE>:
+ 8001414:	4b36      	ldr	r3, [pc, #216]	; (80014f0 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0xdc>)
+ 8001416:	681a      	ldr	r2, [r3, #0]
+ 8001418:	f100 010c 	add.w	r1, r0, #12
+ 800141c:	4291      	cmp	r1, r2
+ 800141e:	b510      	push	{r4, lr}
+ 8001420:	d136      	bne.n	8001490 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0x7c>
+ 8001422:	6902      	ldr	r2, [r0, #16]
+ 8001424:	601a      	str	r2, [r3, #0]
+ 8001426:	2100      	movs	r1, #0
+ 8001428:	e9c0 1103 	strd	r1, r1, [r0, #12]
+ 800142c:	b102      	cbz	r2, 8001430 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0x1c>
+ 800142e:	6011      	str	r1, [r2, #0]
+ 8001430:	685a      	ldr	r2, [r3, #4]
+ 8001432:	3a01      	subs	r2, #1
+ 8001434:	605a      	str	r2, [r3, #4]
+ 8001436:	4b2f      	ldr	r3, [pc, #188]	; (80014f4 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0xe0>)
+ 8001438:	681a      	ldr	r2, [r3, #0]
+ 800143a:	f100 0114 	add.w	r1, r0, #20
+ 800143e:	4291      	cmp	r1, r2
+ 8001440:	d136      	bne.n	80014b0 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0x9c>
+ 8001442:	6982      	ldr	r2, [r0, #24]
+ 8001444:	601a      	str	r2, [r3, #0]
+ 8001446:	2100      	movs	r1, #0
+ 8001448:	e9c0 1105 	strd	r1, r1, [r0, #20]
+ 800144c:	b102      	cbz	r2, 8001450 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0x3c>
+ 800144e:	6011      	str	r1, [r2, #0]
+ 8001450:	685a      	ldr	r2, [r3, #4]
+ 8001452:	3a01      	subs	r2, #1
+ 8001454:	605a      	str	r2, [r3, #4]
+ 8001456:	4b28      	ldr	r3, [pc, #160]	; (80014f8 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0xe4>)
+ 8001458:	681a      	ldr	r2, [r3, #0]
+ 800145a:	1d01      	adds	r1, r0, #4
+ 800145c:	4291      	cmp	r1, r2
+ 800145e:	d137      	bne.n	80014d0 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0xbc>
+ 8001460:	6882      	ldr	r2, [r0, #8]
+ 8001462:	601a      	str	r2, [r3, #0]
+ 8001464:	2100      	movs	r1, #0
+ 8001466:	e9c0 1101 	strd	r1, r1, [r0, #4]
+ 800146a:	b102      	cbz	r2, 800146e <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0x5a>
+ 800146c:	6011      	str	r1, [r2, #0]
+ 800146e:	685a      	ldr	r2, [r3, #4]
+ 8001470:	3a01      	subs	r2, #1
+ 8001472:	605a      	str	r2, [r3, #4]
+ 8001474:	4c21      	ldr	r4, [pc, #132]	; (80014fc <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0xe8>)
+ 8001476:	6823      	ldr	r3, [r4, #0]
+ 8001478:	4283      	cmp	r3, r0
+ 800147a:	d107      	bne.n	800148c <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0x78>
+ 800147c:	481c      	ldr	r0, [pc, #112]	; (80014f0 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0xdc>)
+ 800147e:	f000 f9da 	bl	8001836 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE8getFirstEv>
+ 8001482:	6020      	str	r0, [r4, #0]
+ 8001484:	6823      	ldr	r3, [r4, #0]
+ 8001486:	6ad8      	ldr	r0, [r3, #44]	; 0x2c
+ 8001488:	f7ff f860 	bl	800054c <_ZN4core4Core11restoreTaskEPVm>
+ 800148c:	2001      	movs	r0, #1
+ 800148e:	bd10      	pop	{r4, pc}
+ 8001490:	6852      	ldr	r2, [r2, #4]
+ 8001492:	2a00      	cmp	r2, #0
+ 8001494:	d0cf      	beq.n	8001436 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0x22>
+ 8001496:	4291      	cmp	r1, r2
+ 8001498:	d1fa      	bne.n	8001490 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0x7c>
+ 800149a:	6902      	ldr	r2, [r0, #16]
+ 800149c:	b10a      	cbz	r2, 80014a2 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0x8e>
+ 800149e:	68c1      	ldr	r1, [r0, #12]
+ 80014a0:	6011      	str	r1, [r2, #0]
+ 80014a2:	68c1      	ldr	r1, [r0, #12]
+ 80014a4:	b101      	cbz	r1, 80014a8 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0x94>
+ 80014a6:	604a      	str	r2, [r1, #4]
+ 80014a8:	2200      	movs	r2, #0
+ 80014aa:	e9c0 2203 	strd	r2, r2, [r0, #12]
+ 80014ae:	e7bf      	b.n	8001430 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0x1c>
+ 80014b0:	6852      	ldr	r2, [r2, #4]
+ 80014b2:	2a00      	cmp	r2, #0
+ 80014b4:	d0cf      	beq.n	8001456 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0x42>
+ 80014b6:	4291      	cmp	r1, r2
+ 80014b8:	d1fa      	bne.n	80014b0 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0x9c>
+ 80014ba:	6982      	ldr	r2, [r0, #24]
+ 80014bc:	b10a      	cbz	r2, 80014c2 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0xae>
+ 80014be:	6941      	ldr	r1, [r0, #20]
+ 80014c0:	6011      	str	r1, [r2, #0]
+ 80014c2:	6941      	ldr	r1, [r0, #20]
+ 80014c4:	b101      	cbz	r1, 80014c8 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0xb4>
+ 80014c6:	604a      	str	r2, [r1, #4]
+ 80014c8:	2200      	movs	r2, #0
+ 80014ca:	e9c0 2205 	strd	r2, r2, [r0, #20]
+ 80014ce:	e7bf      	b.n	8001450 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0x3c>
+ 80014d0:	6852      	ldr	r2, [r2, #4]
+ 80014d2:	2a00      	cmp	r2, #0
+ 80014d4:	d0ce      	beq.n	8001474 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0x60>
+ 80014d6:	4291      	cmp	r1, r2
+ 80014d8:	d1fa      	bne.n	80014d0 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0xbc>
+ 80014da:	6882      	ldr	r2, [r0, #8]
+ 80014dc:	b10a      	cbz	r2, 80014e2 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0xce>
+ 80014de:	6841      	ldr	r1, [r0, #4]
+ 80014e0:	6011      	str	r1, [r2, #0]
+ 80014e2:	6841      	ldr	r1, [r0, #4]
+ 80014e4:	b101      	cbz	r1, 80014e8 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0xd4>
+ 80014e6:	604a      	str	r2, [r1, #4]
+ 80014e8:	2200      	movs	r2, #0
+ 80014ea:	e9c0 2201 	strd	r2, r2, [r0, #4]
+ 80014ee:	e7be      	b.n	800146e <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE+0x5a>
+ 80014f0:	20000e70 	.word	0x20000e70
+ 80014f4:	20000e58 	.word	0x20000e58
+ 80014f8:	20000e80 	.word	0x20000e80
+ 80014fc:	20000e64 	.word	0x20000e64
+
+08001500 <_ZN6kernel9Scheduler5sleepEm>:
+ 8001500:	b590      	push	{r4, r7, lr}
+ 8001502:	b083      	sub	sp, #12
+ 8001504:	af00      	add	r7, sp, #0
+ 8001506:	6078      	str	r0, [r7, #4]
+ 8001508:	4b15      	ldr	r3, [pc, #84]	; (8001560 <_ZN6kernel9Scheduler5sleepEm+0x60>)
+ 800150a:	681b      	ldr	r3, [r3, #0]
+ 800150c:	4a15      	ldr	r2, [pc, #84]	; (8001564 <_ZN6kernel9Scheduler5sleepEm+0x64>)
+ 800150e:	6013      	str	r3, [r2, #0]
+ 8001510:	4b13      	ldr	r3, [pc, #76]	; (8001560 <_ZN6kernel9Scheduler5sleepEm+0x60>)
+ 8001512:	2200      	movs	r2, #0
+ 8001514:	601a      	str	r2, [r3, #0]
+ 8001516:	4b14      	ldr	r3, [pc, #80]	; (8001568 <_ZN6kernel9Scheduler5sleepEm+0x68>)
+ 8001518:	e9d3 3400 	ldrd	r3, r4, [r3]
+ 800151c:	461a      	mov	r2, r3
+ 800151e:	687b      	ldr	r3, [r7, #4]
+ 8001520:	441a      	add	r2, r3
+ 8001522:	4b10      	ldr	r3, [pc, #64]	; (8001564 <_ZN6kernel9Scheduler5sleepEm+0x64>)
+ 8001524:	681b      	ldr	r3, [r3, #0]
+ 8001526:	639a      	str	r2, [r3, #56]	; 0x38
+ 8001528:	4b0e      	ldr	r3, [pc, #56]	; (8001564 <_ZN6kernel9Scheduler5sleepEm+0x64>)
+ 800152a:	681b      	ldr	r3, [r3, #0]
+ 800152c:	4a0f      	ldr	r2, [pc, #60]	; (800156c <_ZN6kernel9Scheduler5sleepEm+0x6c>)
+ 800152e:	4619      	mov	r1, r3
+ 8001530:	480f      	ldr	r0, [pc, #60]	; (8001570 <_ZN6kernel9Scheduler5sleepEm+0x70>)
+ 8001532:	f000 f991 	bl	8001858 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E>
+ 8001536:	4b0b      	ldr	r3, [pc, #44]	; (8001564 <_ZN6kernel9Scheduler5sleepEm+0x64>)
+ 8001538:	681b      	ldr	r3, [r3, #0]
+ 800153a:	2200      	movs	r2, #0
+ 800153c:	64da      	str	r2, [r3, #76]	; 0x4c
+ 800153e:	4b09      	ldr	r3, [pc, #36]	; (8001564 <_ZN6kernel9Scheduler5sleepEm+0x64>)
+ 8001540:	681b      	ldr	r3, [r3, #0]
+ 8001542:	480c      	ldr	r0, [pc, #48]	; (8001574 <_ZN6kernel9Scheduler5sleepEm+0x74>)
+ 8001544:	f000 f977 	bl	8001836 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE8getFirstEv>
+ 8001548:	4602      	mov	r2, r0
+ 800154a:	4b05      	ldr	r3, [pc, #20]	; (8001560 <_ZN6kernel9Scheduler5sleepEm+0x60>)
+ 800154c:	601a      	str	r2, [r3, #0]
+ 800154e:	2000      	movs	r0, #0
+ 8001550:	f000 f812 	bl	8001578 <_ZN6kernel9Scheduler9setPendSvENS0_17changeTaskTriggerE>
+ 8001554:	2301      	movs	r3, #1
+ 8001556:	4618      	mov	r0, r3
+ 8001558:	370c      	adds	r7, #12
+ 800155a:	46bd      	mov	sp, r7
+ 800155c:	bd90      	pop	{r4, r7, pc}
+ 800155e:	bf00      	nop
+ 8001560:	20000e64 	.word	0x20000e64
+ 8001564:	20000e68 	.word	0x20000e68
+ 8001568:	20000e78 	.word	0x20000e78
+ 800156c:	08000a31 	.word	0x08000a31
+ 8001570:	20000e58 	.word	0x20000e58
+ 8001574:	20000e70 	.word	0x20000e70
+
+08001578 <_ZN6kernel9Scheduler9setPendSvENS0_17changeTaskTriggerE>:
+ 8001578:	4b01      	ldr	r3, [pc, #4]	; (8001580 <_ZN6kernel9Scheduler9setPendSvENS0_17changeTaskTriggerE+0x8>)
+ 800157a:	6018      	str	r0, [r3, #0]
+ 800157c:	f7fe bff4 	b.w	8000568 <_ZN4core4Core20contextSwitchTriggerEv>
+ 8001580:	20000018 	.word	0x20000018
+
+08001584 <_ZN6kernel9Scheduler10taskSwitchEPm>:
+ 8001584:	b580      	push	{r7, lr}
+ 8001586:	b082      	sub	sp, #8
+ 8001588:	af00      	add	r7, sp, #0
+ 800158a:	6078      	str	r0, [r7, #4]
+ 800158c:	4b14      	ldr	r3, [pc, #80]	; (80015e0 <_ZN6kernel9Scheduler10taskSwitchEPm+0x5c>)
+ 800158e:	681b      	ldr	r3, [r3, #0]
+ 8001590:	2b14      	cmp	r3, #20
+ 8001592:	bf14      	ite	ne
+ 8001594:	2301      	movne	r3, #1
+ 8001596:	2300      	moveq	r3, #0
+ 8001598:	b2db      	uxtb	r3, r3
+ 800159a:	2b00      	cmp	r3, #0
+ 800159c:	d012      	beq.n	80015c4 <_ZN6kernel9Scheduler10taskSwitchEPm+0x40>
+ 800159e:	4b11      	ldr	r3, [pc, #68]	; (80015e4 <_ZN6kernel9Scheduler10taskSwitchEPm+0x60>)
+ 80015a0:	681b      	ldr	r3, [r3, #0]
+ 80015a2:	6879      	ldr	r1, [r7, #4]
+ 80015a4:	4618      	mov	r0, r3
+ 80015a6:	f7ff fde3 	bl	8001170 <_ZN6kernel4Task15setStackPointerEPm>
+ 80015aa:	4b0e      	ldr	r3, [pc, #56]	; (80015e4 <_ZN6kernel9Scheduler10taskSwitchEPm+0x60>)
+ 80015ac:	2200      	movs	r2, #0
+ 80015ae:	601a      	str	r2, [r3, #0]
+ 80015b0:	4b0d      	ldr	r3, [pc, #52]	; (80015e8 <_ZN6kernel9Scheduler10taskSwitchEPm+0x64>)
+ 80015b2:	681b      	ldr	r3, [r3, #0]
+ 80015b4:	2201      	movs	r2, #1
+ 80015b6:	64da      	str	r2, [r3, #76]	; 0x4c
+ 80015b8:	4b0b      	ldr	r3, [pc, #44]	; (80015e8 <_ZN6kernel9Scheduler10taskSwitchEPm+0x64>)
+ 80015ba:	681b      	ldr	r3, [r3, #0]
+ 80015bc:	4b08      	ldr	r3, [pc, #32]	; (80015e0 <_ZN6kernel9Scheduler10taskSwitchEPm+0x5c>)
+ 80015be:	2214      	movs	r2, #20
+ 80015c0:	601a      	str	r2, [r3, #0]
+ 80015c2:	e003      	b.n	80015cc <_ZN6kernel9Scheduler10taskSwitchEPm+0x48>
+ 80015c4:	687a      	ldr	r2, [r7, #4]
+ 80015c6:	4b08      	ldr	r3, [pc, #32]	; (80015e8 <_ZN6kernel9Scheduler10taskSwitchEPm+0x64>)
+ 80015c8:	681b      	ldr	r3, [r3, #0]
+ 80015ca:	62da      	str	r2, [r3, #44]	; 0x2c
+ 80015cc:	4b07      	ldr	r3, [pc, #28]	; (80015ec <_ZN6kernel9Scheduler10taskSwitchEPm+0x68>)
+ 80015ce:	2200      	movs	r2, #0
+ 80015d0:	701a      	strb	r2, [r3, #0]
+ 80015d2:	4b05      	ldr	r3, [pc, #20]	; (80015e8 <_ZN6kernel9Scheduler10taskSwitchEPm+0x64>)
+ 80015d4:	681b      	ldr	r3, [r3, #0]
+ 80015d6:	6adb      	ldr	r3, [r3, #44]	; 0x2c
+ 80015d8:	4618      	mov	r0, r3
+ 80015da:	3708      	adds	r7, #8
+ 80015dc:	46bd      	mov	sp, r7
+ 80015de:	bd80      	pop	{r7, pc}
+ 80015e0:	20000018 	.word	0x20000018
+ 80015e4:	20000e68 	.word	0x20000e68
+ 80015e8:	20000e64 	.word	0x20000e64
+ 80015ec:	20000e90 	.word	0x20000e90
+
+080015f0 <_ZN6kernel9Scheduler15systemTimerTickEv>:
+ 80015f0:	e92d 47f0 	stmdb	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
+ 80015f4:	4c2b      	ldr	r4, [pc, #172]	; (80016a4 <_ZN6kernel9Scheduler15systemTimerTickEv+0xb4>)
+ 80015f6:	4d2c      	ldr	r5, [pc, #176]	; (80016a8 <_ZN6kernel9Scheduler15systemTimerTickEv+0xb8>)
+ 80015f8:	4f2c      	ldr	r7, [pc, #176]	; (80016ac <_ZN6kernel9Scheduler15systemTimerTickEv+0xbc>)
+ 80015fa:	4e2d      	ldr	r6, [pc, #180]	; (80016b0 <_ZN6kernel9Scheduler15systemTimerTickEv+0xc0>)
+ 80015fc:	e9d4 0100 	ldrd	r0, r1, [r4]
+ 8001600:	1c42      	adds	r2, r0, #1
+ 8001602:	f141 0300 	adc.w	r3, r1, #0
+ 8001606:	e9c4 2300 	strd	r2, r3, [r4]
+ 800160a:	f04f 0a00 	mov.w	sl, #0
+ 800160e:	6868      	ldr	r0, [r5, #4]
+ 8001610:	b1f0      	cbz	r0, 8001650 <_ZN6kernel9Scheduler15systemTimerTickEv+0x60>
+ 8001612:	6829      	ldr	r1, [r5, #0]
+ 8001614:	2900      	cmp	r1, #0
+ 8001616:	d041      	beq.n	800169c <_ZN6kernel9Scheduler15systemTimerTickEv+0xac>
+ 8001618:	6a4a      	ldr	r2, [r1, #36]	; 0x24
+ 800161a:	e9d4 8900 	ldrd	r8, r9, [r4]
+ 800161e:	2300      	movs	r3, #0
+ 8001620:	4599      	cmp	r9, r3
+ 8001622:	bf08      	it	eq
+ 8001624:	4590      	cmpeq	r8, r2
+ 8001626:	d313      	bcc.n	8001650 <_ZN6kernel9Scheduler15systemTimerTickEv+0x60>
+ 8001628:	684a      	ldr	r2, [r1, #4]
+ 800162a:	602a      	str	r2, [r5, #0]
+ 800162c:	3801      	subs	r0, #1
+ 800162e:	6068      	str	r0, [r5, #4]
+ 8001630:	2300      	movs	r3, #0
+ 8001632:	b102      	cbz	r2, 8001636 <_ZN6kernel9Scheduler15systemTimerTickEv+0x46>
+ 8001634:	6013      	str	r3, [r2, #0]
+ 8001636:	e9c1 3300 	strd	r3, r3, [r1]
+ 800163a:	624b      	str	r3, [r1, #36]	; 0x24
+ 800163c:	2304      	movs	r3, #4
+ 800163e:	638b      	str	r3, [r1, #56]	; 0x38
+ 8001640:	463a      	mov	r2, r7
+ 8001642:	3914      	subs	r1, #20
+ 8001644:	4630      	mov	r0, r6
+ 8001646:	f7ff fb07 	bl	8000c58 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE6insertEPS2_PFaS5_S5_E>
+ 800164a:	f04f 0a01 	mov.w	sl, #1
+ 800164e:	e7de      	b.n	800160e <_ZN6kernel9Scheduler15systemTimerTickEv+0x1e>
+ 8001650:	4d18      	ldr	r5, [pc, #96]	; (80016b4 <_ZN6kernel9Scheduler15systemTimerTickEv+0xc4>)
+ 8001652:	f04f 0800 	mov.w	r8, #0
+ 8001656:	6868      	ldr	r0, [r5, #4]
+ 8001658:	b148      	cbz	r0, 800166e <_ZN6kernel9Scheduler15systemTimerTickEv+0x7e>
+ 800165a:	6829      	ldr	r1, [r5, #0]
+ 800165c:	b1f1      	cbz	r1, 800169c <_ZN6kernel9Scheduler15systemTimerTickEv+0xac>
+ 800165e:	69ca      	ldr	r2, [r1, #28]
+ 8001660:	e9d4 6700 	ldrd	r6, r7, [r4]
+ 8001664:	2300      	movs	r3, #0
+ 8001666:	429f      	cmp	r7, r3
+ 8001668:	bf08      	it	eq
+ 800166a:	4296      	cmpeq	r6, r2
+ 800166c:	d207      	bcs.n	800167e <_ZN6kernel9Scheduler15systemTimerTickEv+0x8e>
+ 800166e:	f1ba 0f00 	cmp.w	sl, #0
+ 8001672:	d015      	beq.n	80016a0 <_ZN6kernel9Scheduler15systemTimerTickEv+0xb0>
+ 8001674:	2001      	movs	r0, #1
+ 8001676:	e8bd 47f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, lr}
+ 800167a:	f7ff be91 	b.w	80013a0 <_ZN6kernel9Scheduler8scheduleENS0_17changeTaskTriggerE>
+ 800167e:	684b      	ldr	r3, [r1, #4]
+ 8001680:	602b      	str	r3, [r5, #0]
+ 8001682:	3801      	subs	r0, #1
+ 8001684:	6068      	str	r0, [r5, #4]
+ 8001686:	b10b      	cbz	r3, 800168c <_ZN6kernel9Scheduler15systemTimerTickEv+0x9c>
+ 8001688:	f8c3 8000 	str.w	r8, [r3]
+ 800168c:	6a08      	ldr	r0, [r1, #32]
+ 800168e:	6803      	ldr	r3, [r0, #0]
+ 8001690:	e9c1 8800 	strd	r8, r8, [r1]
+ 8001694:	685b      	ldr	r3, [r3, #4]
+ 8001696:	391c      	subs	r1, #28
+ 8001698:	4798      	blx	r3
+ 800169a:	e7dc      	b.n	8001656 <_ZN6kernel9Scheduler15systemTimerTickEv+0x66>
+ 800169c:	6b8b      	ldr	r3, [r1, #56]	; 0x38
+ 800169e:	deff      	udf	#255	; 0xff
+ 80016a0:	e8bd 87f0 	ldmia.w	sp!, {r4, r5, r6, r7, r8, r9, sl, pc}
+ 80016a4:	20000e78 	.word	0x20000e78
+ 80016a8:	20000e58 	.word	0x20000e58
+ 80016ac:	08000a69 	.word	0x08000a69
+ 80016b0:	20000e70 	.word	0x20000e70
+ 80016b4:	20000e88 	.word	0x20000e88
+
+080016b8 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm>:
+ 80016b8:	b538      	push	{r3, r4, r5, lr}
+ 80016ba:	460d      	mov	r5, r1
+ 80016bc:	e9d1 4100 	ldrd	r4, r1, [r1]
+ 80016c0:	68ab      	ldr	r3, [r5, #8]
+ 80016c2:	2810      	cmp	r0, #16
+ 80016c4:	f200 80a3 	bhi.w	800180e <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x156>
+ 80016c8:	e8df f000 	tbb	[pc, r0]
+ 80016cc:	5d150d09 	.word	0x5d150d09
+ 80016d0:	3d384f63 	.word	0x3d384f63
+ 80016d4:	2e29241f 	.word	0x2e29241f
+ 80016d8:	97816a33 	.word	0x97816a33
+ 80016dc:	9c          	.byte	0x9c
+ 80016dd:	00          	.byte	0x00
+ 80016de:	f7ff fdcf 	bl	8001280 <_ZN6kernel9Scheduler14startFirstTaskEv>
+ 80016e2:	6028      	str	r0, [r5, #0]
+ 80016e4:	bd38      	pop	{r3, r4, r5, pc}
+ 80016e6:	460a      	mov	r2, r1
+ 80016e8:	484a      	ldr	r0, [pc, #296]	; (8001814 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x15c>)
+ 80016ea:	4621      	mov	r1, r4
+ 80016ec:	f7fe fd69 	bl	80001c2 <_ZN14implementation7vectors20DynamicVectorManager15registerHandlerEN4core10interfaces3IrqEPFvvEPKc>
+ 80016f0:	2301      	movs	r3, #1
+ 80016f2:	602b      	str	r3, [r5, #0]
+ 80016f4:	e7f6      	b.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 80016f6:	4b47      	ldr	r3, [pc, #284]	; (8001814 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x15c>)
+ 80016f8:	b224      	sxth	r4, r4
+ 80016fa:	3490      	adds	r4, #144	; 0x90
+ 80016fc:	f8d3 2334 	ldr.w	r2, [r3, #820]	; 0x334
+ 8001700:	f843 2024 	str.w	r2, [r3, r4, lsl #2]
+ 8001704:	2301      	movs	r3, #1
+ 8001706:	602b      	str	r3, [r5, #0]
+ 8001708:	e7ec      	b.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 800170a:	4620      	mov	r0, r4
+ 800170c:	f7ff fdd4 	bl	80012b8 <_ZN6kernel9Scheduler9startTaskERNS_4TaskE>
+ 8001710:	6028      	str	r0, [r5, #0]
+ 8001712:	e7e7      	b.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 8001714:	4620      	mov	r0, r4
+ 8001716:	f7ff fe7d 	bl	8001414 <_ZN6kernel9Scheduler8stopTaskERNS_4TaskE>
+ 800171a:	6028      	str	r0, [r5, #0]
+ 800171c:	e7e2      	b.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 800171e:	4620      	mov	r0, r4
+ 8001720:	f7ff feee 	bl	8001500 <_ZN6kernel9Scheduler5sleepEm>
+ 8001724:	6028      	str	r0, [r5, #0]
+ 8001726:	e7dd      	b.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 8001728:	4620      	mov	r0, r4
+ 800172a:	f7ff f9a9 	bl	8000a80 <_ZN6kernel5Event17kernelSignalEventEPS0_>
+ 800172e:	6028      	str	r0, [r5, #0]
+ 8001730:	e7d8      	b.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 8001732:	4620      	mov	r0, r4
+ 8001734:	f7ff f9c2 	bl	8000abc <_ZN6kernel5Event15kernelWaitEventEPS0_m>
+ 8001738:	6028      	str	r0, [r5, #0]
+ 800173a:	e7d3      	b.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 800173c:	4621      	mov	r1, r4
+ 800173e:	4835      	ldr	r0, [pc, #212]	; (8001814 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x15c>)
+ 8001740:	f7fe fde0 	bl	8000304 <_ZN14implementation7vectors20DynamicVectorManager9enableIrqEN4core10interfaces3IrqE>
+ 8001744:	e7ce      	b.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 8001746:	b263      	sxtb	r3, r4
+ 8001748:	2b00      	cmp	r3, #0
+ 800174a:	dbcb      	blt.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 800174c:	2201      	movs	r2, #1
+ 800174e:	095b      	lsrs	r3, r3, #5
+ 8001750:	f004 041f 	and.w	r4, r4, #31
+ 8001754:	fa02 f404 	lsl.w	r4, r2, r4
+ 8001758:	3320      	adds	r3, #32
+ 800175a:	4a2f      	ldr	r2, [pc, #188]	; (8001818 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x160>)
+ 800175c:	f842 4023 	str.w	r4, [r2, r3, lsl #2]
+ 8001760:	f3bf 8f4f 	dsb	sy
+ 8001764:	f3bf 8f6f 	isb	sy
+ 8001768:	e7bc      	b.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 800176a:	b263      	sxtb	r3, r4
+ 800176c:	2b00      	cmp	r3, #0
+ 800176e:	dbb9      	blt.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 8001770:	2201      	movs	r2, #1
+ 8001772:	095b      	lsrs	r3, r3, #5
+ 8001774:	f004 041f 	and.w	r4, r4, #31
+ 8001778:	fa02 f404 	lsl.w	r4, r2, r4
+ 800177c:	3360      	adds	r3, #96	; 0x60
+ 800177e:	4a26      	ldr	r2, [pc, #152]	; (8001818 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x160>)
+ 8001780:	f842 4023 	str.w	r4, [r2, r3, lsl #2]
+ 8001784:	e7ae      	b.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 8001786:	b2ca      	uxtb	r2, r1
+ 8001788:	4822      	ldr	r0, [pc, #136]	; (8001814 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x15c>)
+ 800178a:	4621      	mov	r1, r4
+ 800178c:	f7fe fd7d 	bl	800028a <_ZN14implementation7vectors20DynamicVectorManager11irqPriorityEN4core10interfaces3IrqEh>
+ 8001790:	e7a8      	b.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 8001792:	b2ca      	uxtb	r2, r1
+ 8001794:	b2db      	uxtb	r3, r3
+ 8001796:	4621      	mov	r1, r4
+ 8001798:	481e      	ldr	r0, [pc, #120]	; (8001814 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x15c>)
+ 800179a:	f7fe fd38 	bl	800020e <_ZN14implementation7vectors20DynamicVectorManager11irqPriorityEN4core10interfaces3IrqEhh>
+ 800179e:	e7a1      	b.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 80017a0:	491e      	ldr	r1, [pc, #120]	; (800181c <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x164>)
+ 80017a2:	780a      	ldrb	r2, [r1, #0]
+ 80017a4:	2a00      	cmp	r2, #0
+ 80017a6:	d19d      	bne.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 80017a8:	4b1d      	ldr	r3, [pc, #116]	; (8001820 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x168>)
+ 80017aa:	781b      	ldrb	r3, [r3, #0]
+ 80017ac:	3301      	adds	r3, #1
+ 80017ae:	b2db      	uxtb	r3, r3
+ 80017b0:	f3ef 8211 	mrs	r2, BASEPRI
+ 80017b4:	f3c2 1207 	ubfx	r2, r2, #4, #8
+ 80017b8:	4293      	cmp	r3, r2
+ 80017ba:	d300      	bcc.n	80017be <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x106>
+ 80017bc:	b912      	cbnz	r2, 80017c4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x10c>
+ 80017be:	011b      	lsls	r3, r3, #4
+ 80017c0:	f383 8811 	msr	BASEPRI, r3
+ 80017c4:	4b17      	ldr	r3, [pc, #92]	; (8001824 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x16c>)
+ 80017c6:	701a      	strb	r2, [r3, #0]
+ 80017c8:	2301      	movs	r3, #1
+ 80017ca:	700b      	strb	r3, [r1, #0]
+ 80017cc:	e78a      	b.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 80017ce:	4a13      	ldr	r2, [pc, #76]	; (800181c <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x164>)
+ 80017d0:	7811      	ldrb	r1, [r2, #0]
+ 80017d2:	2900      	cmp	r1, #0
+ 80017d4:	d086      	beq.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 80017d6:	4b13      	ldr	r3, [pc, #76]	; (8001824 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x16c>)
+ 80017d8:	781b      	ldrb	r3, [r3, #0]
+ 80017da:	b2db      	uxtb	r3, r3
+ 80017dc:	f3ef 8111 	mrs	r1, BASEPRI
+ 80017e0:	f3c1 1107 	ubfx	r1, r1, #4, #8
+ 80017e4:	428b      	cmp	r3, r1
+ 80017e6:	d800      	bhi.n	80017ea <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x132>
+ 80017e8:	b913      	cbnz	r3, 80017f0 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x138>
+ 80017ea:	011b      	lsls	r3, r3, #4
+ 80017ec:	f383 8811 	msr	BASEPRI, r3
+ 80017f0:	f3bf 8f6f 	isb	sy
+ 80017f4:	2300      	movs	r3, #0
+ 80017f6:	7013      	strb	r3, [r2, #0]
+ 80017f8:	e774      	b.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 80017fa:	4620      	mov	r0, r4
+ 80017fc:	f7ff fb08 	bl	8000e10 <_ZN6kernel5Mutex15kernelLockMutexEPS0_m>
+ 8001800:	6028      	str	r0, [r5, #0]
+ 8001802:	e76f      	b.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 8001804:	4620      	mov	r0, r4
+ 8001806:	f7ff fc03 	bl	8001010 <_ZN6kernel5Mutex18kernelReleaseMutexEPS0_>
+ 800180a:	6028      	str	r0, [r5, #0]
+ 800180c:	e76a      	b.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 800180e:	be00      	bkpt	0x0000
+ 8001810:	e768      	b.n	80016e4 <_ZN6kernel9Scheduler14supervisorCallENS_11ServiceCall9SvcNumberEPm+0x2c>
+ 8001812:	bf00      	nop
+ 8001814:	20000600 	.word	0x20000600
+ 8001818:	e000e100 	.word	0xe000e100
+ 800181c:	20000e6c 	.word	0x20000e6c
+ 8001820:	20000e6d 	.word	0x20000e6d
+ 8001824:	20000e60 	.word	0x20000e60
+
+08001828 <_ZN4core4Core14supervisorCallILN6kernel11ServiceCall9SvcNumberE0EvEET0_v>:
+ 8001828:	b500      	push	{lr}
+ 800182a:	f3bf 8f4f 	dsb	sy
+ 800182e:	df00      	svc	0
+ 8001830:	f85d eb04 	ldr.w	lr, [sp], #4
+ 8001834:	4770      	bx	lr
+
+08001836 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE8getFirstEv>:
+ 8001836:	6843      	ldr	r3, [r0, #4]
+ 8001838:	b163      	cbz	r3, 8001854 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE8getFirstEv+0x1e>
+ 800183a:	6802      	ldr	r2, [r0, #0]
+ 800183c:	6851      	ldr	r1, [r2, #4]
+ 800183e:	6001      	str	r1, [r0, #0]
+ 8001840:	3b01      	subs	r3, #1
+ 8001842:	6043      	str	r3, [r0, #4]
+ 8001844:	2300      	movs	r3, #0
+ 8001846:	b101      	cbz	r1, 800184a <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_9ReadyListEE8getFirstEv+0x14>
+ 8001848:	600b      	str	r3, [r1, #0]
+ 800184a:	4610      	mov	r0, r2
+ 800184c:	6053      	str	r3, [r2, #4]
+ 800184e:	f840 390c 	str.w	r3, [r0], #-12
+ 8001852:	4770      	bx	lr
+ 8001854:	4618      	mov	r0, r3
+ 8001856:	4770      	bx	lr
+
+08001858 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E>:
+ 8001858:	e92d 43f8 	stmdb	sp!, {r3, r4, r5, r6, r7, r8, r9, lr}
+ 800185c:	4606      	mov	r6, r0
+ 800185e:	4691      	mov	r9, r2
+ 8001860:	460d      	mov	r5, r1
+ 8001862:	2900      	cmp	r1, #0
+ 8001864:	d04d      	beq.n	8001902 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E+0xaa>
+ 8001866:	6842      	ldr	r2, [r0, #4]
+ 8001868:	2300      	movs	r3, #0
+ 800186a:	f101 0714 	add.w	r7, r1, #20
+ 800186e:	e9c1 3305 	strd	r3, r3, [r1, #20]
+ 8001872:	b922      	cbnz	r2, 800187e <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E+0x26>
+ 8001874:	2301      	movs	r3, #1
+ 8001876:	6007      	str	r7, [r0, #0]
+ 8001878:	6043      	str	r3, [r0, #4]
+ 800187a:	e8bd 83f8 	ldmia.w	sp!, {r3, r4, r5, r6, r7, r8, r9, pc}
+ 800187e:	6804      	ldr	r4, [r0, #0]
+ 8001880:	4698      	mov	r8, r3
+ 8001882:	6873      	ldr	r3, [r6, #4]
+ 8001884:	3b01      	subs	r3, #1
+ 8001886:	4543      	cmp	r3, r8
+ 8001888:	d91b      	bls.n	80018c2 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E+0x6a>
+ 800188a:	b1a4      	cbz	r4, 80018b6 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E+0x5e>
+ 800188c:	f1a4 0014 	sub.w	r0, r4, #20
+ 8001890:	4629      	mov	r1, r5
+ 8001892:	47c8      	blx	r9
+ 8001894:	2800      	cmp	r0, #0
+ 8001896:	dd10      	ble.n	80018ba <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E+0x62>
+ 8001898:	6823      	ldr	r3, [r4, #0]
+ 800189a:	e9c5 3405 	strd	r3, r4, [r5, #20]
+ 800189e:	6027      	str	r7, [r4, #0]
+ 80018a0:	696b      	ldr	r3, [r5, #20]
+ 80018a2:	b103      	cbz	r3, 80018a6 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E+0x4e>
+ 80018a4:	605f      	str	r7, [r3, #4]
+ 80018a6:	6873      	ldr	r3, [r6, #4]
+ 80018a8:	3301      	adds	r3, #1
+ 80018aa:	6073      	str	r3, [r6, #4]
+ 80018ac:	6833      	ldr	r3, [r6, #0]
+ 80018ae:	42a3      	cmp	r3, r4
+ 80018b0:	d1e3      	bne.n	800187a <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E+0x22>
+ 80018b2:	6037      	str	r7, [r6, #0]
+ 80018b4:	e7e1      	b.n	800187a <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E+0x22>
+ 80018b6:	4620      	mov	r0, r4
+ 80018b8:	e7ea      	b.n	8001890 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E+0x38>
+ 80018ba:	6864      	ldr	r4, [r4, #4]
+ 80018bc:	f108 0801 	add.w	r8, r8, #1
+ 80018c0:	e7df      	b.n	8001882 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E+0x2a>
+ 80018c2:	b184      	cbz	r4, 80018e6 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E+0x8e>
+ 80018c4:	f1a4 0014 	sub.w	r0, r4, #20
+ 80018c8:	4629      	mov	r1, r5
+ 80018ca:	47c8      	blx	r9
+ 80018cc:	2800      	cmp	r0, #0
+ 80018ce:	dc0c      	bgt.n	80018ea <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E+0x92>
+ 80018d0:	6863      	ldr	r3, [r4, #4]
+ 80018d2:	61ab      	str	r3, [r5, #24]
+ 80018d4:	616c      	str	r4, [r5, #20]
+ 80018d6:	6067      	str	r7, [r4, #4]
+ 80018d8:	69ab      	ldr	r3, [r5, #24]
+ 80018da:	b103      	cbz	r3, 80018de <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E+0x86>
+ 80018dc:	601f      	str	r7, [r3, #0]
+ 80018de:	6873      	ldr	r3, [r6, #4]
+ 80018e0:	3301      	adds	r3, #1
+ 80018e2:	6073      	str	r3, [r6, #4]
+ 80018e4:	e7c9      	b.n	800187a <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E+0x22>
+ 80018e6:	4620      	mov	r0, r4
+ 80018e8:	e7ee      	b.n	80018c8 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E+0x70>
+ 80018ea:	6823      	ldr	r3, [r4, #0]
+ 80018ec:	e9c5 3405 	strd	r3, r4, [r5, #20]
+ 80018f0:	6027      	str	r7, [r4, #0]
+ 80018f2:	696b      	ldr	r3, [r5, #20]
+ 80018f4:	b103      	cbz	r3, 80018f8 <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E+0xa0>
+ 80018f6:	605f      	str	r7, [r3, #4]
+ 80018f8:	6833      	ldr	r3, [r6, #0]
+ 80018fa:	42a3      	cmp	r3, r4
+ 80018fc:	bf08      	it	eq
+ 80018fe:	6037      	streq	r7, [r6, #0]
+ 8001900:	e7ed      	b.n	80018de <_ZN9framework14DualLinkedListIN6kernel4TaskENS1_12SleepingListEE6insertEPS2_PFaS5_S5_E+0x86>
+ 8001902:	6069      	str	r1, [r5, #4]
+ 8001904:	deff      	udf	#255	; 0xff
+	...
+
+08001908 <_GLOBAL__sub_I__ZN6kernel9Scheduler18s_schedulerStartedE>:
+ 8001908:	4a38      	ldr	r2, [pc, #224]	; (80019ec <_GLOBAL__sub_I__ZN6kernel9Scheduler18s_schedulerStartedE+0xe4>)
+ 800190a:	6813      	ldr	r3, [r2, #0]
+ 800190c:	3301      	adds	r3, #1
+ 800190e:	2b01      	cmp	r3, #1
+ 8001910:	b570      	push	{r4, r5, r6, lr}
+ 8001912:	6013      	str	r3, [r2, #0]
+ 8001914:	bf02      	ittt	eq
+ 8001916:	4b36      	ldreq	r3, [pc, #216]	; (80019f0 <_GLOBAL__sub_I__ZN6kernel9Scheduler18s_schedulerStartedE+0xe8>)
+ 8001918:	4a36      	ldreq	r2, [pc, #216]	; (80019f4 <_GLOBAL__sub_I__ZN6kernel9Scheduler18s_schedulerStartedE+0xec>)
+ 800191a:	601a      	streq	r2, [r3, #0]
+ 800191c:	4b36      	ldr	r3, [pc, #216]	; (80019f8 <_GLOBAL__sub_I__ZN6kernel9Scheduler18s_schedulerStartedE+0xf0>)
+ 800191e:	6819      	ldr	r1, [r3, #0]
+ 8001920:	3101      	adds	r1, #1
+ 8001922:	2901      	cmp	r1, #1
+ 8001924:	6019      	str	r1, [r3, #0]
+ 8001926:	d160      	bne.n	80019ea <_GLOBAL__sub_I__ZN6kernel9Scheduler18s_schedulerStartedE+0xe2>
+ 8001928:	4b34      	ldr	r3, [pc, #208]	; (80019fc <_GLOBAL__sub_I__ZN6kernel9Scheduler18s_schedulerStartedE+0xf4>)
+ 800192a:	4e35      	ldr	r6, [pc, #212]	; (8001a00 <_GLOBAL__sub_I__ZN6kernel9Scheduler18s_schedulerStartedE+0xf8>)
+ 800192c:	f883 1048 	strb.w	r1, [r3, #72]	; 0x48
+ 8001930:	f503 7002 	add.w	r0, r3, #520	; 0x208
+ 8001934:	62d8      	str	r0, [r3, #44]	; 0x2c
+ 8001936:	f103 0054 	add.w	r0, r3, #84	; 0x54
+ 800193a:	6318      	str	r0, [r3, #48]	; 0x30
+ 800193c:	2080      	movs	r0, #128	; 0x80
+ 800193e:	6358      	str	r0, [r3, #52]	; 0x34
+ 8001940:	4830      	ldr	r0, [pc, #192]	; (8001a04 <_GLOBAL__sub_I__ZN6kernel9Scheduler18s_schedulerStartedE+0xfc>)
+ 8001942:	6518      	str	r0, [r3, #80]	; 0x50
+ 8001944:	f64d 64ad 	movw	r4, #57005	; 0xdead
+ 8001948:	f64b 60ef 	movw	r0, #48879	; 0xbeef
+ 800194c:	2200      	movs	r2, #0
+ 800194e:	e9c3 4015 	strd	r4, r0, [r3, #84]	; 0x54
+ 8001952:	e9c3 4017 	strd	r4, r0, [r3, #92]	; 0x5c
+ 8001956:	e9c3 4019 	strd	r4, r0, [r3, #100]	; 0x64
+ 800195a:	e9c3 401b 	strd	r4, r0, [r3, #108]	; 0x6c
+ 800195e:	f04f 7080 	mov.w	r0, #16777216	; 0x1000000
+ 8001962:	639a      	str	r2, [r3, #56]	; 0x38
+ 8001964:	63da      	str	r2, [r3, #60]	; 0x3c
+ 8001966:	f8c3 024c 	str.w	r0, [r3, #588]	; 0x24c
+ 800196a:	4827      	ldr	r0, [pc, #156]	; (8001a08 <_GLOBAL__sub_I__ZN6kernel9Scheduler18s_schedulerStartedE+0x100>)
+ 800196c:	f8c3 6248 	str.w	r6, [r3, #584]	; 0x248
+ 8001970:	2503      	movs	r5, #3
+ 8001972:	f8c3 0244 	str.w	r0, [r3, #580]	; 0x244
+ 8001976:	2404      	movs	r4, #4
+ 8001978:	2002      	movs	r0, #2
+ 800197a:	e9c3 2201 	strd	r2, r2, [r3, #4]
+ 800197e:	e9c3 2203 	strd	r2, r2, [r3, #12]
+ 8001982:	e9c3 2205 	strd	r2, r2, [r3, #20]
+ 8001986:	e9c3 2207 	strd	r2, r2, [r3, #28]
+ 800198a:	e9c3 2209 	strd	r2, r2, [r3, #36]	; 0x24
+ 800198e:	e9c3 6210 	strd	r6, r2, [r3, #64]	; 0x40
+ 8001992:	f883 2049 	strb.w	r2, [r3, #73]	; 0x49
+ 8001996:	64dd      	str	r5, [r3, #76]	; 0x4c
+ 8001998:	f8c3 4240 	str.w	r4, [r3, #576]	; 0x240
+ 800199c:	f8c3 523c 	str.w	r5, [r3, #572]	; 0x23c
+ 80019a0:	f8c3 0238 	str.w	r0, [r3, #568]	; 0x238
+ 80019a4:	f8c3 1234 	str.w	r1, [r3, #564]	; 0x234
+ 80019a8:	f8c3 2230 	str.w	r2, [r3, #560]	; 0x230
+ 80019ac:	220b      	movs	r2, #11
+ 80019ae:	f8c3 222c 	str.w	r2, [r3, #556]	; 0x22c
+ 80019b2:	220a      	movs	r2, #10
+ 80019b4:	f8c3 2228 	str.w	r2, [r3, #552]	; 0x228
+ 80019b8:	2209      	movs	r2, #9
+ 80019ba:	f8c3 2224 	str.w	r2, [r3, #548]	; 0x224
+ 80019be:	2208      	movs	r2, #8
+ 80019c0:	f8c3 2220 	str.w	r2, [r3, #544]	; 0x220
+ 80019c4:	2207      	movs	r2, #7
+ 80019c6:	f8c3 221c 	str.w	r2, [r3, #540]	; 0x21c
+ 80019ca:	2206      	movs	r2, #6
+ 80019cc:	f8c3 2218 	str.w	r2, [r3, #536]	; 0x218
+ 80019d0:	2205      	movs	r2, #5
+ 80019d2:	f8c3 2214 	str.w	r2, [r3, #532]	; 0x214
+ 80019d6:	f06f 0202 	mvn.w	r2, #2
+ 80019da:	f8c3 4210 	str.w	r4, [r3, #528]	; 0x210
+ 80019de:	f8c3 020c 	str.w	r0, [r3, #524]	; 0x20c
+ 80019e2:	f8c3 2208 	str.w	r2, [r3, #520]	; 0x208
+ 80019e6:	4a09      	ldr	r2, [pc, #36]	; (8001a0c <_GLOBAL__sub_I__ZN6kernel9Scheduler18s_schedulerStartedE+0x104>)
+ 80019e8:	601a      	str	r2, [r3, #0]
+ 80019ea:	bd70      	pop	{r4, r5, r6, pc}
+ 80019ec:	20000474 	.word	0x20000474
+ 80019f0:	2000021c 	.word	0x2000021c
+ 80019f4:	20000000 	.word	0x20000000
+ 80019f8:	20000478 	.word	0x20000478
+ 80019fc:	20000220 	.word	0x20000220
+ 8001a00:	08000565 	.word	0x08000565
+ 8001a04:	08001bc4 	.word	0x08001bc4
+ 8001a08:	08001a31 	.word	0x08001a31
+ 8001a0c:	08001bd8 	.word	0x08001bd8
+
+08001a10 <_ZN6kernel4Task5startEv>:
+ 8001a10:	4b05      	ldr	r3, [pc, #20]	; (8001a28 <_ZN6kernel4Task5startEv+0x18>)
+ 8001a12:	781b      	ldrb	r3, [r3, #0]
+ 8001a14:	b510      	push	{r4, lr}
+ 8001a16:	4604      	mov	r4, r0
+ 8001a18:	b90b      	cbnz	r3, 8001a1e <_ZN6kernel4Task5startEv+0xe>
+ 8001a1a:	f7ff fbe7 	bl	80011ec <_ZN6kernel9Scheduler22installKernelInterruptEv>
+ 8001a1e:	4620      	mov	r0, r4
+ 8001a20:	f000 f807 	bl	8001a32 <_ZN4core4Core14supervisorCallILN6kernel11ServiceCall9SvcNumberE8EbPNS2_4TaskEEET0_T1_>
+ 8001a24:	bd10      	pop	{r4, pc}
+ 8001a26:	bf00      	nop
+ 8001a28:	20000e6f 	.word	0x20000e6f
+
+08001a2c <_ZN6kernel4Task4stopEv>:
+ 8001a2c:	2001      	movs	r0, #1
+ 8001a2e:	4770      	bx	lr
+
+08001a30 <_ZN6kernel4Task12taskFinishedEv>:
+ 8001a30:	4770      	bx	lr
+
+08001a32 <_ZN4core4Core14supervisorCallILN6kernel11ServiceCall9SvcNumberE8EbPNS2_4TaskEEET0_T1_>:
+ 8001a32:	b500      	push	{lr}
+ 8001a34:	f3bf 8f4f 	dsb	sy
+ 8001a38:	df08      	svc	8
+ 8001a3a:	f85d eb04 	ldr.w	lr, [sp], #4
+ 8001a3e:	4770      	bx	lr
+
+08001a40 <_GLOBAL__sub_I__ZN6kernel4Task13startTaskStubE>:
+ 8001a40:	4a38      	ldr	r2, [pc, #224]	; (8001b24 <_GLOBAL__sub_I__ZN6kernel4Task13startTaskStubE+0xe4>)
+ 8001a42:	6813      	ldr	r3, [r2, #0]
+ 8001a44:	3301      	adds	r3, #1
+ 8001a46:	2b01      	cmp	r3, #1
+ 8001a48:	b570      	push	{r4, r5, r6, lr}
+ 8001a4a:	6013      	str	r3, [r2, #0]
+ 8001a4c:	bf02      	ittt	eq
+ 8001a4e:	4b36      	ldreq	r3, [pc, #216]	; (8001b28 <_GLOBAL__sub_I__ZN6kernel4Task13startTaskStubE+0xe8>)
+ 8001a50:	4a36      	ldreq	r2, [pc, #216]	; (8001b2c <_GLOBAL__sub_I__ZN6kernel4Task13startTaskStubE+0xec>)
+ 8001a52:	601a      	streq	r2, [r3, #0]
+ 8001a54:	4b36      	ldr	r3, [pc, #216]	; (8001b30 <_GLOBAL__sub_I__ZN6kernel4Task13startTaskStubE+0xf0>)
+ 8001a56:	6819      	ldr	r1, [r3, #0]
+ 8001a58:	3101      	adds	r1, #1
+ 8001a5a:	2901      	cmp	r1, #1
+ 8001a5c:	6019      	str	r1, [r3, #0]
+ 8001a5e:	d160      	bne.n	8001b22 <_GLOBAL__sub_I__ZN6kernel4Task13startTaskStubE+0xe2>
+ 8001a60:	4b34      	ldr	r3, [pc, #208]	; (8001b34 <_GLOBAL__sub_I__ZN6kernel4Task13startTaskStubE+0xf4>)
+ 8001a62:	4e35      	ldr	r6, [pc, #212]	; (8001b38 <_GLOBAL__sub_I__ZN6kernel4Task13startTaskStubE+0xf8>)
+ 8001a64:	f883 1048 	strb.w	r1, [r3, #72]	; 0x48
+ 8001a68:	f503 7002 	add.w	r0, r3, #520	; 0x208
+ 8001a6c:	62d8      	str	r0, [r3, #44]	; 0x2c
+ 8001a6e:	f103 0054 	add.w	r0, r3, #84	; 0x54
+ 8001a72:	6318      	str	r0, [r3, #48]	; 0x30
+ 8001a74:	2080      	movs	r0, #128	; 0x80
+ 8001a76:	6358      	str	r0, [r3, #52]	; 0x34
+ 8001a78:	4830      	ldr	r0, [pc, #192]	; (8001b3c <_GLOBAL__sub_I__ZN6kernel4Task13startTaskStubE+0xfc>)
+ 8001a7a:	6518      	str	r0, [r3, #80]	; 0x50
+ 8001a7c:	f64d 64ad 	movw	r4, #57005	; 0xdead
+ 8001a80:	f64b 60ef 	movw	r0, #48879	; 0xbeef
+ 8001a84:	2200      	movs	r2, #0
+ 8001a86:	e9c3 4015 	strd	r4, r0, [r3, #84]	; 0x54
+ 8001a8a:	e9c3 4017 	strd	r4, r0, [r3, #92]	; 0x5c
+ 8001a8e:	e9c3 4019 	strd	r4, r0, [r3, #100]	; 0x64
+ 8001a92:	e9c3 401b 	strd	r4, r0, [r3, #108]	; 0x6c
+ 8001a96:	f04f 7080 	mov.w	r0, #16777216	; 0x1000000
+ 8001a9a:	639a      	str	r2, [r3, #56]	; 0x38
+ 8001a9c:	63da      	str	r2, [r3, #60]	; 0x3c
+ 8001a9e:	f8c3 024c 	str.w	r0, [r3, #588]	; 0x24c
+ 8001aa2:	4827      	ldr	r0, [pc, #156]	; (8001b40 <_GLOBAL__sub_I__ZN6kernel4Task13startTaskStubE+0x100>)
+ 8001aa4:	f8c3 6248 	str.w	r6, [r3, #584]	; 0x248
+ 8001aa8:	2503      	movs	r5, #3
+ 8001aaa:	f8c3 0244 	str.w	r0, [r3, #580]	; 0x244
+ 8001aae:	2404      	movs	r4, #4
+ 8001ab0:	2002      	movs	r0, #2
+ 8001ab2:	e9c3 2201 	strd	r2, r2, [r3, #4]
+ 8001ab6:	e9c3 2203 	strd	r2, r2, [r3, #12]
+ 8001aba:	e9c3 2205 	strd	r2, r2, [r3, #20]
+ 8001abe:	e9c3 2207 	strd	r2, r2, [r3, #28]
+ 8001ac2:	e9c3 2209 	strd	r2, r2, [r3, #36]	; 0x24
+ 8001ac6:	e9c3 6210 	strd	r6, r2, [r3, #64]	; 0x40
+ 8001aca:	f883 2049 	strb.w	r2, [r3, #73]	; 0x49
+ 8001ace:	64dd      	str	r5, [r3, #76]	; 0x4c
+ 8001ad0:	f8c3 4240 	str.w	r4, [r3, #576]	; 0x240
+ 8001ad4:	f8c3 523c 	str.w	r5, [r3, #572]	; 0x23c
+ 8001ad8:	f8c3 0238 	str.w	r0, [r3, #568]	; 0x238
+ 8001adc:	f8c3 1234 	str.w	r1, [r3, #564]	; 0x234
+ 8001ae0:	f8c3 2230 	str.w	r2, [r3, #560]	; 0x230
+ 8001ae4:	220b      	movs	r2, #11
+ 8001ae6:	f8c3 222c 	str.w	r2, [r3, #556]	; 0x22c
+ 8001aea:	220a      	movs	r2, #10
+ 8001aec:	f8c3 2228 	str.w	r2, [r3, #552]	; 0x228
+ 8001af0:	2209      	movs	r2, #9
+ 8001af2:	f8c3 2224 	str.w	r2, [r3, #548]	; 0x224
+ 8001af6:	2208      	movs	r2, #8
+ 8001af8:	f8c3 2220 	str.w	r2, [r3, #544]	; 0x220
+ 8001afc:	2207      	movs	r2, #7
+ 8001afe:	f8c3 221c 	str.w	r2, [r3, #540]	; 0x21c
+ 8001b02:	2206      	movs	r2, #6
+ 8001b04:	f8c3 2218 	str.w	r2, [r3, #536]	; 0x218
+ 8001b08:	2205      	movs	r2, #5
+ 8001b0a:	f8c3 2214 	str.w	r2, [r3, #532]	; 0x214
+ 8001b0e:	f06f 0202 	mvn.w	r2, #2
+ 8001b12:	f8c3 4210 	str.w	r4, [r3, #528]	; 0x210
+ 8001b16:	f8c3 020c 	str.w	r0, [r3, #524]	; 0x20c
+ 8001b1a:	f8c3 2208 	str.w	r2, [r3, #520]	; 0x208
+ 8001b1e:	4a09      	ldr	r2, [pc, #36]	; (8001b44 <_GLOBAL__sub_I__ZN6kernel4Task13startTaskStubE+0x104>)
+ 8001b20:	601a      	str	r2, [r3, #0]
+ 8001b22:	bd70      	pop	{r4, r5, r6, pc}
+ 8001b24:	20000474 	.word	0x20000474
+ 8001b28:	2000021c 	.word	0x2000021c
+ 8001b2c:	20000000 	.word	0x20000000
+ 8001b30:	20000478 	.word	0x20000478
+ 8001b34:	20000220 	.word	0x20000220
+ 8001b38:	08000565 	.word	0x08000565
+ 8001b3c:	08001bc9 	.word	0x08001bc9
+ 8001b40:	08001a31 	.word	0x08001a31
+ 8001b44:	08001bd8 	.word	0x08001bd8
+
+08001b48 <__libc_init_array>:
+ 8001b48:	b570      	push	{r4, r5, r6, lr}
+ 8001b4a:	4e0d      	ldr	r6, [pc, #52]	; (8001b80 <__libc_init_array+0x38>)
+ 8001b4c:	4c0d      	ldr	r4, [pc, #52]	; (8001b84 <__libc_init_array+0x3c>)
+ 8001b4e:	1ba4      	subs	r4, r4, r6
+ 8001b50:	10a4      	asrs	r4, r4, #2
+ 8001b52:	2500      	movs	r5, #0
+ 8001b54:	42a5      	cmp	r5, r4
+ 8001b56:	d109      	bne.n	8001b6c <__libc_init_array+0x24>
+ 8001b58:	4e0b      	ldr	r6, [pc, #44]	; (8001b88 <__libc_init_array+0x40>)
+ 8001b5a:	4c0c      	ldr	r4, [pc, #48]	; (8001b8c <__libc_init_array+0x44>)
+ 8001b5c:	f000 f818 	bl	8001b90 <_init>
+ 8001b60:	1ba4      	subs	r4, r4, r6
+ 8001b62:	10a4      	asrs	r4, r4, #2
+ 8001b64:	2500      	movs	r5, #0
+ 8001b66:	42a5      	cmp	r5, r4
+ 8001b68:	d105      	bne.n	8001b76 <__libc_init_array+0x2e>
+ 8001b6a:	bd70      	pop	{r4, r5, r6, pc}
+ 8001b6c:	f856 3025 	ldr.w	r3, [r6, r5, lsl #2]
+ 8001b70:	4798      	blx	r3
+ 8001b72:	3501      	adds	r5, #1
+ 8001b74:	e7ee      	b.n	8001b54 <__libc_init_array+0xc>
+ 8001b76:	f856 3025 	ldr.w	r3, [r6, r5, lsl #2]
+ 8001b7a:	4798      	blx	r3
+ 8001b7c:	3501      	adds	r5, #1
+ 8001b7e:	e7f2      	b.n	8001b66 <__libc_init_array+0x1e>
+ 8001b80:	08001c64 	.word	0x08001c64
+ 8001b84:	08001c64 	.word	0x08001c64
+ 8001b88:	08001c64 	.word	0x08001c64
+ 8001b8c:	08001c80 	.word	0x08001c80
+
+08001b90 <_init>:
+ 8001b90:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 8001b92:	bf00      	nop
+ 8001b94:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 8001b96:	bc08      	pop	{r3}
+ 8001b98:	469e      	mov	lr, r3
+ 8001b9a:	4770      	bx	lr
+
+08001b9c <_fini>:
+ 8001b9c:	b5f8      	push	{r3, r4, r5, r6, r7, lr}
+ 8001b9e:	bf00      	nop
+ 8001ba0:	bcf8      	pop	{r3, r4, r5, r6, r7}
+ 8001ba2:	bc08      	pop	{r3}
+ 8001ba4:	469e      	mov	lr, r3
+ 8001ba6:	4770      	bx	lr

@@ -1,0 +1,16 @@
+StringsTools.cpp:5:7:static bool volund::StringsTools::compare(const char*, const char*)	16	static
+StringsTools.cpp:17:7:static bool volund::StringsTools::compare(const char*, const char*, uint16_t)	16	static
+StringsTools.cpp:29:7:static bool volund::StringsTools::compare(const char*, uint16_t, const char*, uint16_t)	12	static
+StringsTools.cpp:41:7:static void volund::StringsTools::strCopy(const char*, char*)	12	static
+StringsTools.cpp:51:7:static void volund::StringsTools::strCopy(const char*, char*, uint16_t)	12	static
+StringsTools.cpp:62:8:static char* volund::StringsTools::contains(char*, const char*)	32	static
+StringsTools.cpp:97:14:static const char* volund::StringsTools::contains(const char*, const char*)	24	static
+StringsTools.cpp:129:7:static char volund::StringsTools::digitToChar(uint8_t)	0	static
+StringsTools.cpp:139:11:static uint16_t volund::StringsTools::toString(uint8_t, char*, uint16_t, uint8_t)	32	static
+StringsTools.cpp:177:11:static uint16_t volund::StringsTools::toString(uint16_t, char*, uint16_t, uint8_t)	32	static
+StringsTools.cpp:215:11:static uint16_t volund::StringsTools::toString(uint32_t, char*, uint16_t, uint8_t)	40	static
+StringsTools.cpp:251:10:static uint8_t volund::StringsTools::toU8(const char*, std::size_t)	0	static
+StringsTools.cpp:267:11:static uint16_t volund::StringsTools::toU16(const char*, std::size_t)	8	static
+StringsTools.cpp:283:10:static int16_t volund::StringsTools::toI16(const char*, std::size_t)	16	static
+StringsTools.cpp:309:11:static uint32_t volund::StringsTools::toU32(const char*, std::size_t)	20	static
+StringsTools.cpp:327:14:static std::size_t volund::StringsTools::skipZeros(const char*, std::size_t)	0	static

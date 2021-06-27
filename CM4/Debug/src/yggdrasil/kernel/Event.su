@@ -1,0 +1,15 @@
+Task.hpp:202:17:static int8_t kernel::Task::sleepCompare(kernel::Task*, kernel::Task*)	0	static
+Task.hpp:224:17:static int8_t kernel::Task::priorityCompare(kernel::Task*, kernel::Task*)	0	static
+Event.cpp:37:7:static bool kernel::Event::kernelSignalEvent(kernel::Event*)	8	static
+Event.cpp:62:10:static int16_t kernel::Event::kernelWaitEvent(kernel::Event*, uint32_t)	40	static
+Event.cpp:92:10:int16_t kernel::Event::wait(uint32_t)	8	static
+Event.cpp:98:7:bool kernel::Event::signal()	8	static
+Event.cpp:104:7:bool kernel::Event::someoneWaiting()	0	static
+Event.cpp:112:7:void kernel::Event::reset()	0	static
+Event.cpp:117:7:bool kernel::Event::isAlreadyUp()	0	static
+Event.cpp:122:7:virtual void kernel::Event::stopWait(kernel::Task*)	0	static
+Event.cpp:131:7:virtual void kernel::Event::onTimeout(kernel::Task*)	8	static
+DualLinkedList.hpp:139:9:void framework::DualLinkedList<UnderLyingType, List>::insert(UnderLyingType*, framework::DualLinkedList<UnderLyingType, List>::Comparator) [with UnderLyingType = kernel::Task; List = kernel::ReadyList]	32	static
+Core.hpp:112:39:static Return core::Core::supervisorCall(Param0, Param1) [with kernel::ServiceCall::SvcNumber Number = (kernel::ServiceCall::SvcNumber)12; Return = short int; Param0 = kernel::Event*; Param1 = long unsigned int]	0	static,ignoring_inline_asm
+Core.hpp:101:40:static Return core::Core::supervisorCall(Param0) [with kernel::ServiceCall::SvcNumber Number = (kernel::ServiceCall::SvcNumber)11; Return = bool; Param0 = kernel::Event*]	0	static,ignoring_inline_asm
+Event.cpp:148:1:cpp)	16	static

@@ -1,0 +1,6 @@
+Task.cpp:39:8:virtual bool kernel::Task::start()	8	static
+Task.cpp:46:8:virtual bool kernel::Task::stop()	0	static
+Task.cpp:52:8:static void kernel::Task::taskFinished()	0	static
+Task.cpp:57:8:bool kernel::Task::isStackCorrupted()	0	static
+Core.hpp:101:40:static Return core::Core::supervisorCall(Param0) [with kernel::ServiceCall::SvcNumber Number = (kernel::ServiceCall::SvcNumber)8; Return = bool; Param0 = kernel::Task*]	0	static,ignoring_inline_asm
+Task.cpp:77:1:cpp)	16	static
